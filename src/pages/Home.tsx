@@ -29,10 +29,10 @@ const Home = () => {
                                     className='w-full h-full object-cover'
                                 />
                             </div>
-                            <h3 className='font-bold text-slate-400 text-4xl text-left -mb-2'>
+                            <h3 className='font-bold text-slate-400 text-4xl -mb-2'>
                                 Ferdi Licher
                             </h3>
-                            <p className='text-gold-100 font-medium text-2xl text-right leading-tight'>
+                            <p className='text-gold-100 font-medium text-2xl leading-tight text-center '>
                                 Senior Leadership Coach & Trainer
                             </p>
                             <p className='text-muted-foreground leading-relaxed text-xl text-center text-slate-400'>
