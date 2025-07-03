@@ -83,7 +83,7 @@ const ImageSlider = () => {
     }, [current]);
 
     return (
-        <section className='w-full h-[30vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
+        <section className='w-full h-[60vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
             {/* Profile - Top right (hidden on lg and down) */}
             <div className='hidden xl:block absolute top-4 right-4 z-20'>
                 <FerdiProfile />

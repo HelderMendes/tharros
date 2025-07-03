@@ -13,7 +13,7 @@ const Home = () => {
             {/* Hero Section with Full Width Slider */}
             {/* <section className='w-full h-[30vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'> */}
 
-            <section className='w-full h-[30vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
+            <section className='w-full h-[60vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
                 <ImageSlider />
             </section>
 
