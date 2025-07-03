@@ -126,7 +126,7 @@ const Footer = () => {
                                     href='/workshops'
                                     className='text-gray-400 hover:text-slate-400 transition-colors font-light'
                                 >
-                                    Workshops
+                                    workshops
                                 </a>
                             </li>
                             <li>
