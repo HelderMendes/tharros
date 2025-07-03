@@ -15,17 +15,6 @@ const Footer = () => {
                                 className='w-[260px] mb-3'
                             />
                         </Link>
-                        {/* <div className='flex items-center space-x-3 mb-8'>
-                            <Building2 className='h-8 w-8 text-slate-400' />
-                            <div className='flex flex-col'>
-                                <span className='text-2xl font-bold'>
-                                    Tharros
-                                </span>
-                                <span className='text-sm opacity-80 font-medium'>
-                                    Training & Coaching
-                                </span>
-                            </div>
-                        </div> */}
                         <p className='text-gray-300 leading-relaxed mb-6 font-light'>
                             Specialist in leiderschap en ambtelijk vakmanschap
                             voor de publieke sector. Wij ontwikkelen de leiders
@@ -34,9 +23,10 @@ const Footer = () => {
                         </p>
                         <div className='flex space-x-4'>
                             <a
-                                href='#'
+                                href='https://www.linkedin.com/in/ferdi-licher-20456313/#'
                                 className='text-gray-400 hover:text-slate-400 transition-colors'
                                 aria-label='LinkedIn'
+                                target='new'
                             >
                                 <Linkedin className='siz3-8 mt-3 text-gray-300' />
                             </a>
