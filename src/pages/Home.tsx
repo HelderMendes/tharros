@@ -1,10 +1,7 @@
-import React from 'react';
 import ImageSlider from '../components/ImageSlider';
 import ServiceBlock from '../components/ServiceBlock';
-import { Building2, Target, UserCheck } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 const Home = () => {
@@ -17,9 +14,9 @@ const Home = () => {
                 <ImageSlider />
             </section>
 
-            <section>
+            <section className='min-w-full'>
                 {/* Profile - Below slider (shown on lg and down) */}
-                <div className='block xl:hidden bg-[#04293A]'>
+                <div className='block xl:hidden bg-[#04293A] min-w-full'>
                     <div className='flex  w-[80%] py-12 mx-auto gap-3 '>
                         <div className='flex-1 flex flex-col justify-center items-center gap-3'>
                             <div className='w-36 h-36 rounded-full overflow-hidden flex-shrink-0 border-4 border-slate-700'>

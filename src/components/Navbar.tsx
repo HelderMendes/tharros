@@ -60,19 +60,19 @@ const Navbar = () => {
                             onClick={() => setIsOpen(false)}
                             className='p-3 rounded-lg text-slate-800 hover:bg-slate-50/65 transition-colors'
                         >
-                            <X className='h-16 w-16' />
+                            <X className='size-12 md:h-16 md:w-16' />
                         </button>
                     </div>
 
-                    <div className='flex flex-col items-center justify-center h-full -mt-20'>
+                    <div className='flex flex-col items-center md:justify-center -mt-8 md:-mt-20 justify-start h-full '>
                         <nav className='text-center'>
-                            <ul className='space-y-8 text-gold-200'>
+                            <ul className='space-y-2 md:space-y-8 text-gold-200'>
                                 {navigation.map((item) => (
                                     <li key={item.name}>
                                         <Link
                                             to={item.href}
                                             onClick={() => setIsOpen(false)}
-                                            className={`leading-tight pb-2 block text-3xl font-semibold transition-all duration-300 hover:text-slate-600 text-center ${
+                                            className={`leading-tight pb-2 block text-md md:text-3xl font-semibold transition-all duration-300 hover:text-slate-600 text-center ${
                                                 isActive(item.href)
                                                     ? 'text-slate-800 font-medium'
                                                     : 'text-gold-50'
@@ -104,8 +104,8 @@ const Navbar = () => {
                             </ul>
                         </nav>
 
-                        <div className='mt-16 text-center'>
-                            <div className='flex items-center justify-center space-x-3 mb-6'>
+                        <div className='md:mt-16 mt-6 text-center'>
+                            <div className='flex items-center justify-center space-x-3 mb-6 max-w-[65%] mx-auto'>
                                 <Link
                                     to='/'
                                     className='flex items-center space-x-3'
@@ -113,11 +113,11 @@ const Navbar = () => {
                                     <img
                                         src='Logo_tharros_transparent.png'
                                         alt='logo Tharros, Training & Coaching'
-                                        className='w-[300px]'
+                                        className='max-w-[300px]'
                                     />
                                 </Link>
                             </div>
-                            <p className='text-lg text-slate-400 max-w-md mx-auto px-4 font-light'>
+                            <p className='text-lg text-slate-400 max-w-md mx-auto px-4 font-light max-w-[90%]'>
                                 Leiderschap en ambtelijk vakmanschap in de
                                 publieke sector
                             </p>

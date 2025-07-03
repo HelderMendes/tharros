@@ -83,7 +83,7 @@ const ImageSlider = () => {
     }, [current]);
 
     return (
-        <section className='w-full h-[60vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
+        <section className='min-w-full h-[60vh] md:h-[40vh] xl:h-[55vh] 2xl:h-[60] mt-12 relative'>
             {/* Profile - Top right (hidden on lg and down) */}
             <div className='hidden xl:block absolute top-4 right-4 z-20'>
                 <FerdiProfile />
@@ -106,9 +106,9 @@ const ImageSlider = () => {
                         >
                             {/* Content - Bottom Left */}
                             <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8'>
-                                <div className='max-w-2xl flex flex-col text-center lg:text-left items-center lg:items-start mx-auto lg:mx-0'>
-                                    <div className='container mx-auto'>
-                                        <div className='max-w-2xl'>
+                                <div className='w-full lg:max-w-2xl flex flex-col text-center lg:text-left items-center lg:items-start mx-auto lg:mx-0'>
+                                    <div className=' mx-auto'>
+                                        <div className='w-full lg:max-w-2xl'>
                                             <p className='text-gold-100 leading-relaxed text-xl mb-4'>
                                                 Training en Coaching op het
                                                 gebied van leiderschap en
