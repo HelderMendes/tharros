@@ -24,15 +24,12 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({
     return (
         <Link
             to={href}
-            // className={`group block bg-white rounded-none border border-gray-200 hover:border-gold-300 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-            //     featured ? 'ring-2 ring-gold-400' : ''
-            // }`}
             className={`group block bg-white rounded-none border border-gray-200 hover:border-gold-300 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                featured ? '' : ''
+                featured ? 'ring-2 ring-gold-400' : ''
             }`}
         >
             {image && (
-                <div className='h-48 overflow-hidden'>
+                <div className='h-64 overflow-hidden'>
                     <img
                         src={image}
                         alt={title}
@@ -49,7 +46,7 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({
                 </h3>
 
                 {subtitle && (
-                    <h4 className='text-sm font-medium text-slate-600 mb-3 uppercase tracking-wider'>
+                    <h4 className='text-lg font-medium text-slate-600 mb-3 leading-snug tracking-wide'>
                         {subtitle}
                     </h4>
                 )}

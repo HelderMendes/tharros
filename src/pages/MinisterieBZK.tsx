@@ -9,7 +9,7 @@ import {
     Briefcase,
 } from 'lucide-react';
 
-const BZR = () => {
+const MinisterieBZK = () => {
     return (
         <div className='pt-16'>
             {/* Hero Section */}
@@ -18,7 +18,7 @@ const BZR = () => {
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
                         <div>
                             <h1 className='text-4xl lg:text-5xl font-bold mb-6'>
-                                BZR Programma
+                                BZK Programma
                             </h1>
                             <p className='text-xl text-gold-100 mb-6'>
                                 Programma Doorgroeien in Leiderschap
@@ -61,7 +61,7 @@ const BZR = () => {
                             De Volgende Stap in Uw Carrière
                         </h2>
                         <p className='text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed'>
-                            Het BZR programma is speciaal ontworpen voor ervaren
+                            Het BZK programma is speciaal ontworpen voor ervaren
                             professionals die klaar zijn voor meer
                             verantwoordelijkheid, grotere impact en strategisch
                             leiderschap binnen de publieke sector.
@@ -123,7 +123,7 @@ const BZR = () => {
                                 Uw Carrièrepad Versnellen
                             </h2>
                             <p className='text-lg text-gray-600 mb-8 leading-relaxed'>
-                                Het BZR programma erkent dat ervaren
+                                Het BZK programma erkent dat ervaren
                                 professionals unieke behoeften hebben. We
                                 richten ons op de specifieke uitdagingen en
                                 kansen die komen kijken bij doorgroei naar
@@ -355,7 +355,7 @@ const BZR = () => {
                         Klaar voor de Volgende Stap?
                     </h2>
                     <p className='text-xl text-gold-100 mb-8 leading-relaxed'>
-                        Het BZR programma is ontworpen voor ervaren
+                        Het BZK programma is ontworpen voor ervaren
                         professionals die ambiëren naar senior
                         leiderschapsposities. Ben u klaar om uw impact te
                         vergroten?
@@ -426,4 +426,4 @@ const BZR = () => {
     );
 };
 
-export default BZR;
+export default MinisterieBZK;

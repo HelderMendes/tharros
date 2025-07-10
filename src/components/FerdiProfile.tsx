@@ -18,7 +18,7 @@ export default function FerdiProfile({
                 </div>
                 <div className='w-36 h-36 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20 border-zinc-300 border-y-2'>
                     <img
-                        src='Ferdi01.jpeg'
+                        src='images/Ferdi01.jpeg'
                         alt='Ferdi Licher'
                         className='w-full h-full object-cover'
                     />
