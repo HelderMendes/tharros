@@ -6,9 +6,44 @@ const Tharros = () => {
     return (
         <>
             <SEO
-                title='Tharros - Moed en Zelfvertrouwen'
-                description='Ontdek de betekenis van Tharros - moed en zelfvertrouwen. Leer hoe deze antieke Griekse filosofie onze moderne leiderschapsbenadering vormgeeft in de publieke sector.'
-                keywords='tharros betekenis, moed zelfvertrouwen, griekse filosofie, leiderschap filosofie, antieke stad tharros'
+                title='Tharros - Moed en Zelfvertrouwen in Ambtelijk Vakmanschap'
+                description='Ontdek waarom Ferdi Licher Tharros koos als bedrijfsnaam. Tharros betekent moed in het Oudgrieks en staat centraal in ambtelijk vakmanschap: durven spreken, richting geven en authentiek leiderschap tonen in de publieke sector.'
+                keywords='tharros betekenis, moed zelfvertrouwen, ambtelijk vakmanschap, ambtelijke lef, publiek leiderschap, griekse filosofie, dapperheid overheid, leiderschap publieke sector, vier kardinale deugden'
+                structuredData={{
+                    '@context': 'https://schema.org',
+                    '@type': 'Article',
+                    headline:
+                        'Tharros - Moed en Zelfvertrouwen in Ambtelijk Vakmanschap',
+                    description:
+                        'De betekenis van Tharros (moed) en hoe dit Oudgriekse concept essentieel is voor ambtelijk vakmanschap en leiderschap in de publieke sector.',
+                    author: {
+                        '@type': 'Person',
+                        name: 'Ferdi Licher',
+                        jobTitle: 'Senior Leadership Coach & Trainer',
+                    },
+                    publisher: {
+                        '@type': 'Organization',
+                        name: 'Tharros Training & Coaching',
+                    },
+                    mainEntityOfPage: {
+                        '@type': 'WebPage',
+                        '@id': 'https://www.tharros-trainingcoaching.nl/tharros',
+                    },
+                    about: [
+                        {
+                            '@type': 'Concept',
+                            name: 'Tharros',
+                            description:
+                                'Oudgrieks woord voor moed, geassocieerd met helden en krijgers die moeilijke uitdagingen aangaan',
+                        },
+                        {
+                            '@type': 'Concept',
+                            name: 'Ambtelijk Vakmanschap',
+                            description:
+                                'Professionele vaardigheden en moed om het goede gesprek aan te gaan in de publieke sector',
+                        },
+                    ],
+                }}
             />
 
             {/* Featured Image Section */}
