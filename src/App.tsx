@@ -17,9 +17,9 @@ function App() {
     return (
         <HelmetProvider>
             <Router>
-                <div className='min-h-screen bg-white'>
+                <div className='flex flex-col min-h-screen bg-white'>
                     <Navbar />
-                    <main>
+                    <main className='flex-grow mt-24'>
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/tharros' element={<Tharros />} />

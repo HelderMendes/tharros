@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Users,
     Clock,
@@ -93,7 +92,7 @@ const Workshops = () => {
     ];
 
     return (
-        <div className='pt-16'>
+        <>
             {/* Hero Section */}
             <section className='bg-gradient-to-r from-gold-800 to-gold-900 text-white'>
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
@@ -483,7 +482,7 @@ const Workshops = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     );
 };
 
