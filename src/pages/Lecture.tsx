@@ -1,12 +1,5 @@
 import { SEO } from '@/components/SEO';
-import {
-    BookOpen,
-    Users,
-    Target,
-    Clock,
-    ArrowRight,
-    Quote,
-} from 'lucide-react';
+import { BookOpen, Users, Target, Clock, Quote } from 'lucide-react';
 
 const Lecture = () => {
     const lectureSchema = {
@@ -387,14 +380,34 @@ const Lecture = () => {
                                 ontwikkelen burgers en ministers tegen te
                                 spreken en alternatieven bespreekbaar te maken.
                             </p>
-                            <p className="mt-3">persoonlijk</p>
+                            <p className="mt-3">
+                                Daarbij gaat het niet om het tegenspreken vanuit
+                                persoonlijke of politieke opvattingen, maar om
+                                ruimte voor het spreken over wat er echt toe
+                                doet en echt nodig is. Leidinggevenden in de
+                                publieke sector hebben hierin een cruciale rol.
+                                Zij kunnen die ruimte maken. Zij moeten zich
+                                niet laten instrueren door de minister, of weg
+                                laten sturen met een boodschap, maar borgen dat
+                                alle ambtelijke kennis en ervaring op het
+                                speelveld komt. Zij moeten durven staan voor de
+                                ambtenaren in gewetensnood en ambtenaren
+                                uitdagen om het verschil te maken en virtuoos
+                                vakmanschap te laten zien. Dat vergt moed maar
+                                kan ook geleerd en overgedragen worden. En dat
+                                is wat we met onze jonge ambtenaren doen.
+                            </p>
                         </div>
 
-                        <div className="prose prose-lg bg-white">
-                            <p className="mt-8">
-                                <strong>Deerzuchting</strong>
+                        <div className="prose prose-lg bg-white p-2">
+                            <p className="mt-3 cursor-pointer text-slate-600 hover:text-slate-900">
+                                <a
+                                    href="http://comenianen-omarmen.pdf"
+                                    target="_blank"
+                                    className="cursor-pointer hover:text-slate-900 hover:underline"
+                                ></a>
+                                Download de PDF
                             </p>
-                            <p className="mt-3">persoonlijk</p>
                         </div>
                     </div>
                 </div>
