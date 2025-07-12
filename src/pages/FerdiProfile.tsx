@@ -17,17 +17,47 @@ const FerdiProfile = () => {
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Ferdi Licher',
-        jobTitle: 'Senior Leadership Coach & Trainer',
+        jobTitle: 'Senior Leadership Coach, Trainer & Moderator',
         worksFor: {
             '@type': 'Organization',
             name: 'Tharros Training & Coaching',
         },
         description:
-            'Ervaren trainer, coach en moderator met 35 jaar ervaring in de rijksoverheid, gespecialiseerd in leiderschapsontwikkeling voor de publieke sector.',
-        image: 'https://www.tharros-trainingcoaching.nl/images/Ferdi01.jpeg',
+            'Ervaren trainer, coach en moderator met 35 jaar ervaring in de rijksoverheid, waarvan 25 jaar als leidinggevende. Gespecialiseerd in leiderschapsontwikkeling voor de publieke sector, met rollen als directeur Bouwen en Energie en programmadirecteur Verduurzaming Groningen bij BZK.',
+        image: 'https://www.tharros-trainingcoaching.nl/images/Ferdi_Profil.jpeg',
         url: 'https://www.tharros-trainingcoaching.nl/ferdi-licher',
         birthPlace: 'Ermelo, Nederland',
+        homeLocation: [
+            {
+                '@type': 'Place',
+                name: 'Amsterdam, Nederland',
+            },
+            {
+                '@type': 'Place',
+                name: 'Siracusa, Sicilië',
+            },
+        ],
         alumniOf: ['Universiteit van Amsterdam', 'Universiteit Padova, Italië'],
+        hasOccupation: [
+            {
+                '@type': 'Occupation',
+                name: 'Bewegingsonderwijzer',
+            },
+            {
+                '@type': 'Occupation',
+                name: 'Arbeid- en Organisatiepsycholoog',
+            },
+            {
+                '@type': 'Occupation',
+                name: 'Directeur Bouwen en Energie',
+                worksFor: 'Ministerie van BZK',
+            },
+            {
+                '@type': 'Occupation',
+                name: 'Programmadirecteur Verduurzaming Groningen',
+                worksFor: 'Ministerie van BZK',
+            },
+        ],
         knowsAbout: [
             'Leiderschapsontwikkeling',
             'Coaching',
@@ -35,16 +65,29 @@ const FerdiProfile = () => {
             'Organisatieverandering',
             'Ambtelijk vakmanschap',
             'Politiek-ambtelijke advisering',
+            'Emerging Leaders training',
+            'Comenius leergang',
+            'Verduurzaming Groningen',
+            'Bouwen en Energie',
+            'Persoonlijk leiderschap',
+            'Moed en zelfvertrouwen ontwikkeling',
         ],
+        hasCredential: [
+            'Bewegingsonderwijzer',
+            'Arbeid- en Organisatiepsycholoog',
+            '35 jaar rijksoverheid ervaring',
+            '25 jaar leidinggevende ervaring',
+        ],
+        interestIn: ['Tango', 'Sport', 'Schaken'],
         sameAs: ['https://www.linkedin.com/in/ferdi-licher'],
     };
 
     return (
         <>
             <SEO
-                title="Ferdi Licher - Moderator, Trainer en Coach voor de Publieke Sector"
-                description="Ferdi Licher heeft 35 jaar ervaring in de rijksoverheid, waarvan 25 jaar als leidinggevende. Nu helpt hij jonge ambtenaren en beginnend leidinggevenden het verschil te maken door zijn expertise in leiderschapsontwikkeling."
-                keywords="ferdi licher, leadership coach rijksoverheid, trainer publieke sector, moderator, leiderschapsontwikkeling overheid, ambtelijk vakmanschap, BZK, OCW, SZW, emerging leaders"
+                title="Ferdi Licher - Senior Leadership Coach & Expert in Publieke Sector | 35+ Jaar Ervaring"
+                description="Ferdi Licher: 35 jaar rijksoverheid, 25 jaar leidinggevende bij BZK, OCW & SZW. Van Ermelo naar Amsterdam en Siracusa. Expert in leiderschapsontwikkeling, Emerging Leaders training en politiek-ambtelijke advisering. Moderator Comenius leergang."
+                keywords="ferdi licher, leadership coach rijksoverheid, trainer publieke sector, moderator comenius, leiderschapsontwikkeling overheid, BZK directeur, emerging leaders, programmadirecteur verduurzaming groningen, ambtelijk vakmanschap, politiek-ambtelijke advisering, tango schaken sport, amsterdam siracusa, arbeid organisatiepsycholoog"
                 structuredData={personSchema}
             />
             {/* Featured Image Section */}
