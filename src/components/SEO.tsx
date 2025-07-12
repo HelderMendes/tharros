@@ -43,47 +43,47 @@ export const SEO = ({
         <Helmet>
             {/* Basic Meta Tags */}
             <title>{fullTitle}</title>
-            <meta name='description' content={description} />
-            <meta name='keywords' content={keywords} />
+            <meta name="description" content={description} />
+            <meta name="keywords" content={keywords} />
             <meta
-                name='author'
-                content='Ferdi Licher, Tharros Training & Coaching'
+                name="author"
+                content="Ferdi Licher, Tharros Training & Coaching"
             />
-            <meta name='robots' content='index, follow' />
-            <meta name='language' content='nl' />
-            <meta name='revisit-after' content='7 days' />
+            <meta name="robots" content="index, follow" />
+            <meta name="language" content="nl" />
+            <meta name="revisit-after" content="7 days" />
 
             {/* Canonical URL */}
-            <link rel='canonical' href={finalCanonical} />
+            <link rel="canonical" href={finalCanonical} />
 
             {/* Open Graph Meta Tags */}
-            <meta property='og:title' content={finalOgTitle} />
-            <meta property='og:description' content={finalOgDescription} />
-            <meta property='og:image' content={finalOgImage} />
-            <meta property='og:url' content={finalOgUrl} />
-            <meta property='og:type' content='website' />
+            <meta property="og:title" content={finalOgTitle} />
+            <meta property="og:description" content={finalOgDescription} />
+            <meta property="og:image" content={finalOgImage} />
+            <meta property="og:url" content={finalOgUrl} />
+            <meta property="og:type" content="website" />
             <meta
-                property='og:site_name'
-                content='Tharros Training & Coaching'
+                property="og:site_name"
+                content="Tharros Training & Coaching"
             />
-            <meta property='og:locale' content='nl_NL' />
+            <meta property="og:locale" content="nl_NL" />
 
             {/* Twitter Card Meta Tags */}
-            <meta name='twitter:card' content='summary_large_image' />
-            <meta name='twitter:title' content={finalOgTitle} />
-            <meta name='twitter:description' content={finalOgDescription} />
-            <meta name='twitter:image' content={finalOgImage} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={finalOgTitle} />
+            <meta name="twitter:description" content={finalOgDescription} />
+            <meta name="twitter:image" content={finalOgImage} />
 
             {/* Additional SEO Meta Tags */}
-            <meta name='geo.region' content='NL' />
-            <meta name='geo.placename' content='Nederland' />
-            <meta name='coverage' content='Worldwide' />
-            <meta name='distribution' content='Global' />
-            <meta name='rating' content='General' />
+            <meta name="geo.region" content="NL" />
+            <meta name="geo.placename" content="Nederland" />
+            <meta name="coverage" content="Worldwide" />
+            <meta name="distribution" content="Global" />
+            <meta name="rating" content="General" />
 
             {/* Structured Data */}
             {structuredData && (
-                <script type='application/ld+json'>
+                <script type="application/ld+json">
                     {JSON.stringify(structuredData)}
                 </script>
             )}

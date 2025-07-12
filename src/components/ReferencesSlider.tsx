@@ -52,9 +52,9 @@ const ReferencesSlider = () => {
     }, [references.length]);
 
     return (
-        <section className='relative w-fulloverflow-hidden flex items-center justify-center'>
-            <div className='w-full h-full relative overflow-hidden'>
-                <p className='text-muted-foreground leading-loose text-xl mt-3 text-center text-slate-400'>
+        <section className="w-fulloverflow-hidden relative flex items-center justify-center">
+            <div className="relative h-full w-full overflow-hidden">
+                <p className="mt-3 text-center text-xl leading-loose text-muted-foreground text-slate-400">
                     {references[current].reference}
                 </p>
             </div>

@@ -51,29 +51,26 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 right-0 z-50 bg-white/90 shadow-sm border-b border-gray-200/10 transition-all duration-300
-                ${scrolled ? 'py-1' : 'py-2'}`}
+                className={`fixed left-0 right-0 top-0 z-50 border-b border-gray-200/10 bg-white/90 shadow-sm transition-all duration-300 ${scrolled ? 'py-1' : 'py-2'}`}
             >
-                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div
-                        className={`flex justify-between items-center transition-all duration-300 ${
+                        className={`flex items-center justify-between transition-all duration-300 ${
                             scrolled ? 'h-14' : 'h-20'
                         }`}
                     >
-                        <Link to='/' className='flex space-x-3'>
+                        <Link to="/" className="flex space-x-3">
                             <img
-                                src='LogoTharros.png'
-                                alt='logo Tharros, Training & Coaching'
-                                className={`transition-all duration-300 
-                                    ${scrolled ? 'w-[168px]' : 'w-[240px] pt-2'}
-                                `}
+                                src="LogoTharros.png"
+                                alt="logo Tharros, Training & Coaching"
+                                className={`transition-all duration-300 ${scrolled ? 'w-[168px]' : 'w-[240px] pt-2'} `}
                             />
                         </Link>
                         <button
                             onClick={() => setIsOpen(true)}
-                            className='mt-1 p-1 rounded-lg text-gold-950 hover:text-slate-600 transition-colors border-2 border-transparent hover:border-slate-600 hover:border-inset'
+                            className="hover:border-inset mt-1 rounded-lg border-2 border-transparent p-1 text-gold-950 transition-colors hover:border-slate-600 hover:text-slate-600"
                         >
-                            <Menu className='h-10 w-10' />
+                            <Menu className="h-10 w-10" />
                         </button>
                     </div>
                 </div>
@@ -85,40 +82,40 @@ const Navbar = () => {
                     isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
             >
-                <div className='absolute inset-0 bg-[#04293A] py-3'>
-                    <div className='flex justify-end items-center h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 '>
+                <div className="absolute inset-0 bg-[#04293A] py-3">
+                    <div className="mx-auto flex h-20 max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
                         <button
                             onClick={() => setIsOpen(false)}
-                            className='mt-1 p-1 rounded-lg text-slate-600 hover:text-white  transition-colors border-2 border-transparent hover:border-slate-600 hover:border-inset'
+                            className="hover:border-inset mt-1 rounded-lg border-2 border-transparent p-1 text-slate-600 transition-colors hover:border-slate-600 hover:text-white"
                         >
-                            <X className='size-10' />
+                            <X className="size-10" />
                         </button>
                     </div>
 
-                    <div className='flex flex-col items-center md:justify-center -mt-8 md:-mt-20 justify-start h-full '>
-                        <nav className='text-center'>
-                            <ul className='space-y-2 md:space-y-8 text-gold-200'>
+                    <div className="-mt-8 flex h-full flex-col items-center justify-start md:-mt-20 md:justify-center">
+                        <nav className="text-center">
+                            <ul className="space-y-2 text-gold-200 md:space-y-8">
                                 {navigation.map((item) => (
                                     <li key={item.name}>
                                         <Link
                                             to={item.href}
                                             onClick={() => setIsOpen(false)}
-                                            className={`leading-tight pb-2 block text-md md:text-2xl font-semibold transition-all duration-300 hover:text-[#b67716] text-center ${
+                                            className={`text-md block pb-2 text-center font-semibold leading-tight transition-all duration-300 hover:text-[#b67716] md:text-2xl ${
                                                 isActive(item.href)
-                                                    ? 'text-slate-800 font-light'
+                                                    ? 'font-light text-slate-800'
                                                     : 'text-gold-50'
                                             }`}
                                         >
                                             {item.name.includes('\n') ? (
                                                 <span>
-                                                    <span className='block'>
+                                                    <span className="block">
                                                         {
                                                             item.name.split(
                                                                 '\n'
                                                             )[0]
                                                         }
                                                     </span>
-                                                    <span className='block font-extralight'>
+                                                    <span className="block font-extralight">
                                                         {
                                                             item.name.split(
                                                                 '\n'
@@ -135,20 +132,20 @@ const Navbar = () => {
                             </ul>
                         </nav>
 
-                        <div className='md:mt-16 mt-6 text-center'>
-                            <div className='flex items-center justify-center space-x-3 mb-6 max-w-[65%] mx-auto'>
+                        <div className="mt-6 text-center md:mt-16">
+                            <div className="mx-auto mb-6 flex max-w-[65%] items-center justify-center space-x-3">
                                 <Link
-                                    to='/'
-                                    className='flex items-center space-x-3'
+                                    to="/"
+                                    className="flex items-center space-x-3"
                                 >
                                     <img
-                                        src='TharrosLogoNegatief.png'
-                                        alt='logo Tharros, Training & Coaching'
-                                        className='max-w-[300px]'
+                                        src="TharrosLogoNegatief.png"
+                                        alt="logo Tharros, Training & Coaching"
+                                        className="max-w-[300px]"
                                     />
                                 </Link>
                             </div>
-                            <p className='text-lg text-[#b67716] max-w-md mx-auto px-4 font-light max-w-[90%]'>
+                            <p className="mx-auto max-w-[90%] max-w-md px-4 text-lg font-light text-[#b67716]">
                                 Leiderschap en ambtelijk vakmanschap in de
                                 publieke sector
                             </p>

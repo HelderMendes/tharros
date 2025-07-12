@@ -17,26 +17,26 @@ function App() {
     return (
         <HelmetProvider>
             <Router>
-                <div className='flex flex-col min-h-screen bg-white'>
+                <div className="flex min-h-screen flex-col bg-white">
                     <Navbar />
-                    <main className='flex-grow mt-24'>
+                    <main className="mt-24 flex-grow">
                         <Routes>
-                            <Route path='/' element={<Home />} />
-                            <Route path='/tharros' element={<Tharros />} />
+                            <Route path="/" element={<Home />} />
+                            <Route path="/tharros" element={<Tharros />} />
                             <Route
-                                path='/ferdi-licher'
+                                path="/ferdi-licher"
                                 element={<FerdiProfile />}
                             />
-                            <Route path='/lecture' element={<Lecture />} />
-                            <Route path='/comenius' element={<Comenius />} />
-                            <Route path='/abr' element={<ABR />} />
+                            <Route path="/lecture" element={<Lecture />} />
+                            <Route path="/comenius" element={<Comenius />} />
+                            <Route path="/abr" element={<ABR />} />
                             <Route
-                                path='/ministerie-BZK'
+                                path="/ministerie-BZK"
                                 element={<MinisterieBZK />}
                             />
-                            <Route path='/workshops' element={<Workshops />} />
-                            <Route path='/coaching' element={<Coaching />} />
-                            <Route path='/contact' element={<Contact />} />
+                            <Route path="/workshops" element={<Workshops />} />
+                            <Route path="/coaching" element={<Coaching />} />
+                            <Route path="/contact" element={<Contact />} />
                         </Routes>
                     </main>
                     <Footer />

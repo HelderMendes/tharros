@@ -6,9 +6,9 @@ const Tharros = () => {
     return (
         <>
             <SEO
-                title='Tharros - Moed en Zelfvertrouwen in Ambtelijk Vakmanschap'
-                description='Ontdek waarom Ferdi Licher Tharros koos als bedrijfsnaam. Tharros betekent moed in het Oudgrieks en staat centraal in ambtelijk vakmanschap: durven spreken, richting geven en authentiek leiderschap tonen in de publieke sector.'
-                keywords='tharros betekenis, moed zelfvertrouwen, ambtelijk vakmanschap, ambtelijke lef, publiek leiderschap, griekse filosofie, dapperheid overheid, leiderschap publieke sector, vier kardinale deugden'
+                title="Tharros - Moed en Zelfvertrouwen in Ambtelijk Vakmanschap"
+                description="Ontdek waarom Ferdi Licher Tharros koos als bedrijfsnaam. Tharros betekent moed in het Oudgrieks en staat centraal in ambtelijk vakmanschap: durven spreken, richting geven en authentiek leiderschap tonen in de publieke sector."
+                keywords="tharros betekenis, moed zelfvertrouwen, ambtelijk vakmanschap, ambtelijke lef, publiek leiderschap, griekse filosofie, dapperheid overheid, leiderschap publieke sector, vier kardinale deugden"
                 structuredData={{
                     '@context': 'https://schema.org',
                     '@type': 'Article',
@@ -47,17 +47,17 @@ const Tharros = () => {
             />
 
             {/* Featured Image Section */}
-            <section className='bg-gradient-to-t to-gold-900 from-black/85 text-white mb-12'>
-                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+            <section className="mb-12 bg-gradient-to-t from-black/85 to-gold-900 text-white">
+                <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 className='text-4xl lg:text-5xl font-bold mb-2'>
+                            <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
                                 Tharros
                             </h1>
-                            <p className='text-2xl text-slate-600 mb-6'>
+                            <p className="mb-6 text-2xl text-slate-600">
                                 Moed en zelfvertrouwen
                             </p>
-                            <p className='text-xl leading-loose mb-8 font-light'>
+                            <p className="mb-8 text-xl font-light leading-loose">
                                 Tharros is een Oudgrieks woord dat moed
                                 betekent. In de Griekse literatuur wordt
                                 'tharros' vaak geassocieerd met helden, krijgers
@@ -66,11 +66,11 @@ const Tharros = () => {
                                 bereiken.
                             </p>
                         </div>
-                        <div className='relative inset-0 bg-gradient-to-t from-gold-900/50 to-transparent rounded-lg'>
+                        <div className="relative inset-0 rounded-lg bg-gradient-to-t from-gold-900/50 to-transparent">
                             <img
-                                src='images/TheFourCardinalVirtues-appearing-to-SaintJerome.jpg'
-                                alt='De vier hoofddeugden die aan Sint-Hiëronymus verschijnen (Pietro Testa)'
-                                className='rounded-sm shadow-2xl'
+                                src="images/TheFourCardinalVirtues-appearing-to-SaintJerome.jpg"
+                                alt="De vier hoofddeugden die aan Sint-Hiëronymus verschijnen (Pietro Testa)"
+                                className="rounded-sm shadow-2xl"
                             />
                         </div>
                     </div>
@@ -78,15 +78,15 @@ const Tharros = () => {
             </section>
 
             {/* Main Content Section */}
-            <section className='py-16 bg-white'>
-                <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-start'>
-                        <div className='space-y-8'>
+            <section className="bg-white py-16">
+                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+                        <div className="space-y-8">
                             <div>
-                                <h3 className='text-2xl font-semibold text-gold-800 mb-6 leading-tight'>
+                                <h3 className="mb-6 text-2xl font-semibold leading-tight text-gold-800">
                                     Moed in het Nederlands betekent dapperheid
                                 </h3>
-                                <div className='space-y-6 text-gray-700 leading-relaxed'>
+                                <div className="space-y-6 leading-relaxed text-gray-700">
                                     <p>
                                         Tharros verwijst ook naar innerlijke
                                         kracht, zelfvertrouwen en naar een
@@ -110,34 +110,34 @@ const Tharros = () => {
                             </div>
                         </div>
 
-                        <div className='lg:pl-8'>
-                            <div className='bg-white rounded-lg shadow-sm p-8 border border-gray-200'>
-                                <h4 className='text-xl font-semibold text-gold-800 mb-6'>
+                        <div className="lg:pl-8">
+                            <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
+                                <h4 className="mb-6 text-xl font-semibold text-gold-800">
                                     Kernwaarden van Tharros
                                 </h4>
-                                <ul className='space-y-4'>
-                                    <li className='items-start'>
-                                        <span className='text-gray-700'>
-                                            <Check className='inline-flex text-gold-700 mr-2' />
+                                <ul className="space-y-4">
+                                    <li className="items-start">
+                                        <span className="text-gray-700">
+                                            <Check className="mr-2 inline-flex text-gold-700" />
                                             Innerlijke kracht en zelfvertrouwen
                                         </span>
                                     </li>
-                                    <li className='flex items-start'>
-                                        <span className='text-gray-700'>
-                                            <Check className='inline-flex text-gold-700 mr-2' />
+                                    <li className="flex items-start">
+                                        <span className="text-gray-700">
+                                            <Check className="mr-2 inline-flex text-gold-700" />
                                             Onbevreesde houding in moeilijke
                                             situaties
                                         </span>
                                     </li>
-                                    <li className='flex items-start'>
-                                        <span className='text-gray-700'>
-                                            <Check className='inline-flex text-gold-700 mr-2' />
+                                    <li className="flex items-start">
+                                        <span className="text-gray-700">
+                                            <Check className="mr-2 inline-flex text-gold-700" />
                                             Bereidheid risico's te nemen
                                         </span>
                                     </li>
-                                    <li className='flex items-start'>
-                                        <span className='text-gray-700'>
-                                            <Check className='inline-flex text-gold-700 mr-2 ' />
+                                    <li className="flex items-start">
+                                        <span className="text-gray-700">
+                                            <Check className="mr-2 inline-flex text-gold-700" />
                                             Doorzettingsvermogen bij tegenslagen
                                         </span>
                                     </li>
@@ -149,13 +149,13 @@ const Tharros = () => {
             </section>
 
             {/* Personal Philosophy Section */}
-            <section className='py-16 bg-white'>
-                <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='bg-gradient-to-b to-gold-900 from-black/85 rounded-lg p-8 md:p-12 text-white'>
-                        <h3 className='text-2xl font-semibold mb-6 text-slate-600'>
+            <section className="bg-white py-16">
+                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                    <div className="rounded-lg bg-gradient-to-b from-black/85 to-gold-900 p-8 text-white md:p-12">
+                        <h3 className="mb-6 text-2xl font-semibold text-slate-600">
                             Waarom Tharros?
                         </h3>
-                        <div className='space-y-6 leading-loose '>
+                        <div className="space-y-6 leading-loose">
                             <p>
                                 Ik heb 'Tharros' als naam voor mijn bedrijf
                                 gekozen omdat ambtelijke lef voor mij cruciaal
@@ -178,14 +178,14 @@ const Tharros = () => {
             </section>
 
             {/* Leadership Section */}
-            <section className='pt-20 mt-12 bg-slate-100/30'>
-                <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-gray-700'>
+            <section className="mt-12 bg-slate-100/30 pt-20">
+                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 items-center gap-12 text-gray-700 lg:grid-cols-2">
                         <div>
-                            <h3 className='text-3xl font-semibold mb-8 text-gold-800'>
+                            <h3 className="mb-8 text-3xl font-semibold text-gold-800">
                                 Leiderschap in de publieke sector
                             </h3>
-                            <div className='space-y-6 leading-relaxed'>
+                            <div className="space-y-6 leading-relaxed">
                                 <p>
                                     Leiderschap in de publieke sector vraagt
                                     wijsheid, kunnen luisteren en doorvragen,
@@ -204,28 +204,28 @@ const Tharros = () => {
                             </div>
                         </div>
 
-                        <div className='space-y-6'>
-                            <div className='bg-white/75 rounded-lg shadow-sm p-5 border border-gray-200'>
-                                <h4 className='font-semibold text-slate-800 mb-2 text-xl'>
+                        <div className="space-y-6">
+                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
                                     Wijsheid & Luisteren
                                 </h4>
-                                <p className='text-gray-600 '>
+                                <p className="text-gray-600">
                                     Kunnen luisteren en doorvragen met wijsheid
                                 </p>
                             </div>
-                            <div className='bg-white/75 rounded-lg shadow-sm p-5 border border-gray-200'>
-                                <h4 className='font-semibold text-slate-800 mb-2 text-xl'>
+                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
                                     Richting Durven Geven
                                 </h4>
-                                <p className='text-gray-600 '>
+                                <p className="text-gray-600">
                                     Koers bepalen en leiding nemen wanneer nodig
                                 </p>
                             </div>
-                            <div className='bg-white/75 rounded-lg shadow-sm p-5 border border-gray-200'>
-                                <h4 className='font-semibold text-slate-800 mb-2 text-xl'>
+                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
                                     Authentieke Verbinding
                                 </h4>
-                                <p className='text-gray-600 '>
+                                <p className="text-gray-600">
                                     Echte verbinding maken, ook in complexe
                                     situaties
                                 </p>
@@ -233,11 +233,11 @@ const Tharros = () => {
                         </div>
                     </div>
                 </div>
-                <div className='mt-12 max-h-[500px]'>
+                <div className="mt-12 max-h-[500px]">
                     <img
-                        src='images/Museum-of-the-Future-Dubai.jpg'
-                        alt='Museum of the Future Dubai'
-                        className='w-full h-full object-cover'
+                        src="images/Museum-of-the-Future-Dubai.jpg"
+                        alt="Museum of the Future Dubai"
+                        className="h-full w-full object-cover"
                     />
                 </div>
             </section>

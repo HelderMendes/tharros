@@ -3,40 +3,40 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className='bg-gray-900 text-white'>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-6'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
+        <footer className="bg-gray-900 text-white">
+            <div className="mx-auto max-w-7xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
                     {/* Company Info */}
                     <div>
-                        <Link to='/' className='flex items-center space-x-3'>
+                        <Link to="/" className="flex items-center space-x-3">
                             <img
-                                src='Logo_tharros_transparent01.png'
-                                alt='logo Tharros, Training & Coaching'
-                                className='w-[260px] mb-3'
+                                src="Logo_tharros_transparent01.png"
+                                alt="logo Tharros, Training & Coaching"
+                                className="mb-3 w-[260px]"
                             />
                         </Link>
-                        <p className='text-gray-300 leading-relaxed mb-6 font-light'>
+                        <p className="mb-6 font-light leading-relaxed text-gray-300">
                             Specialist in leiderschap en ambtelijk vakmanschap
                             voor de publieke sector. Wij ontwikkelen de leiders
                             van morgen door middel van praktijkgerichte training
                             en coaching programma's.
                         </p>
-                        <div className='mt-24'>
-                            <h3 className='text-2xl font-semibold mb-8'>
+                        <div className="mt-24">
+                            <h3 className="mb-8 text-2xl font-semibold">
                                 Contact
                             </h3>
-                            <div className='space-y-6'>
-                                <div className='flex items-start space-x-3'>
-                                    <MapPin className='h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0' />
+                            <div className="space-y-6">
+                                <div className="flex items-start space-x-3">
+                                    <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <div>
-                                        <p className='text-gray-300 font-medium'>
+                                        <p className="font-medium text-gray-300">
                                             Ferdi Licher
                                         </p>
                                         <a
-                                            href='https://www.google.com/maps/search/?api=1&query=Vossiusstraat+30-2,+1071AG+Amsterdam'
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className='text-gray-400 text-sm hover:text-slate-400 transition-colors'
+                                            href="https://www.google.com/maps/search/?api=1&query=Vossiusstraat+30-2,+1071AG+Amsterdam"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm text-gray-400 transition-colors hover:text-slate-400"
                                         >
                                             Vossiusstraat 30-2
                                             <br />
@@ -44,33 +44,33 @@ const Footer = () => {
                                         </a>
                                     </div>
                                 </div>
-                                <div className='flex items-center space-x-3'>
-                                    <Phone className='h-5 w-5 text-slate-400 flex-shrink-0' />
+                                <div className="flex items-center space-x-3">
+                                    <Phone className="h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <a
-                                        href='tel:+31615017524'
-                                        className='text-gray-300  hover:text-slate-600  transition-colors'
+                                        href="tel:+31615017524"
+                                        className="text-gray-300 transition-colors hover:text-slate-600"
                                     >
                                         +31 (6) 150 175 24
                                     </a>
                                 </div>
-                                <div className='flex items-center space-x-3'>
-                                    <Mail className='h-5 w-5 text-slate-400 flex-shrink-0' />
+                                <div className="flex items-center space-x-3">
+                                    <Mail className="h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <a
-                                        href='mailto:f.licher1@chello.nl?subject=Contact%20via%20Tharros%20Website'
-                                        className='text-gray-300 hover:text-slate-600  transition-colors '
+                                        href="mailto:f.licher1@chello.nl?subject=Contact%20via%20Tharros%20Website"
+                                        className="text-gray-300 transition-colors hover:text-slate-600"
                                     >
                                         f.licher1@chello.nl
                                     </a>
                                 </div>
-                                <div className='flex space-x-4'>
+                                <div className="flex space-x-4">
                                     <a
-                                        href='https://www.linkedin.com/in/ferdi-licher-20456313/#'
-                                        className='text-gray-400 hover: hover:text-slate-600 transition-colors inline-flex items-end'
-                                        aria-label='LinkedIn'
-                                        target='new'
+                                        href="https://www.linkedin.com/in/ferdi-licher-20456313/#"
+                                        className="hover: inline-flex items-end text-gray-400 transition-colors hover:text-slate-600"
+                                        aria-label="LinkedIn"
+                                        target="new"
                                     >
-                                        <Linkedin className='siz3-8 mt-3 text-gray-300 inline ' />{' '}
-                                        <span className='ml-3 text-white'>
+                                        <Linkedin className="siz3-8 mt-3 inline text-gray-300" />{' '}
+                                        <span className="ml-3 text-white">
                                             LinkedIn Profile
                                         </span>
                                     </a>
@@ -83,24 +83,24 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className='text-2xl font-semibold mb-8'>
+                        <h3 className="mb-8 text-2xl font-semibold">
                             Onze Diensten
                         </h3>
-                        <ul className='space-y-3'>
+                        <ul className="space-y-3">
                             <li>
                                 <a
-                                    href='/'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     Home
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href='/tharros'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/tharros"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Tharros
                                     </span>
                                     <br />
@@ -109,10 +109,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/ferdi-licher'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/ferdi-licher"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Ferdi Licher
                                     </span>
                                     <br />
@@ -121,10 +121,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/lecture'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/lecture"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Lecture
                                     </span>
                                     <br />
@@ -133,10 +133,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/comenius'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/comenius"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Comenius
                                     </span>
                                     <br />
@@ -146,10 +146,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/abr'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/abr"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         ABR – Algemene Bestuursdienst Rijk
                                     </span>
                                     <br />
@@ -159,10 +159,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/ministerie-BZK'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/ministerie-BZK"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Ministerie BZK
                                     </span>
                                     <br />
@@ -171,10 +171,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/workshops'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/workshops"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Workshops
                                     </span>
                                     <br />
@@ -184,10 +184,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/coaching'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/coaching"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
-                                    <span className='font-semibold'>
+                                    <span className="font-semibold">
                                         Individuele Trajecten
                                     </span>
                                     <br />
@@ -196,8 +196,8 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href='/contact'
-                                    className='text-gray-400 hover:text-slate-400 transition-colors font-light'
+                                    href="/contact"
+                                    className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     Contact
                                 </a>
@@ -206,22 +206,22 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='border-t border-gray-800 mt-12 pt-8'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className="mt-12 border-t border-gray-800 pt-8">
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                         <div>
-                            <p className='text-gray-400 text-sm font-light'>
+                            <p className="text-sm font-light text-gray-400">
                                 © {new Date().getFullYear()} Tharros Training &
                                 Coaching. Alle rechten voorbehouden.
                             </p>
                         </div>
-                        <div className='text-gray-400 text-md font-light flex flex-col gap-2'>
+                        <div className="text-md flex flex-col gap-2 font-light text-gray-400">
                             <p>KvK: 97556947 | BTW: NL005277464B14</p>
                             <p>IBAN: NL24INGB0114748454</p>
                             <p>
                                 {' '}
                                 <Link
-                                    to='/'
-                                    className='flex items-center space-x-3'
+                                    to="/"
+                                    className="flex items-center space-x-3"
                                 >
                                     tharros-trainingcoaching.nl
                                 </Link>

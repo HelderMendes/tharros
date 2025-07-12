@@ -46,29 +46,29 @@ const ImageSlider = () => {
     }, [current]);
 
     return (
-        <section className='relative w-full aspect-[1700/900] overflow-hidden  '>
+        <section className="relative aspect-[1700/900] w-full overflow-hidden">
             {/* Slider */}
-            <div className='w-full h-full relative overflow-hidden'>
+            <div className="relative h-full w-full overflow-hidden">
                 {heroImages.map((img, idx) => (
                     <div
                         key={idx}
                         className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
                             idx === current
-                                ? 'opacity-100 z-10'
-                                : 'opacity-0 z-0 pointer-events-none'
+                                ? 'z-10 opacity-100'
+                                : 'pointer-events-none z-0 opacity-0'
                         }`}
                         aria-hidden={idx !== current}
                     >
                         <div
-                            className='w-full h-full bg-cover bg-center bg-no-repeat relative max-h-[870px]'
+                            className="relative h-full max-h-[870px] w-full bg-cover bg-center bg-no-repeat"
                             style={{ backgroundImage: `url('${img.src}')` }}
                         >
                             {/* Content - Bottom Left */}
-                            <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8 '>
-                                <div className='w-full xl:max-w-4xl flex flex-col text-center items-center xl:items-start mx-auto xl:mx-0'>
-                                    <div className=' mx-auto'>
-                                        <div className='w-full lg:max-w-4xl lg:pb-16  xl:pb-0'>
-                                            <p className='text-gold-100 text-xl sm:text-3xl text-center md:text-4xl md:leading-relaxed lg:text-5xl lg:leading-relaxed xl:text-left xl:text-5xl xl:leading-relaxed mb-4 md:mb-8 lg:mb-12 xl:mb-16  leading-relaxed '>
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
+                                <div className="mx-auto flex w-full flex-col items-center text-center xl:mx-0 xl:max-w-4xl xl:items-start">
+                                    <div className="mx-auto">
+                                        <div className="w-full lg:max-w-4xl lg:pb-16 xl:pb-0">
+                                            <p className="mb-4 text-center text-xl leading-relaxed text-gold-100 sm:text-3xl md:mb-8 md:text-4xl md:leading-relaxed lg:mb-12 lg:text-5xl lg:leading-relaxed xl:mb-16 xl:text-left xl:text-5xl xl:leading-relaxed">
                                                 Training en Coaching op het
                                                 gebied van leiderschap en
                                                 ambtelijk vakmanschap in de
@@ -81,27 +81,27 @@ const ImageSlider = () => {
                         </div>
 
                         {/* Ferdi's Profile - Top Right */}
-                        <div className='hidden xl:block absolute  top-6 right-6 bg-white/85 backdrop-blur-sm rounded-lg p-4 max-w-lg shadow-xl'>
-                            <div className='flex items-end gap-6'>
-                                <div className='w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20 mb-2'>
+                        <div className="absolute right-6 top-6 hidden max-w-lg rounded-lg bg-white/85 p-4 shadow-xl backdrop-blur-sm xl:block">
+                            <div className="flex items-end gap-6">
+                                <div className="mb-2 h-32 w-32 flex-shrink-0 overflow-hidden rounded-full border-4 border-primary/20">
                                     <img
-                                        src='images/Ferdi01.jpeg'
-                                        alt='Ferdi Licher'
-                                        className='w-full h-full object-cover'
+                                        src="images/Ferdi01.jpeg"
+                                        alt="Ferdi Licher"
+                                        className="h-full w-full object-cover"
                                     />
                                 </div>
 
-                                <div className='flex-1'>
-                                    <h3 className='font-bold text-foreground text-3xl mb-1'>
+                                <div className="flex-1">
+                                    <h3 className="mb-1 text-3xl font-bold text-foreground">
                                         Ferdi Licher
                                     </h3>
-                                    <p className='text-primary font-light text-lg leading-6  mb-3'>
+                                    <p className="mb-3 text-lg font-light leading-6 text-primary">
                                         Senior Leadership Coach & Trainer
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                <p className='text-base font-medium text-slate-600 text-muted-foreground leading-relaxed mt-1 '>
+                                <p className="mt-1 text-base font-medium leading-relaxed text-muted-foreground text-slate-600">
                                     {img.recommendation}
                                 </p>
                             </div>
@@ -112,15 +112,15 @@ const ImageSlider = () => {
                 {/* Controls */}
                 <button
                     onClick={prevSlide}
-                    aria-label='Previous Slide'
-                    className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full z-20 hover:text-slate-400'
+                    aria-label="Previous Slide"
+                    className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/70 hover:text-slate-400"
                 >
                     &#8592;
                 </button>
                 <button
                     onClick={nextSlide}
-                    aria-label='Next Slide'
-                    className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full z-20 hover:text-slate-400'
+                    aria-label="Next Slide"
+                    className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/70 hover:text-slate-400"
                 >
                     &#8594;
                 </button>
