@@ -1,4 +1,5 @@
 import { SEO } from '@/components/SEO';
+import { useState } from 'react';
 import {
     Users,
     Target,
@@ -7,15 +8,19 @@ import {
     Eye,
     Brain,
     Ear,
-    ArrowRight,
+    // SpeechBubble,
+    // Speech,
     Star,
     Calendar,
     Clock,
     GraduationCap,
     CheckCircle,
+    Speech,
 } from 'lucide-react';
 
 const Comenius = () => {
+    const [activeDay, setActiveDay] = useState('maandag');
+
     const courseSchema = {
         '@context': 'https://schema.org',
         '@type': 'EducationalEvent',
@@ -280,7 +285,7 @@ const Comenius = () => {
                                         hand van drietal thema’s:
                                     </p>
                                 </div>
-                                <blockquote className="relative mx-auto max-w-screen-md rounded-lg bg-slate-50 px-8 py-6 text-center text-2xl font-medium italic leading-relaxed text-slate-700 shadow">
+                                <blockquote className="relative mx-auto max-w-screen-md rounded-lg bg-slate-50 px-8 py-6 text-center text-xl font-medium italic leading-relaxed text-slate-700 shadow">
                                     "De toekomst van Europa, Publieke regie in
                                     een markteconomie, De kloof in de
                                     samenleving."
@@ -385,7 +390,7 @@ const Comenius = () => {
                 </div>
             </section>
 
-            {/* 7 Pillars Section – optie 001*/}
+            {/* 7 Pillars Section – optie 00A */}
             <section className="bg-white py-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
@@ -424,7 +429,7 @@ const Comenius = () => {
                 </div>
             </section>
 
-            {/* Key Themes Section */}
+            {/* Drie Grote Maatschappelijke Vraagstukken */}
             <section className="mt-8 bg-slate-50 py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
@@ -453,10 +458,9 @@ const Comenius = () => {
                         ))}
                     </div>
 
-                    {/* Program Structure */}
-
+                    {/* Programmaopbouw */}
                     <div className="mb-8 text-center">
-                        <h3 className="mb-4 text-3xl font-semibold text-gold-500">
+                        <h3 className="mb-4 text-3xl font-semibold text-gray-700">
                             Programmaopbouw
                         </h3>
                         <p className="text-lg text-gray-600">
@@ -467,63 +471,63 @@ const Comenius = () => {
 
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                         <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
-                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold-500">
+                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-slate-500">
                                 <Heart className="h-6 w-6 text-white" />
                             </div>
-                            <h4 className="mb-4 text-2xl font-semibold text-gold-500">
+                            <h4 className="mb-4 text-2xl font-semibold text-gray-500">
                                 Persoonlijk-Emotionele Laag
                             </h4>
                             <ul className="space-y-3 text-gray-700">
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>Je roots en achtergrond</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>
                                         Persoonlijke drijfveren en leerdoelen
                                     </span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>Kwetsbaarheid en kracht</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>Persoonlijk leiderschapsprofiel</span>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
-                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold-500">
+                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-slate-700">
                                 <Brain className="h-6 w-6 text-white" />
                             </div>
-                            <h4 className="mb-4 text-2xl font-semibold text-gold-500">
+                            <h4 className="mb-4 text-2xl font-semibold text-gray-500">
                                 Systemisch-Rationele Laag
                             </h4>
                             <ul className="space-y-3 text-gray-700">
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>
                                         Complexiteit van maatschappelijke
                                         vraagstukken
                                     </span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>
                                         Analytische en debatvaardigheden
                                     </span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>
                                         Systeemfalen en handelingsperspectieven
                                     </span>
                                 </li>
                                 <li className="flex items-start">
-                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
+                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gray-500" />
                                     <span>
                                         Politiek-filosofische stromingen
                                     </span>
@@ -532,174 +536,204 @@ const Comenius = () => {
                         </div>
                     </div>
                 </div>
+                <blockquote className="relative mx-auto mt-12 max-w-5xl px-8 py-6 text-center font-medium leading-loose text-gray-600">
+                    Het programma heeft als ankerpunt de 7 pijlers van wijs
+                    leiderschap. Deze pijlers, zijn richtingwijzers voor het
+                    juiste en goede in verhouding tot anderen. Ze nodigen uit
+                    tot zelfkennis en zelfreflectie, tot verwondering en het
+                    actief luisteren en bevragen van andere inzichten{' '}
+                    <strong>(deep democracy)</strong>, en tot het vergroten van
+                    aanpassingsvermogen en verbeeldingskracht, omdat deze{' '}
+                    <span className="font-bold text-slate-600">
+                        onmisbaar zijn voor positief transformerend leiderschap
+                    </span>
+                    . Daarbij gaat het steeds opnieuw om het vinden van een
+                    balans tussen emotie en ratio, tussen reflectie en actie,
+                    tussen het persoonlijke en het institutionele, en tussen de
+                    systemische analyse en strategisch handelen.
+                </blockquote>
             </section>
 
-            {/* Program Schedule Preview */}
-            <section className="bg-slate-100 py-20">
-                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
-                        <h3 className="mb-4 text-3xl font-semibold text-slate-800">
-                            Programma 15-18 september 2025
-                        </h3>
-                        <p className="text-lg text-gray-600">
-                            Vier intensieve dagen van persoonlijke ontwikkeling
-                            en maatschappelijke verdieping
-                        </p>
-                    </div>
-
-                    <div className="space-y-6">
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <div className="mb-3 flex items-center">
-                                <div className="mr-3 h-3 w-3 rounded-full bg-gold-500"></div>
-                                <h4 className="text-xl font-semibold text-slate-800">
-                                    Maandag 15 september
-                                </h4>
+            <section className="mt-12 py-20 pt-20">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="grid-cols- grid items-start gap-12 text-gray-700 lg:grid-cols-2">
+                        <div>
+                            {/* Collomn 01 */}
+                            <h3 className="mb-8 text-3xl font-semibold text-gold-800">
+                                Het programma
+                            </h3>
+                            <div className="space-y-6 text-lg leading-relaxed">
+                                <p>
+                                    Het programma start en eindigt met een
+                                    persoonlijke opdracht:{' '}
+                                    <span className="font-bold text-slate-600">
+                                        een confessio
+                                    </span>
+                                    , oftewel een persoonlijk levensverhaal of
+                                    sleutelverhaal, waarin je de betekenis van
+                                    dit verhaal voor jouw persoonlijk
+                                    leiderschap toelicht, en een{' '}
+                                    <span className="font-bold text-slate-600">
+                                        proeve van wijs leiderschap
+                                    </span>
+                                    , een persoonlijk manifest waarin je anderen
+                                    meeneemt in jouw visie en verhaal voor de
+                                    toekomst, en de wijze waarop jij daar een
+                                    rol in wilt spelen. Hierbij word je begeleid
+                                    zodat jouw boodschap ook vorm krijgt in een
+                                    eigen stijl en toon.
+                                </p>
                             </div>
-                            <p className="mb-2 font-medium text-gray-700">
-                                Aristotelische deugden: Ken jezelf!
-                            </p>
-                            <p className="text-gray-600">
-                                Over de innerlijke stem en het persoonlijk
-                                kompas
-                            </p>
-                        </div>
+                            <div className="mt-12 space-y-6">
+                                <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                    <div className="mb-3 flex items-center">
+                                        <div className="mr-3 h-3 w-3 rounded-full bg-slate-600"></div>
+                                        <h4 className="text-xl font-semibold text-slate-800">
+                                            Maandag 15 september
+                                        </h4>
+                                    </div>
+                                    <p className="mb-2 font-medium text-gray-700">
+                                        Aristotelische deugden: Ken jezelf!
+                                    </p>
+                                    <p className="text-gray-600">
+                                        IOver de innerlijke stem en het
+                                        persoonlijk kompas
+                                    </p>
+                                </div>
 
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <div className="mb-3 flex items-center">
-                                <div className="mr-3 h-3 w-3 rounded-full bg-green-600"></div>
-                                <h4 className="text-xl font-semibold text-slate-800">
-                                    Dinsdag 16 september
-                                </h4>
+                                <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                    <div className="mb-3 flex items-center">
+                                        <div className="mr-3 h-3 w-3 rounded-full bg-slate-600"></div>
+                                        <h4 className="text-xl font-semibold text-slate-800">
+                                            Dinsdag 16 september
+                                        </h4>
+                                    </div>
+                                    <p className="mb-2 font-medium text-gray-700">
+                                        Europese waarden: Otherness
+                                    </p>
+                                    <p className="text-gray-600">
+                                        Ik en de ander - de ander en ik. Over
+                                        relativeren en luisteren
+                                    </p>
+                                </div>
+
+                                <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                    <div className="mb-3 flex items-center">
+                                        <div className="mr-3 h-3 w-3 rounded-full bg-slate-500"></div>
+                                        <h4 className="text-xl font-semibold text-slate-800">
+                                            Woensdag 17 september
+                                        </h4>
+                                    </div>
+                                    <p className="mb-2 font-medium text-gray-700">
+                                        De markt en publieke waarden
+                                    </p>
+                                    <p className="text-gray-600">
+                                        Interacties en complexiteiten. Over
+                                        analyseren en interveniëren
+                                    </p>
+                                </div>
+
+                                <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
+                                    <div className="mb-3 flex items-center">
+                                        <div className="mr-3 h-3 w-3 rounded-full bg-slate-600"></div>
+                                        <h4 className="text-xl font-semibold text-slate-800">
+                                            Donderdag 18 september
+                                        </h4>
+                                    </div>
+                                    <p className="mb-2 font-medium text-gray-700">
+                                        De uitdaging van publiek leiderschap
+                                    </p>
+                                    <p className="text-gray-600">
+                                        Tot onderscheiding komen. Over jouw
+                                        verhaal en persoonlijke opdracht
+                                    </p>
+                                </div>
                             </div>
-                            <p className="mb-2 font-medium text-gray-700">
-                                Europese waarden: Otherness
-                            </p>
-                            <p className="text-gray-600">
-                                Ik en de ander - de ander en ik. Over
-                                relativeren en luisteren
-                            </p>
                         </div>
 
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <div className="mb-3 flex items-center">
-                                <div className="mr-3 h-3 w-3 rounded-full bg-gold-500"></div>
-                                <h4 className="text-xl font-semibold text-slate-800">
-                                    Woensdag 17 september
-                                </h4>
+                        {/* Collomn 02 */}
+                        <div>
+                            <h3 className="mb-8 text-3xl font-semibold text-gold-800">
+                                Voor wie?
+                            </h3>
+                            <div className="space-y-6 text-lg leading-relaxed">
+                                <p>
+                                    We zoeken hemelbestormers zonder
+                                    luchtfietserij.
+                                </p>
                             </div>
-                            <p className="mb-2 font-medium text-gray-700">
-                                De markt en publieke waarden
-                            </p>
-                            <p className="text-gray-600">
-                                Interacties en complexiteiten. Over analyseren
-                                en interveniëren
-                            </p>
-                        </div>
+                            <img
+                                src="images/workshops.jpeg"
+                                alt="Mensen met stoelen in de lucht - creativiteit en verbinding"
+                                className="my-6 h-72 w-full object-cover"
+                            />
 
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <div className="mb-3 flex items-center">
-                                <div className="mr-3 h-3 w-3 rounded-full bg-purple-600"></div>
-                                <h4 className="text-xl font-semibold text-slate-800">
-                                    Donderdag 18 september
+                            {/* Target Audience */}
+                            <div className="rounded-lg bg-gradient-to-br from-slate-50 to-slate-50 p-8">
+                                <h4 className="mb-4 text-xl font-semibold text-slate-800">
+                                    Doelgroep
                                 </h4>
+                                <ul className="space-y-3 text-gray-700">
+                                    <li className="flex items-start">
+                                        <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Senior/coördinerend
+                                            beleidsmedewerkers
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>Tot ongeveer 40-45 jaar</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Werkzaam binnen hetzelfde
+                                            departement
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>12-16 deelnemers per groep</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <p className="mb-2 font-medium text-gray-700">
-                                De uitdaging van publiek leiderschap
-                            </p>
-                            <p className="text-gray-600">
-                                Tot onderscheiding komen. Over jouw verhaal en
-                                persoonlijke opdracht
-                            </p>
+
+                            <div className="my-6 rounded-lg bg-gradient-to-br from-slate-50 to-slate-50 p-8">
+                                <h4 className="mb-4 text-xl font-semibold text-slate-800">
+                                    Wat we zoeken
+                                </h4>
+                                <ul className="space-y-3 text-gray-700">
+                                    <li className="flex items-start">
+                                        <Lightbulb className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Gedreven, intelligent, belezen en
+                                            open minded
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Heart className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Durf om kwetsbaar en krachtig te
+                                            zijn
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Ear className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Kunnen luisteren en doorvragen
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <Target className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-slate-500" />
+                                        <span>
+                                            Wil van betekenis zijn en het
+                                            verschil maken
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Target Audience */}
-            <section className="bg-white py-20">
-                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
-                        <h3 className="mb-4 text-3xl font-semibold text-slate-800">
-                            Voor wie?
-                        </h3>
-                        <p className="text-lg text-gray-600">
-                            We zoeken hemelbestormers zonder luchtfietserij
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                        <div className="rounded-lg bg-gradient-to-br from-gold-50 to-slate-50 p-8">
-                            <h4 className="mb-4 text-xl font-semibold text-slate-800">
-                                Doelgroep
-                            </h4>
-                            <ul className="space-y-3 text-gray-700">
-                                <li className="flex items-start">
-                                    <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>
-                                        Senior/coördinerend beleidsmedewerkers
-                                    </span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>Tot ongeveer 40-45 jaar</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>
-                                        Werkzaam binnen hetzelfde departement
-                                    </span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Star className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>12-16 deelnemers per groep</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-lg bg-gradient-to-br from-gold-50 to-slate-50 p-8">
-                            <h4 className="mb-4 text-xl font-semibold text-slate-800">
-                                Wat we zoeken
-                            </h4>
-                            <ul className="space-y-3 text-gray-700">
-                                <li className="flex items-start">
-                                    <Lightbulb className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>
-                                        Gedreven, intelligent, belezen en open
-                                        minded
-                                    </span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Heart className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>
-                                        Durf om kwetsbaar en krachtig te zijn
-                                    </span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Ear className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>Kunnen luisteren en doorvragen</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <Target className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                                    <span>
-                                        Wil van betekenis zijn en het verschil
-                                        maken
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Final Image */}
-            <section className="py-12">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                    <div className="overflow-hidden rounded-lg shadow-xl">
-                        <img
-                            src="images/workshops.jpeg"
-                            alt="Mensen met stoelen in de lucht - creativiteit en verbinding"
-                            className="h-96 w-full object-cover"
-                        />
                     </div>
                 </div>
             </section>
@@ -752,6 +786,1368 @@ const Comenius = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Option 2 - Complete Program Explanation */}
+            <section className="bg-slate-100/50 py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="mb-16 text-center">
+                        <h3 className="mb-6 text-4xl font-bold text-slate-800">
+                            Toelichting op het programma
+                        </h3>
+                        <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+                            Een diepgaande verkenning van persoonlijk en
+                            contextueel leiderschap
+                        </p>
+                    </div>
+
+                    {/* Two Layers Introduction */}
+                    <div className="mb-20">
+                        <div className="mx-auto max-w-4xl text-center">
+                            <p className="mb-8 text-lg leading-relaxed text-gray-700">
+                                Het programma is gebouwd op uit twee lagen.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+                            {/* First Layer - Personal-Emotional */}
+                            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
+                                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
+                                    <Heart className="h-8 w-8 text-white" />
+                                </div>
+                                <h4 className="mb-6 text-2xl font-bold text-slate-600">
+                                    Persoonlijk-Emotionele Laag
+                                </h4>
+                                <div className="space-y-4 leading-relaxed text-gray-700">
+                                    <p>
+                                        <strong>De eerste laag</strong> richt
+                                        zich op het persoonlijk-emotionele, het
+                                        bewuste en onbewuste niveau van het
+                                        persoonlijk leiderschap.
+                                    </p>
+                                    <p>
+                                        Hierbij is er aandacht voor je{' '}
+                                        <strong>roots</strong>, voor waar je
+                                        vandaan komt, wat je meeneemt, de
+                                        voorbeelden en waarden die je hebt
+                                        meegekregen in je opvoeding, de
+                                        gewoonten en patronen die je kenmerken.
+                                    </p>
+                                    <p>
+                                        Is er aandacht voor{' '}
+                                        <strong>
+                                            wie je nu bent en wie je wilt zijn
+                                        </strong>
+                                        , de netwerken waarin je je beweegt, je
+                                        verhouding tot anderen, je kwetsbaarheid
+                                        en kracht.
+                                    </p>
+                                    <p>
+                                        En we verkennen je{' '}
+                                        <strong>
+                                            persoonlijke drijfveren en
+                                            leerdoelen
+                                        </strong>
+                                        , je inspiratiebronnen en
+                                        voedingsbronnen voor je dromen, je
+                                        persoonlijke leiderschapsprofiel, je
+                                        route en mogelijke bestemmingen.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Second Layer - Systemic-Rational */}
+                            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
+                                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
+                                    <Brain className="h-8 w-8 text-white" />
+                                </div>
+                                <h4 className="mb-6 text-2xl font-bold text-slate-600">
+                                    Systemisch-Rationele Laag
+                                </h4>
+                                <div className="space-y-4 leading-relaxed text-gray-700">
+                                    <p>
+                                        <strong>De tweede laag</strong> richt
+                                        zich meer op systemische-rationele
+                                        niveau van het contextueel leiderschap.
+                                    </p>
+                                    <p>
+                                        Hierbij is er aandacht voor de{' '}
+                                        <strong>
+                                            complexiteit van de grote
+                                            maatschappelijke vraagstukken
+                                        </strong>{' '}
+                                        zowel geopolitiek, economisch als
+                                        sociaal-cultureel.
+                                    </p>
+                                    <p>
+                                        We onderzoeken{' '}
+                                        <strong>
+                                            de toekomst van Europa, de publieke
+                                            regie in een markteconomie en de
+                                            kloof in de samenleving
+                                        </strong>
+                                        .
+                                    </p>
+                                    <p>
+                                        Aan de hand van deze drie grote thema's
+                                        scherpen we onze{' '}
+                                        <strong>
+                                            analytische vaardigheden en
+                                            debatvaardigheden
+                                        </strong>{' '}
+                                        aan om te komen tot dieper inzicht in en
+                                        begrip voor de achterliggende oorzaken.
+                                    </p>
+                                    <p>
+                                        We verdiepen ons in{' '}
+                                        <strong>
+                                            systeemfalen en bestuurlijke en
+                                            beleidsmatige
+                                            handelingsperspectieven
+                                        </strong>
+                                        . Om onze horizon te verbreden
+                                        reflecteren op de geschiedenis, de grote
+                                        politiek-filosofische stromingen en de
+                                        geografische en culturele verschillen
+                                        tussen landen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 7 Pillars as Anchor Point */}
+                    <div className="mb-8"></div>
+                    <div className="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-gray-600">
+                        <h4 className="mb-4 text-3xl font-bold text-slate-600">
+                            Het Ankerpunt: 7 Pijlers van Wijs Leiderschap
+                        </h4>
+                        <p>
+                            Het programma heeft als{' '}
+                            <strong>
+                                ankerpunt de 7 pijlers van wijs leiderschap
+                            </strong>
+                            . Deze pijlers, zijn richtingwijzers voor het juiste
+                            en goede in verhouding tot anderen.
+                        </p>
+                        <p>
+                            Ze nodigen uit tot{' '}
+                            <strong>zelfkennis en zelfreflectie</strong>, tot{' '}
+                            <strong>verwondering</strong> en het actief{' '}
+                            <strong>
+                                luisteren en bevragen van andere inzichten (deep
+                                democracy)
+                            </strong>
+                            , en tot het vergroten van{' '}
+                            <strong>
+                                aanpassingsvermogen en verbeeldingskracht
+                            </strong>
+                            , omdat deze onmisbaar zijn voor positief
+                            transformerend leiderschap.
+                        </p>
+                        <p className="font-medium text-slate-600">
+                            Daarbij gaat het steeds opnieuw om het vinden van
+                            een balans tussen emotie en ratio, tussen reflectie
+                            en actie, tussen het persoonlijke en het
+                            institutionele, en tussen de systemische analyse en
+                            strategisch handelen.
+                        </p>
+                    </div>
+
+                    {/* Personal Assignments */}
+                    <div className="my-20">
+                        <div className="mx-auto max-w-6xl">
+                            <h4 className="mb-8 text-2xl font-bold text-slate-600">
+                                Het programma start en eindigt met een
+                                persoonlijke opdracht
+                            </h4>
+
+                            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+                                {/* First Layer - Personal-Emotional */}
+                                <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
+                                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
+                                        <Speech className="h-8 w-8 text-white" />
+                                    </div>
+                                    <h4 className="mb-6 text-2xl font-bold text-slate-600">
+                                        Confessio
+                                    </h4>
+                                    <div className="space-y-4 leading-relaxed text-gray-700">
+                                        <p>
+                                            Een{' '}
+                                            <strong>
+                                                persoonlijk levensverhaal of
+                                                sleutelverhaal
+                                            </strong>
+                                            , waarin je de betekenis van dit
+                                            verhaal voor jouw persoonlijk
+                                            leiderschap toelicht.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Second Layer - Systemic-Rational */}
+                                <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
+                                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
+                                        <GraduationCap className="h-8 w-8 text-white" />
+                                    </div>
+                                    <h4 className="mb-6 text-2xl font-bold text-slate-600">
+                                        Proeve van Wijs Leiderschap
+                                    </h4>
+                                    <div className="space-y-4 leading-relaxed text-gray-700">
+                                        <p>
+                                            Een{' '}
+                                            <strong>
+                                                persoonlijk manifest
+                                            </strong>{' '}
+                                            waarin je anderen meeneemt in jouw
+                                            visie en verhaal voor de toekomst,
+                                            en de wijze waarop jij daar een rol
+                                            in wilt spelen.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className="my-10 leading-relaxed text-gray-700">
+                                <strong>Begeleiding:</strong> Hierbij word je
+                                begeleid zodat jouw boodschap ook vorm krijgt in
+                                een eigen stijl en toon.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Program Flow */}
+
+                    <div className="mb-8 text-center">
+                        <div className="mx-auto max-w-4xl space-y-6 text-left text-lg leading-relaxed text-gray-600">
+                            <h4 className="mb-4 text-3xl font-bold text-slate-600">
+                                Programmaverloop
+                            </h4>
+                            <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                                Het programma <strong>start en eindigt</strong>{' '}
+                                met een persoonlijke opdracht: een confessio,
+                                oftewel een persoonlijk levensverhaal of
+                                sleutelverhaal, waarin je de betekenis van dit
+                                verhaal voor jouw persoonlijk leiderschap
+                                toelicht, en een proeve van wijs leiderschap,
+                                een persoonlijk manifest waarin je anderen
+                                meeneemt in jouw visie en verhaal voor de
+                                toekomst, en de wijze waarop jij daar een rol in
+                                wilt spelen.
+                            </p>
+                            <p className="text-lg leading-relaxed text-gray-700">
+                                In de <strong>tussenliggende dagen</strong>{' '}
+                                staan drie grote maatschappelijke vraagstukken
+                                centraal:{' '}
+                                <strong>
+                                    de toekomst van Europa, publieke regie in de
+                                    markteconomie en de kloof in de samenleving
+                                </strong>
+                                . Hiervoor zijn zowel wetenschappelijke experts
+                                als ervaringsdeskundigen uitgenodigd. We volgen
+                                colleges, luisteren naar verhalen uit de
+                                praktijk, bevragen de sprekers en elkaar op
+                                ervaringen in inzichten, doen groepsopdrachten
+                                om tot dieper inzicht en begrip te komen, en
+                                eindigen elke dag met een reflectie op het thema
+                                van de dag in de vorm van een dialoog of
+                                socratisch gesprek.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Participants Profile Section */}
+            <section className="bg-white py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="mb-16 text-center">
+                        <h3 className="mb-6 text-4xl font-bold text-slate-600">
+                            Deelnemersprofiel
+                        </h3>
+                        <p className="mx-auto max-w-2xl text-xl text-gray-600">
+                            Emerging leaders in de publieke sector
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+                        {/* Target Group */}
+                        <div>
+                            <h4 className="mb-8 text-2xl font-bold text-slate-800">
+                                Wie nodigen we uit?
+                            </h4>
+                            <div className="rounded-xl bg-gradient-to-br from-slate-50 to-slate-50 p-8">
+                                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                                    Voor 7 pijlers van wijs leiderschap nodigt
+                                    Comenius{' '}
+                                    <strong>
+                                        getalenteerde beleidsmedewerkers
+                                    </strong>{' '}
+                                    uit:{' '}
+                                    <em>
+                                        'Emerging leaders in de publieke sector'
+                                    </em>
+                                    .
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-start">
+                                        <Users className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Groepssamenstelling
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Minimaal 12 en maximum 16
+                                                deelnemers allen werkzaam binnen
+                                                hetzelfde departement
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <Target className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Functieniveau
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Senior/coördinerend
+                                                beleidsmedewerkers die de wens
+                                                hebben zich verder te
+                                                ontwikkelen
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <Calendar className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Leeftijd
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Geen harde leeftijdgrens, focus
+                                                ligt op medewerkers tot ongeveer
+                                                40-45 jaar
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-6 rounded-lg bg-slate-100 p-4">
+                                    <p className="font-medium text-slate-800">
+                                        <strong>Netwerkvorming:</strong> Er
+                                        ontstaat ook een nieuw netwerk waar je
+                                        steun aan kan hebben bij je verdere
+                                        persoonlijke en professionele
+                                        ontwikkeling.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Expectations */}
+                        <div>
+                            <h4 className="mb-8 text-2xl font-bold text-slate-800">
+                                Wat verwachten we?
+                            </h4>
+                            <div className="rounded-xl bg-gradient-to-br from-gold-50 to-yellow-50 p-8">
+                                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                                    Van de deelnemers verwacht Comenius een{' '}
+                                    <strong>
+                                        actieve en betrokken deelname
+                                    </strong>
+                                    , waarbij reflecteren en co-creëren
+                                    essentieel zijn.
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-start">
+                                        <Heart className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Actieve participatie
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Reflecteren en co-creëren zijn
+                                                essentieel voor het programma
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <Brain className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Persoonlijk gesprek
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Voorafgaand aan het programma
+                                                vindt een gesprek plaats met de
+                                                moderator
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <Target className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-slate-600" />
+                                        <div>
+                                            <p className="font-medium text-gray-800">
+                                                Persoonlijk leerdoel
+                                            </p>
+                                            <p className="text-gray-600">
+                                                Hiermee articuleer je in nauwe
+                                                samenspraak je persoonlijke
+                                                leerdoel
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Daily Program Section */}
+            <section className="bg-slate-50 py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="mb-16 text-center">
+                        <h3 className="mb-6 text-4xl font-bold text-slate-800">
+                            Programma
+                        </h3>
+                        <p className="mx-auto mb-8 max-w-2xl text-2xl font-medium text-gray-600">
+                            15 september – 18 september 2025
+                        </p>
+
+                        {/* Dynamic Day Tabs */}
+                        <div className="mb-12 flex flex-wrap justify-center gap-4">
+                            {[
+                                {
+                                    id: 'maandag',
+                                    label: 'Maandag 15 sept',
+                                    subtitle:
+                                        'Aristotelische deugden: Ken jezelf!',
+                                },
+                                {
+                                    id: 'dinsdag',
+                                    label: 'Dinsdag 16 sept',
+                                    subtitle: 'Europese waarden: Otherness',
+                                },
+                                {
+                                    id: 'woensdag',
+                                    label: 'Woensdag 17 sept',
+                                    subtitle: 'De markt en publieke waarden',
+                                },
+                                {
+                                    id: 'donderdag',
+                                    label: 'Donderdag 18 sept',
+                                    subtitle:
+                                        'De uitdaging van publiek leiderschap',
+                                },
+                            ].map((tab) => (
+                                <button
+                                    key={tab.id}
+                                    onClick={() => setActiveDay(tab.id)}
+                                    className={`rounded-lg px-6 py-3 font-semibold transition-all duration-300 ${
+                                        activeDay === tab.id
+                                            ? 'scale-105 transform bg-gradient-to-r from-gold-500 to-gold-600 text-white shadow-lg'
+                                            : 'border-2 border-gold-300 bg-white text-gold-600 hover:border-gold-500 hover:bg-gold-50'
+                                    }`}
+                                >
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-sm">
+                                            {tab.label}
+                                        </span>
+                                        <span className="text-xs opacity-75">
+                                            {tab.subtitle}
+                                        </span>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Dynamic Program Content */}
+                    <div className="mx-auto max-w-5xl">
+                        {activeDay === 'maandag' && (
+                            <div className="mb-12 rounded-2xl bg-white p-8 shadow-lg">
+                                <div className="mb-8 border-b border-gray-200 pb-6">
+                                    <h4 className="mb-2 text-3xl font-bold text-slate-800">
+                                        Maandag 15 september 2025
+                                    </h4>
+                                    <div className="mb-4">
+                                        <h5 className="text-xl font-semibold text-blue-700">
+                                            Aristotelische deugden: Ken jezelf!
+                                        </h5>
+                                        <p className="text-lg italic text-gray-600">
+                                            Over de innerlijke stem en het
+                                            persoonlijk kompas
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {/* Morning Sessions */}
+                                    <div className="rounded-lg bg-gold-50 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-100 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    09:00 – 09:45
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Check-in, kwartier maken
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-100 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-200 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    09:45 – 10:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Opening, oculaire
+                                                    kennismaking
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-200 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-300 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    10:15 – 11:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Inleiding: Leiderschap in de
+                                                    publieke sector, als
+                                                    uitdaging
+                                                </h6>
+                                                <p className="mb-2 text-sm text-gray-600">
+                                                    (co-moderator)
+                                                </p>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Opening: Comenius Code;
+                                                    opzet programma
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    (moderator)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    11:15 – 11:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Break
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-300 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-400 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    11:30 – 13:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Confessio
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    13:00 – 14:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Lunch
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Afternoon Sessions */}
+                                    <div className="rounded-lg bg-gold-400 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-500 px-3 py-1 text-sm font-medium text-white">
+                                                    14:00 – 16:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    College & dialoog #1:
+                                                    Aristotelische deugdethiek
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    door Prof. dr. Andreas
+                                                    Kinneging
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    16:30 – 17:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Break
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-500 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-600 px-3 py-1 text-sm font-medium text-white">
+                                                    17:00 – 18:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gold-100">
+                                                    Reflectie #1: Bouwstenen
+                                                    voor persoonlijk kompas;
+                                                    schrijfopdracht
+                                                </h6>
+                                                <p className="text-sm text-gray-100">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Evening Sessions */}
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    18:30 – 19:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Diner
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-600 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-700 px-3 py-1 text-sm font-medium text-white">
+                                                    19:30 – 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Field lab #1: Innerlijke
+                                                    stem
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    Concert en beschouwing door
+                                                    Remy van Kesteren
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-700 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-800 px-3 py-1 text-sm font-medium text-white">
+                                                    Vanaf 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Ont-moeten: Tijd voor jezelf
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeDay === 'dinsdag' && (
+                            <div className="mb-12 rounded-2xl bg-white p-8 shadow-lg">
+                                <div className="mb-8 border-b border-gray-200 pb-6">
+                                    <h4 className="mb-2 text-3xl font-bold text-slate-800">
+                                        Dinsdag 16 september 2025
+                                    </h4>
+                                    <div className="mb-4">
+                                        <h5 className="text-xl font-semibold text-blue-700">
+                                            Europese waarden: Otherness: ik en
+                                            de ander – de ander en ik
+                                        </h5>
+                                        <p className="text-lg italic text-gray-600">
+                                            Over relativeren en luisteren
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {/* Morning Sessions */}
+                                    <div className="rounded-lg bg-gold-50 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-100 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    08:00 – 09:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Ontbijt
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-100 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-200 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    09:00 – 09:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Dagopening
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-200 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-300 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    09:30 – 11:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    College & dialoog #2:
+                                                    Demografische ontwikkelingen
+                                                    en visie op Nederland
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    door prof. dr. Paul Scheffer
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    11:00 – 11:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Break
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-300 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-400 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    11:15 – 13:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Reflectie #2: De Socratische
+                                                    vraag durven stellen
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    13:15 – 14:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Lunch
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Afternoon Sessions */}
+                                    <div className="rounded-lg bg-gold-400 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-500 px-3 py-1 text-sm font-medium text-white">
+                                                    14:15 – 16:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    College & dialoog #3:
+                                                    Populisme: Atlas van
+                                                    afgehaakt Nederland
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    door drs. René Cuperus
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    16:15 – 16:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Break
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-500 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-600 px-3 py-1 text-sm font-medium text-white">
+                                                    16:30 – 18:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gold-100">
+                                                    Field lab #2: Hoe voer je
+                                                    het goede gesprek?
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (co-moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    18:15 – 19:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Diner
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Evening Sessions */}
+                                    <div className="rounded-lg bg-gold-600 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-700 px-3 py-1 text-sm font-medium text-white">
+                                                    19:30 – 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Sleutelverhalen
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-700 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-800 px-3 py-1 text-sm font-medium text-white">
+                                                    Vanaf 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Ont-moeten: Tijd voor jezelf
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeDay === 'woensdag' && (
+                            <div className="mb-12 rounded-2xl bg-white p-8 shadow-lg">
+                                <div className="mb-8 border-b border-gray-200 pb-6">
+                                    <h4 className="mb-2 text-3xl font-bold text-slate-800">
+                                        Woensdag 17 september 2025
+                                    </h4>
+                                    <div className="mb-4">
+                                        <h5 className="text-xl font-semibold text-blue-700">
+                                            De markt en publieke waarden:
+                                            Interacties en complexiteiten
+                                        </h5>
+                                        <p className="text-lg italic text-gray-600">
+                                            Over analyseren en interveniëren
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {/* Morning Sessions */}
+                                    <div className="rounded-lg bg-gold-50 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-100 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    08:00 – 08:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Ontbijt
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-100 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-200 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    08:30 – 09:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Dagopening
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-200 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-300 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    09:00 – 10:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    College & dialoog #4: De
+                                                    gezagscrisis
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    door Prof. dr. Ad Verbrugge
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    10:30 – 11:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Pauze
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-300 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-400 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    11:00 – 12:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    College & dialoog #5: Markt
+                                                    en publieke waarden
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    door prof. dr. Barbara
+                                                    Baarsma
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    12:30 – 13:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Lunch
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Afternoon Sessions */}
+                                    <div className="rounded-lg bg-gold-400 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-500 px-3 py-1 text-sm font-medium text-white">
+                                                    13:30 – 15:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Reflectie #3 Wandelen met
+                                                    een vraag, in tweetallen
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-500 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-600 px-3 py-1 text-sm font-medium text-white">
+                                                    15:00 – 17:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gold-100">
+                                                    Field lab #3: Hoe voer je
+                                                    het goede gesprek?
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (co-moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    17:00 – 18:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Tijd voor jezelf
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    18:00 – 19:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Diner
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Evening Sessions */}
+                                    <div className="rounded-lg bg-gold-600 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-700 px-3 py-1 text-sm font-medium text-white">
+                                                    19:30 – 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Field lab #4: Harmonie in
+                                                    leiderschap: De kunst van
+                                                    het dirigeren
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    door Alexander de Blaeij
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-700 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-800 px-3 py-1 text-sm font-medium text-white">
+                                                    Vanaf 21:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Ont-moeten: Tijd voor jezelf
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeDay === 'donderdag' && (
+                            <div className="mb-12 rounded-2xl bg-white p-8 shadow-lg">
+                                <div className="mb-8 border-b border-gray-200 pb-6">
+                                    <h4 className="mb-2 text-3xl font-bold text-slate-800">
+                                        Donderdag 18 september 2025
+                                    </h4>
+                                    <div className="mb-4">
+                                        <h5 className="text-xl font-semibold text-blue-700">
+                                            De uitdaging van het publiek
+                                            leiderschap; tot onderscheiding
+                                            komen
+                                        </h5>
+                                        <p className="text-lg italic text-gray-600">
+                                            Over jouw verhaal en persoonlijke
+                                            opdracht
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {/* Morning Sessions */}
+                                    <div className="rounded-lg bg-gold-50 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-100 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    08:00 – 09:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Ontbijt
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-100 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-200 px-3 py-1 text-sm font-medium text-gold-800">
+                                                    09:00 – 09:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Dagopening
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-200 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-300 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    09:30 – 13:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Field lab #5: Tot
+                                                    onderscheiding komen.
+                                                    Introductie op de
+                                                    Geestelijke Oefening
+                                                </h6>
+                                                <p className="mb-2 text-sm text-gray-600">
+                                                    door Pieter-Matthijs
+                                                    Gijsbers
+                                                </p>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Practicum: Geestelijke
+                                                    Oefening
+                                                </h6>
+                                                <p className="mb-2 text-sm text-gray-600">
+                                                    (moderator; allen)
+                                                </p>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Reflectie #4: Nabespreking
+                                                    Geestelijke Oefening
+                                                </h6>
+                                                <p className="text-sm text-gray-600">
+                                                    (moderator; allen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    13:00 – 14:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Lunch
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Afternoon Sessions */}
+                                    <div className="rounded-lg bg-gold-300 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-400 px-3 py-1 text-sm font-medium text-gold-900">
+                                                    14:00 – 16:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Jouw verhaal en persoonlijke
+                                                    opdracht
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gray-100 p-4">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-600">
+                                                    16:00 – 16:15
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-medium text-gray-700">
+                                                    Break
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-400 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-500 px-3 py-1 text-sm font-medium text-white">
+                                                    16:15 – 16:45
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gray-800">
+                                                    Slotwoord: De uitdaging van
+                                                    het publiek leiderschap,
+                                                    revisited
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (co-moderator)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-lg bg-gold-500 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-600 px-3 py-1 text-sm font-medium text-white">
+                                                    16:45 – 17:00
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-gold-100">
+                                                    Slotwoord met persoonlijke
+                                                    opdracht
+                                                </h6>
+                                                <p className="text-sm text-gold-100">
+                                                    (moderator)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Closing Session */}
+                                    <div className="rounded-lg bg-gold-600 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="rounded-full bg-gold-700 px-3 py-1 text-sm font-medium text-white">
+                                                    17:00 – 17:30
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 className="font-semibold text-white">
+                                                    Parting glass
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </section>
+
+            {/* Call to Action */}
         </>
     );
 };
