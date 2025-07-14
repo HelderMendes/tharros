@@ -12,6 +12,7 @@ import Coaching from './pages/Coaching';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import MinisterieBZK from './pages/MinisterieBZK';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Router>
                 <div className="flex min-h-screen flex-col bg-white">
                     <Navbar />
+                    <ScrollToTop />
                     <main className="mt-24 flex-grow">
                         <Routes>
                             <Route path="/" element={<Home />} />

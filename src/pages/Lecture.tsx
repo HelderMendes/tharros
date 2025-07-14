@@ -86,15 +86,15 @@ const Lecture = () => {
             </section>
 
             {/* Introduction Section */}
-            <section className="bg-white py-20">
+            <section className="bg-white py-24">
                 <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h2 className="text-4xl font-bold text-slate-600">
                             Waarom deze lecture?
                         </h2>
                         <div className="mx-auto max-w-3xl">
-                            <div className="rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 p-8 text-lg leading-relaxed text-gray-700">
-                                <p className="mb-6">
+                            <div className="rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 pt-8 text-xl leading-loose text-gray-700">
+                                <p className="">
                                     De waan van de dag bepaalt te vaak de
                                     agenda. Goede bedoelingen lopen te vaak vast
                                     in de uitvoering. Het gesprek over waarden
