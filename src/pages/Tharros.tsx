@@ -178,7 +178,7 @@ const Tharros = () => {
             </section>
 
             {/* Leadership Section */}
-            <section className="mt-12 bg-slate-100/30 pt-20">
+            <section className="mt-12 bg-slate-100/30 py-20">
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 text-gray-700 lg:grid-cols-2">
                         <div>
@@ -232,13 +232,6 @@ const Tharros = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="mt-12 max-h-[500px]">
-                    <img
-                        src="images/Museum-of-the-Future-Dubai.jpg"
-                        alt="Museum of the Future Dubai"
-                        className="h-full w-full object-cover"
-                    />
                 </div>
             </section>
         </>

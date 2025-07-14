@@ -94,7 +94,6 @@ const Lecture = () => {
                         </h2>
                         <div className="mx-auto max-w-3xl">
                             <div className="rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 p-8 text-lg leading-relaxed text-gray-700">
-                                <Quote className="mx-auto mb-6 h-12 w-12 text-slate-600" />
                                 <p className="mb-6">
                                     De waan van de dag bepaalt te vaak de
                                     agenda. Goede bedoelingen lopen te vaak vast
@@ -152,7 +151,7 @@ const Lecture = () => {
 
                             <div className="overflow-hidden rounded-lg shadow-lg">
                                 <img
-                                    src="images/stabiliteit-en-diepgang.jpeg"
+                                    src="images/Lecture_bkg.jpeg"
                                     alt="Diepblauwe structuur - stabiliteit en diepgang"
                                     className="h-64 w-full object-cover"
                                 />
@@ -412,15 +411,6 @@ const Lecture = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Featured Image */}
-            <div className="mt-24 max-h-[500px]">
-                <img
-                    src="images/Lecture_bkg.jpeg"
-                    alt="Haagse Bluf: Over ambtelijk leiderschap – Lecture"
-                    className="h-full w-full object-cover"
-                />
-            </div>
         </>
     );
 };

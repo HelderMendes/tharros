@@ -437,15 +437,6 @@ const FerdiProfile = () => {
                     <TestimonialsSlider />
                 </div>
             </section>
-
-            {/* Featured Image */}
-            <div className="mt-12 max-h-[500px]">
-                <img
-                    src="images/Profil_ferdi.jpg"
-                    alt="Museum of the Future Dubai"
-                    className="h-full w-full object-cover"
-                />
-            </div>
         </>
     );
 };
