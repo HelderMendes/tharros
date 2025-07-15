@@ -214,7 +214,7 @@ const MinisterieBZK = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-2xl shadow-2xl">
                                 <img
-                                    src="images/Interactief-leren.jpeg"
+                                    src="images/Interactief-leren.jpeg.jpeg"
                                     alt="Workshop met handen omhoog - Interactieve leergang"
                                     className="h-96 w-full object-cover"
                                 />
@@ -324,8 +324,8 @@ const MinisterieBZK = () => {
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                         <div className="group relative overflow-hidden rounded-2xl">
                             <img
-                                src="images/footsteps-desert.jpeg"
-                                alt="Voetstappen in de woestijn - Persoonlijke reis"
+                                src="images/PersoonlijkeReis.jpeg"
+                                alt="De woestijn - Persoonlijke reis"
                                 className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                             <div className="absolute bottom-4 left-4 text-white">
