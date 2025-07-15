@@ -33,7 +33,7 @@ const Navbar = () => {
         },
         {
             name: 'Ministerie BZK\nLeergang Groeien in persoonlijk leiderschap',
-            href: '/BZK',
+            href: '/ministerie-BZK',
         },
         {
             name: 'Workshops\nMaatwerk en moderatie voor teams en organisaties',
