@@ -67,7 +67,7 @@ const Workshops = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/tree_root_growth.jpg"
+                                    src="images/ArtOfThePeople_ThomasGriesel.jpg"
                                     alt="Ferdi Licher - Senior Leadership Coach & Trainer"
                                     className="h-96 w-full object-cover"
                                 />
