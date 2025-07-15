@@ -1,21 +1,19 @@
 import { SEO } from '@/components/SEO';
 import {
-    Building2,
-    Users,
     Target,
     CheckCircle,
-    ArrowRight,
+    MessageSquare,
     Shield,
-    BookOpen,
+    Compass,
 } from 'lucide-react';
 
 const ABR = () => {
     const courseSchema = {
         '@context': 'https://schema.org',
         '@type': 'Course',
-        name: 'ABR - Algemene Bestuursdienst Rijk - De rol van politiek-ambtelijk adviseur',
+        name: 'Algemene Bestuursdienst Rijk - Oefenen met de rol van politiek-ambtelijk adviseur',
         description:
-            'Groei in persoonlijk leiderschap - een programma voor beleidsmedewerkers en medewerkers in de uitvoering en het toezicht, ontwikkeld voor en door medewerkers zelf.',
+            'In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen.',
         provider: {
             '@type': 'Organization',
             name: 'Tharros Training & Coaching',
@@ -28,387 +26,227 @@ const ABR = () => {
         educationalLevel: 'Professional',
         audience: {
             '@type': 'Audience',
-            audienceType: 'Beleidsmedewerkers en uitvoeringsmedewerkers',
+            audienceType: 'Medewerkers Algemene Bestuursdienst Rijk',
         },
     };
+
+    const kernAspecten = [
+        {
+            icon: MessageSquare,
+            title: 'Ruimte maken voor dialoog',
+            description:
+                'Hoe maak je ruimte in het gesprek met ambtelijk leidinggevende en bewindspersonen voor dialoog, tegenspraak en alternatieven.',
+        },
+        {
+            icon: Target,
+            title: 'Diepgaande reflectie',
+            description:
+                'Hoe maak je tijd voor diepgaande en brede reflectie op vraagstukken zonder vast te komen zitten in stroperige afstemming processen.',
+        },
+        {
+            icon: CheckCircle,
+            title: 'Effectieve oplossingen',
+            description:
+                'Hoe kom je tot de kern van wat er aan de hand is en tot meer effectieve, rechtvaardige en duurzame oplossingen.',
+        },
+    ];
+
+    const kompasRichtingen = [
+        'Vertrekpositie voor leiderschap',
+        '5 kerndimensies van publiek leiderschap',
+        '10 hoofdrichtingen voor ontwikkeling',
+        'Praktische toepassing in dagelijkse werkzaamheden',
+    ];
 
     return (
         <>
             <SEO
-                title="ABR - Algemene Bestuursdienst Rijk - De rol van politiek-ambtelijk adviseur"
-                description="Groei in persoonlijk leiderschap - een programma voor beleidsmedewerkers en medewerkers in de uitvoering en het toezicht, ontwikkeld voor en door medewerkers zelf."
-                keywords="algemene bestuursdienst, ABR, politiek ambtelijk adviseur, rijksoverheid, beleidsmedewerkers, persoonlijk leiderschap"
+                title="ABR - Algemene Bestuursdienst Rijk | Politiek-Ambtelijk Adviseur Training"
+                description="Oefenen met de rol van politiek-ambtelijk adviseur. Leer ruimte maken voor het goede gesprek en vul je rol krachtiger en effectiever in binnen het Ontwikkelprogramma Leiderschap van de ABR."
+                keywords="algemene bestuursdienst rijk, ABR, politiek ambtelijk adviseur, ontwikkelprogramma leiderschap, rijksoverheid, leiderschapstraining, publiek leiderschap kompas"
                 structuredData={courseSchema}
             />
-            {/* Hero Section */}
-            <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white">
-                <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+
+            {/* Featured Image Section */}
+
+            <section className="mb-12 bg-gradient-to-br from-black/95 to-gold-900 text-white">
+                <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <div className="mb-8 flex items-center space-x-4">
-                                <Building2 className="h-16 w-16 text-slate-300" />
-                                <div>
-                                    <h1 className="text-5xl font-bold tracking-tight lg:text-6xl">
-                                        ABR
-                                    </h1>
-                                    <p className="text-xl font-light text-slate-100">
-                                        Ontwikkelprogramma Leiderschap
-                                    </p>
+                            <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
+                                ABR – Algemene Bestuursdienst Rijk
+                            </h1>
+                            <p className="mb-6 text-2xl text-gold-300">
+                                Oefenen met de rol van politiek-ambtelijk
+                                adviseur
+                            </p>
+                            <p className="mb-8 text-xl font-light leading-loose">
+                                In het kader van het Ontwikkelprogramma
+                                Leiderschap van de Algemene Bestuursdienst oefen
+                                ik samen met de deelnemers hoe zij ruimte kunnen
+                                maken voor het goede gesprek en hun rol als
+                                politiek-ambtelijk adviseur krachtiger en
+                                effectiever kunnen invullen.
+                            </p>
+                            <div className="flex items-center space-x-10 text-gold-300">
+                                <div className="flex items-center">
+                                    <MessageSquare className="mr-2 inline h-5 w-5" />
+                                    Ontwikkelprogramma Leiderschap
                                 </div>
-                            </div>
-                            <p className="mb-8 text-xl font-light text-slate-100">
-                                Groei in Persoonlijk Leiderschap (incompany)
-                            </p>
-                            <p className="mb-10 text-lg font-light leading-relaxed">
-                                Training voor de rol van politiek en ambtelijk
-                                adviseur binnen het ABR programma. Leer
-                                effectief en krachtig je adviserende rol in te
-                                vullen in de complexe dynamiek tussen politiek
-                                en ambtelijke organisatie.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <div className="flex items-center rounded-full bg-slate-700 px-6 py-3">
+                                <div className="flex items-center">
                                     <Shield className="mr-2 h-5 w-5" />
-                                    <span className="font-medium">
-                                        ABR Gecertificeerd
-                                    </span>
-                                </div>
-                                <div className="flex items-center rounded-full bg-white px-6 py-3 text-slate-800">
-                                    <Users className="mr-2 h-5 w-5" />
-                                    <span className="font-medium">
-                                        Politiek-Ambtelijk
-                                    </span>
+                                    Praktijkcasussen
                                 </div>
                             </div>
                         </div>
                         <div className="relative">
-                            <img
-                                src="SocialRealism.jpg"
-                                alt="Government Advisory Training"
-                                className="rounded-none shadow-2xl"
-                            />
-                            <div className="absolute inset-0 rounded-none bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                            <div className="overflow-hidden rounded-lg shadow-2xl">
+                                <img
+                                    src="images/tree_root_growth.jpg"
+                                    alt="Ferdi Licher - Senior Leadership Coach & Trainer"
+                                    className="h-96 w-full object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ABR Context */}
-            <section className="bg-white py-20">
+            {/* Aanpak Section */}
+            <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-6 text-4xl font-semibold text-slate-800">
-                            De Politiek-Ambtelijke Relatie
+                    <div className="mb-12 text-center">
+                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
+                            Praktijkgerichte Aanpak
                         </h2>
-                        <p className="mx-auto max-w-4xl text-xl font-light leading-relaxed text-gray-600">
-                            Het ABR (Algemene Bestuursdienst) programma vormt
-                            topambtenaren die de brug slaan tussen politiek en
-                            uitvoering. Onze training bereidt u voor op deze
-                            cruciale rol in het hart van de democratie.
+                        <p className="text-gary-600 mx-auto max-w-3xl text-lg">
+                            Het oefenen vindt plaats aan de hand van casussen
+                            uit de praktijk. Deze aspecten komen aan de orde:
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                        <div className="rounded-none border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
-                                <Building2 className="h-8 w-8 text-white" />
+                    <div className="grid gap-8 md:grid-cols-3">
+                        {kernAspecten.map((aspect, index) => (
+                            <div key={index} className="group relative">
+                                <div className="h-full rounded-2xl bg-gradient-to-br from-slate-50 to-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold-500/10">
+                                        <aspect.icon className="h-6 w-6 text-gold-600" />
+                                    </div>
+                                    <h3 className="mb-4 text-xl font-semibold text-gold-600">
+                                        {aspect.title}
+                                    </h3>
+                                    <p className="leading-relaxed text-black">
+                                        {aspect.description}
+                                    </p>
+                                </div>
                             </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Ambtelijke Professionaliteit
-                            </h3>
-                            <p className="font-light leading-relaxed text-gray-600">
-                                Ontwikkel een sterke professionele identiteit
-                                als topambtenaar, gebaseerd op onpartijdigheid,
-                                integriteit en vakmanschap.
-                            </p>
-                        </div>
-
-                        <div className="rounded-none border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
-                                <Users className="h-8 w-8 text-white" />
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Politieke Sensitiviteit
-                            </h3>
-                            <p className="font-light leading-relaxed text-gray-600">
-                                Leer navigeren in de politieke arena met respect
-                                voor democratische processen en politieke
-                                verhoudingen.
-                            </p>
-                        </div>
-
-                        <div className="rounded-none border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600">
-                                <Target className="h-8 w-8 text-white" />
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Strategisch Adviseren
-                            </h3>
-                            <p className="font-light leading-relaxed text-gray-600">
-                                Ontwikkel vaardigheden om complexe
-                                beleidsvraagstukken te vertalen naar heldere
-                                adviezen en uitvoerbare plannen.
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Core Skills */}
-            <section className="bg-gray-50 py-20">
+            {/* Publiek Leiderschap Kompas Section */}
+            <section className="bg-gradient-to-br from-slate-50 to-gold-50 py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h2 className="mb-8 text-4xl font-semibold text-slate-800">
-                                Kernvaardigheden voor ABR'ers
+                            <div className="mb-6 inline-flex items-center rounded-full bg-gold-500/10 px-4 py-2 text-gold-700">
+                                <Compass className="mr-2 h-4 w-4" />
+                                Leiderschapsinstrument
+                            </div>
+                            <h2 className="mb-6 text-3xl font-bold text-gold-600">
+                                Het Kompas voor Publiek Leiderschap
                             </h2>
-                            <p className="mb-10 text-lg font-light leading-relaxed text-gray-600">
-                                Als ABR'er bent u de spil tussen politieke
-                                ambities en ambtelijke realiteit. Ons programma
-                                rust u uit met de unieke vaardigheden die nodig
-                                zijn voor deze uitdagende positie.
+                            <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                                Het kompas voor publiek leiderschap is opgesteld
+                                aan de hand van groot aantal interviews met
+                                leidinggevenden en bestaat uit een
+                                vertrekpositie, 5 kerndimensies en 10
+                                hoofdrichtingen die de zoektocht naar meer en
+                                beter leiderschap kunnen helpen vormgeven.
                             </p>
 
-                            <div className="space-y-6">
-                                <div className="flex items-start space-x-4">
-                                    <CheckCircle className="mt-1 h-6 w-6 text-slate-500" />
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-slate-800">
-                                            Strategische Analyse
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            Complexe beleidsvraagstukken
-                                            doorgronden en helder adviseren
+                            <div className="space-y-4">
+                                {kompasRichtingen.map((richting, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-start"
+                                    >
+                                        <div className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
+                                        <p className="text-gray-700">
+                                            {richting}
                                         </p>
                                     </div>
-                                </div>
-                                <div className="flex items-start space-x-4">
-                                    <CheckCircle className="mt-1 h-6 w-6 text-slate-500" />
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-slate-800">
-                                            Stakeholder Management
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            Effectief samenwerken met politici,
-                                            ambtenaren en externe partijen
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start space-x-4">
-                                    <CheckCircle className="mt-1 h-6 w-6 text-slate-500" />
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-slate-800">
-                                            Politieke Intelligentie
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            Begrip van politieke dynamiek en
-                                            democratische besluitvorming
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start space-x-4">
-                                    <CheckCircle className="mt-1 h-6 w-6 text-slate-500" />
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-slate-800">
-                                            Integriteit & Onpartijdigheid
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            Handelen vanuit professionele
-                                            waarden in politiek gevoelige
-                                            situaties
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start space-x-4">
-                                    <CheckCircle className="mt-1 h-6 w-6 text-slate-500" />
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-slate-800">
-                                            Communicatie & Invloed
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            Overtuigend presenteren en adviseren
-                                            op het hoogste niveau
-                                        </p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
-                        <div>
-                            <img
-                                src="groeps04.jpeg"
-                                alt="Strategic Advisory Skills"
-                                className="rounded-none shadow-lg"
-                            />
+                        <div className="relative">
+                            <div className="overflow-hidden rounded-full border-4 border-gold-700/30 shadow-2xl">
+                                <img
+                                    src="images/politiek-ambtelijk-samenspel.jpg"
+                                    alt="Leiderschapskompas Algemene bestuursdienst, Politiek ambtelijk samenspel"
+                                    className="w-full object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Program Structure */}
-            <section className="bg-white py-20">
+            {/* Visual Gallery Section */}
+            <section className="-mb-24 bg-slate-50 py-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-6 text-4xl font-semibold text-slate-800">
-                            Programma-opbouw
+                    <div className="mb-12 text-center">
+                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
+                            Reflectie en Perspectief
                         </h2>
-                        <p className="mx-auto max-w-4xl text-xl font-light text-gray-600">
-                            Een intensief 4-maanden durend programma, specifiek
-                            ontworpen voor ABR'ers en hun unieke uitdagingen in
-                            de politiek-ambtelijke context.
+                        <p className="mx-auto max-w-2xl text-lg text-gray-700">
+                            Leiderschap vraagt om reflectie en het vermogen om
+                            verschillende perspectieven te zien
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                        <div className="rounded-none border-2 border-slate-200 bg-white p-8 shadow-sm">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600 text-xl font-bold text-white">
-                                1
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Politiek-Ambtelijke Verhoudingen
-                            </h3>
-                            <p className="mb-6 font-light leading-relaxed text-gray-600">
-                                Verdieping in de constitutionele kaders,
-                                democratische legitimiteit en de unieke positie
-                                van de ABR'er in het bestuurlijke stelsel.
-                            </p>
-                            <ul className="space-y-2 text-sm font-light text-gray-500">
-                                <li>• Democratie en rechtsstaat</li>
-                                <li>• Rol van de ambtelijke top</li>
-                                <li>• Politieke sensitiviteit</li>
-                                <li>• Case studies uit de praktijk</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-none border-2 border-slate-200 bg-white p-8 shadow-sm">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600 text-xl font-bold text-white">
-                                2
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Strategisch Adviseren
-                            </h3>
-                            <p className="mb-6 font-light leading-relaxed text-gray-600">
-                                Praktische vaardigheden voor het analyseren van
-                                complexe beleidsvraagstukken en het formuleren
-                                van heldere adviezen.
-                            </p>
-                            <ul className="space-y-2 text-sm font-light text-gray-500">
-                                <li>• Beleidsanalyse technieken</li>
-                                <li>• Adviesvaardigheden</li>
-                                <li>• Presentatie technieken</li>
-                                <li>• Omgaan met onzekerheid</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-none border-2 border-slate-200 bg-white p-8 shadow-sm">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600 text-xl font-bold text-white">
-                                3
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Stakeholder Dynamiek
-                            </h3>
-                            <p className="mb-6 font-light leading-relaxed text-gray-600">
-                                Navigeren in complexe netwerken van politici,
-                                ambtenaren, media en maatschappelijke
-                                organisaties.
-                            </p>
-                            <ul className="space-y-2 text-sm font-light text-gray-500">
-                                <li>• Stakeholder mapping</li>
-                                <li>• Netwerk management</li>
-                                <li>• Media omgang</li>
-                                <li>• Crisis communicatie</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-none border-2 border-slate-200 bg-white p-8 shadow-sm">
-                            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-600 text-xl font-bold text-white">
-                                4
-                            </div>
-                            <h3 className="mb-4 text-xl font-semibold text-slate-800">
-                                Persoonlijk Leiderschap
-                            </h3>
-                            <p className="mb-6 font-light leading-relaxed text-gray-600">
-                                Ontwikkeling van authentiek leiderschap onder
-                                politieke druk, met focus op integriteit en
-                                professionele waarden.
-                            </p>
-                            <ul className="space-y-2 text-sm font-light text-gray-500">
-                                <li>• Persoonlijke effectiviteit</li>
-                                <li>• Omgaan met druk</li>
-                                <li>• Ethisch leiderschap</li>
-                                <li>• Work-life integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ABR Logo Section & CTA */}
-            <section className="bg-slate-800 py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <div className="mb-10 flex items-center justify-center space-x-6">
-                        <Building2 className="h-20 w-20 text-slate-300" />
-                        <div className="text-left">
-                            <h2 className="text-4xl font-bold text-white">
-                                ABR Ontwikkelprogramma
-                            </h2>
-                            <p className="text-lg font-light text-slate-100">
-                                In samenwerking met de Algemene Bestuursdienst
-                            </p>
-                        </div>
-                    </div>
-
-                    <p className="mb-10 text-xl font-light leading-relaxed text-slate-100">
-                        Bereid u voor op een succesvolle carrière als
-                        topambtenaar. Ontwikkel de vaardigheden die u nodig
-                        heeft om effectief te adviseren en leiding te geven in
-                        de complexe wereld van politiek en bestuur.
-                    </p>
-
-                    <div className="mb-10 rounded-none bg-white bg-opacity-10 p-10 backdrop-blur-sm">
-                        <div className="grid grid-cols-1 gap-8 text-white md:grid-cols-4">
-                            <div>
-                                <h3 className="mb-3 text-lg font-semibold">
-                                    Duur
-                                </h3>
-                                <p className="font-light text-slate-100">
-                                    4 maanden
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                        <div className="group relative overflow-hidden rounded-2xl">
+                            <img
+                                src="images/man-mountains.jpg"
+                                alt="Man kijkt naar bergen - Toekomstperspectief"
+                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
+                            <div className="absolute bottom-4 left-4 text-white">
+                                <p className="text-lg font-medium">
+                                    Toekomstperspectief
                                 </p>
                             </div>
-                            <div>
-                                <h3 className="mb-3 text-lg font-semibold">
-                                    Format
-                                </h3>
-                                <p className="font-light text-slate-100">
-                                    Incompany
-                                </p>
+                        </div>
+
+                        <div className="group relative overflow-hidden rounded-2xl">
+                            <img
+                                src="images/beach-sky.jpeg"
+                                alt="Zandstrand en lucht - Openheid"
+                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
+                            <div className="absolute bottom-4 left-4 text-white">
+                                <p className="text-lg font-medium">Openheid</p>
                             </div>
-                            <div>
-                                <h3 className="mb-3 text-lg font-semibold">
-                                    Doelgroep
-                                </h3>
-                                <p className="font-light text-slate-100">
-                                    ABR'ers
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="mb-3 text-lg font-semibold">
-                                    Certificering
-                                </h3>
-                                <p className="font-light text-slate-100">
-                                    ABR erkend
+                        </div>
+
+                        <div className="group relative overflow-hidden rounded-2xl">
+                            <img
+                                src="images/dramatic-clouds.jpg"
+                                alt="Zwarte witte luchten - Contrasts"
+                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
+                            <div className="absolute bottom-4 left-4 text-white">
+                                <p className="text-lg font-medium">
+                                    Balans vinden
                                 </p>
                             </div>
                         </div>
                     </div>
-
-                    <a
-                        href="/contact"
-                        className="inline-flex transform items-center rounded-none bg-white px-10 py-5 font-semibold text-slate-800 shadow-lg transition-colors duration-200 hover:-translate-y-1 hover:bg-gray-100 hover:shadow-xl"
-                    >
-                        <BookOpen className="mr-3 h-5 w-5" />
-                        <span>Informatie aanvragen</span>
-                        <ArrowRight className="ml-3 h-5 w-5" />
-                    </a>
                 </div>
             </section>
         </>
