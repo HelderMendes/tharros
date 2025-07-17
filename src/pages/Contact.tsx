@@ -424,15 +424,6 @@ const Contact = () => {
                                     <Send className="mr-3 h-5 w-5" />
                                     Verstuur Bericht
                                 </button>
-                                <button type="submit">Send</button>
-                                {status === 'SUCCESS' && (
-                                    <div>
-                                        Thank you! We will talk to you soon!
-                                    </div>
-                                )}
-                                {status === 'ERROR' && (
-                                    <div>Oops! There was an error.</div>
-                                )}
                             </form>
                         </div>
                     </div>
