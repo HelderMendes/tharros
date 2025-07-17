@@ -74,7 +74,7 @@ const ABR = () => {
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
                             <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
-                                ABR – Algemene Bestuursdienst Rijk
+                                Algemene Bestuursdienst Rijk
                             </h1>
                             <p className="mb-6 text-2xl text-gold-300">
                                 Oefenen met de rol van politiek-ambtelijk
@@ -102,7 +102,7 @@ const ABR = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/tree_root_growth.jpg"
+                                    src="images/AlgemeneBestuursdienstRijk.jpeg"
                                     alt="Ferdi Licher - Senior Leadership Coach & Trainer"
                                     className="h-96 w-full object-cover"
                                 />
@@ -187,63 +187,6 @@ const ABR = () => {
                                     alt="Leiderschapskompas Algemene bestuursdienst, Politiek ambtelijk samenspel"
                                     className="w-full object-cover"
                                 />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Visual Gallery Section */}
-            <section className="-mb-24 bg-slate-50 py-20">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Reflectie en Perspectief
-                        </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-gray-700">
-                            Leiderschap vraagt om reflectie en het vermogen om
-                            verschillende perspectieven te zien
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/man-mountains.jpg"
-                                alt="Man kijkt naar bergen - Toekomstperspectief"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Toekomstperspectief
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/beach-sky.jpeg"
-                                alt="Zandstrand en lucht - Openheid"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">Openheid</p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/dramatic-clouds.jpg"
-                                alt="Zwarte witte luchten - Contrasts"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Balans vinden
-                                </p>
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ import {
     Briefcase,
     GraduationCap,
     Heart,
-    Star,
+    Linkedin,
     Check,
     Sun,
 } from 'lucide-react';
@@ -121,7 +121,7 @@ const FerdiProfile = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/Ferdi_Profil.jpeg"
+                                    src="images/profil02.jpg"
                                     alt="Ferdi Licher - Senior Leadership Coach & Trainer"
                                     className="h-96 w-full object-cover"
                                 />
@@ -168,6 +168,19 @@ const FerdiProfile = () => {
                                         Groningen.
                                     </p>
                                 </div>
+                                <div className="mt-3">
+                                    <a
+                                        href="https://www.linkedin.com/in/ferdi-licher-20456313/#"
+                                        className="flex items-center justify-end text-gold-700 transition-colors hover:text-slate-600"
+                                        aria-label="LinkedIn"
+                                        target="new"
+                                    >
+                                        <Linkedin className="inline" />
+                                        <span className="ml-3 pt-2 font-semibold">
+                                            LinkedIn Profile
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -204,57 +217,19 @@ const FerdiProfile = () => {
                                     </li>
                                 </ul>
                             </div>
-
-                            <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
-                                <h3 className="mb-4 flex items-center text-xl font-semibold text-slate-800">
-                                    <MapPin className="mr-3 h-6 w-6 text-slate-700" />
-                                    Opleiding
-                                </h3>
-                                <ul className="space-y-3">
-                                    <li className="items-start">
-                                        <span className="text-gray-700">
-                                            <Check className="mr-2 inline-flex text-slate-700" />
-                                            Ermelo (geboorteplaats)
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="text-gray-700">
-                                            <Check className="mr-2 inline-flex text-slate-700" />
-                                            Arnhem
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="text-gray-700">
-                                            <Check className="mr-2 inline-flex text-slate-700" />
-                                            Modena, Italië
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="text-gray-700">
-                                            <Check className="mr-2 inline-flex text-slate-700" />
-                                            Amsterdam (35 jaar)
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <span className="text-gray-700">
-                                            <Check className="mr-2 inline-flex text-slate-700" />
-                                            Siracusa, Sicilië (seizoensgebonden)
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            {/* Leiderschapsvisie Section */}
-            {/* <section className='py-16 bg-white'>
-                <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='bg-gradient-to-br to-gold-900 from-black/85 rounded-lg p-8 md:p-12 text-white'>
-                        <h3 className='text-2xl font-semibold mb-6 text-slate-600'>
+
+            {/* Leadership and vision Section */}
+            <section className="mt-12 bg-slate-100/30 py-20 pt-20">
+                <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+                    <div>
+                        <h3 className="mb-8 text-3xl font-semibold text-gold-800">
                             Mijn leiderschapsvisie
                         </h3>
-                        <div className='space-y-6 leading-loose '>
+                        <div className="space-y-6 text-lg leading-relaxed">
                             <p>
                                 Als rode draad door mijn loopbaan loopt het
                                 aspect van het ontwerpen, het effectief leren
@@ -271,112 +246,11 @@ const FerdiProfile = () => {
                         </div>
                     </div>
                 </div>
-            </section> */}
-            {/* Leadership and vision Section */}
-            <section className="mt-12 bg-slate-100/30 py-20 pt-20">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-start gap-12 text-gray-700 lg:grid-cols-2">
-                        <div>
-                            <h3 className="mb-8 text-3xl font-semibold text-gold-800">
-                                Mijn leiderschapsvisie
-                            </h3>
-                            <div className="space-y-6 text-lg leading-relaxed">
-                                <p>
-                                    Als rode draad door mijn loopbaan loopt het
-                                    aspect van het ontwerpen, het effectief
-                                    leren samenspelen en het enthousiasmeren van
-                                    jonge mensen.
-                                </p>
-                                <p>
-                                    In mijn visie op leiderschap staan het
-                                    ontwikkelen van{' '}
-                                    <strong>moed en zelfvertrouwen</strong>{' '}
-                                    centraal, en het durven vertrouwen op
-                                    intuïtie en improvisatie.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
-                                <h4 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                    Directeur Bouwen en Energie
-                                </h4>
-                                <p className="text-gray-600">
-                                    Ministerie van BZK - Strategische leiding
-                                    aan beleidsontwikkeling{' '}
-                                </p>
-                            </div>
-                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
-                                <h4 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                    Programmadirecteur Verduurzaming Groningen
-                                </h4>
-                                <p className="text-gray-600">
-                                    Complexe programma's leiden in uitdagende
-                                    omstandigheden
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
-            {/* Career Experience Section */}
-            <section className="bg-slate-100/30 py-20 pt-14">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                    <h2 className="mx-auto mb-12 max-w-6xl text-center text-2xl font-semibold text-gold-800">
-                        Leidinggevende (25+ jaar ervaring) en huidige
-                        werkzaamheden
-                    </h2>
-                    <div className="grid grid-cols-1 items-start gap-6 text-gray-700 lg:grid-cols-2">
-                        <div className="rounded-lg bg-white p-4 shadow-sm">
-                            <h3 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                Tharros Training & Coaching
-                            </h3>
-                            <p className="mb-1 text-gray-600">
-                                Medio 2025 ben ik gestart met mijn bedrijf
-                                Tharros training en coaching, gericht op
-                                leiderschapsontwikkeling in de publieke sector.
-                            </p>
-                        </div>
 
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <h3 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                Comenius leergang
-                            </h3>
-                            <p className="mb-1 text-gray-600">
-                                Moderator van de Comenius leergang 'Emerging
-                                Leaders' die ik samen met Comenius heb
-                                ontwikkeld.
-                            </p>
-                        </div>
-
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <h3 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                Ministerie BZK
-                            </h3>
-                            <p className="mb-1 text-gray-600">
-                                Leergang 'Groeien in persoonlijk leiderschap'
-                                die meerdere succesvolle edities heeft
-                                doorlopen.
-                            </p>
-                        </div>
-
-                        <div className="rounded-lg bg-white p-6 shadow-sm">
-                            <h3 className="mb-2 text-xl font-semibold leading-snug text-slate-800">
-                                Algemene bestuursdienst
-                            </h3>
-                            <p className="mb-1 text-gray-600">
-                                Trainingen voor leidinggevenden op het thema
-                                politiek-ambtelijke advisering en workshops
-                                binnen het rijk.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             {/* Current Work Section */}
             <section className="bg-white py-20">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 className="mb-12 text-center text-3xl font-semibold text-slate-700">
                         Lust for life...
                     </h2>
@@ -430,9 +304,9 @@ const FerdiProfile = () => {
             </section>
             {/* Testimonials Section */}
             <section className="bg-white py-16">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 className="mb-12 text-center text-3xl font-semibold text-gold-800">
-                        Wat anderen zeggen!
+                        Wat anderen zeggen...
                     </h2>
                     <TestimonialsSlider />
                 </div>

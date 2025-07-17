@@ -45,9 +45,9 @@ const Home = () => {
             />
 
             {/* Slider Section */}
-            <section className="relative max-h-[60vh] w-full md:max-h-[40vh] xl:max-h-[55vh] 2xl:max-h-[60]">
-                <ImageSlider />
-            </section>
+            {/* <section className="relative max-h-[60vh] w-full md:max-h-[40vh] xl:max-h-[55vh] 2xl:max-h-[60]"> */}
+            <ImageSlider />
+            {/* </section> */}
 
             <section className="min-w-full">
                 {/* Profile - Below slider (shown on lg and down) */}
@@ -56,7 +56,7 @@ const Home = () => {
                         <div className="-mt-4 flex flex-1 flex-col items-center justify-center gap-3">
                             <div className="z-50 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-slate-700">
                                 <img
-                                    src="images/Ferdi01.jpeg"
+                                    src="images/Profil_FerdiLicher.jpeg"
                                     alt="Ferdi Licher"
                                     className="h-full w-full object-cover"
                                 />
@@ -65,7 +65,7 @@ const Home = () => {
                                 Ferdi Licher
                             </h3>
                             <p className="text-center text-2xl font-medium leading-tight text-gold-100">
-                                Senior Leadership Coach & Trainer
+                                Moderator, Trainer en Coach
                             </p>
                             <ReferencesSlider />
                         </div>
@@ -73,7 +73,7 @@ const Home = () => {
                 </div>
             </section>
             {/* Services Section */}
-            <section className="bg-white py-20 2xl:mt-24">
+            <section className="mt-24 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         <ServiceBlock
@@ -109,7 +109,7 @@ const Home = () => {
                         />
 
                         <ServiceBlock
-                            title="ABR – Algemene Bestuursdienst Rijk"
+                            title="Algemene Bestuursdienst Rijk"
                             subtitle="Oefenen met de rol van politiek-ambtelijk adviseur"
                             intro="In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen."
                             href="abr"

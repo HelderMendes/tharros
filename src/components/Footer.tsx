@@ -16,10 +16,8 @@ const Footer = () => {
                             />
                         </Link>
                         <p className="mb-6 font-light leading-relaxed text-gray-300">
-                            Specialist in leiderschap en ambtelijk vakmanschap
-                            voor de publieke sector. Wij ontwikkelen de leiders
-                            van morgen door middel van praktijkgerichte training
-                            en coaching programma's.
+                            Training en Coaching op het gebied van leiderschap
+                            en ambtelijk vakmanschap in de publieke sector
                         </p>
                         <div className="mt-24">
                             <h3 className="mb-8 text-2xl font-semibold">
@@ -83,9 +81,7 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="mb-8 text-2xl font-semibold">
-                            Onze Diensten
-                        </h3>
+                        <h3 className="mb-8 text-2xl font-semibold">Menu</h3>
                         <ul className="space-y-3">
                             <li>
                                 <a
@@ -150,7 +146,7 @@ const Footer = () => {
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
-                                        ABR – Algemene Bestuursdienst Rijk
+                                        Algemene Bestuursdienst Rijk
                                     </span>
                                     <br />
                                     Oefenen met de rol van politiek-ambtelijk

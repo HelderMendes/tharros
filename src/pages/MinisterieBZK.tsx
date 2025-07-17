@@ -133,7 +133,7 @@ const MinisterieBZK = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/woestijn.jpg"
+                                    src="images/MinisterieBKZ.jpeg"
                                     alt="Voetstappen in de woestijn - Persoonlijke groei"
                                     className="h-96 w-full object-cover"
                                 />
@@ -177,55 +177,67 @@ const MinisterieBZK = () => {
             </section>
 
             {/* Programma Opzet Section */}
-            <section className="bg-gradient-to-br from-slate-50 to-gold-50 py-16">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-                        <div>
-                            <div className="mb-6 inline-flex items-center rounded-full bg-gold-500/10 px-4 py-2 text-gold-700">
-                                <Calendar className="mr-2 h-4 w-4" />
-                                Programma Opzet
-                            </div>
-                            <h2 className="mb-6 text-3xl font-bold text-gold-600">
-                                Flexibel en Maatwerk
-                            </h2>
-                            <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                                De leergang bestaat standaard uit 8 modules van
-                                een dagdeel die worden verdeeld over een periode
-                                van 8 maanden. De groep kiest in een
-                                startbijeenkomst zelf welke 8 thema's centraal
-                                zullen staan. Daarbij zorgt de moderator voor
-                                samenhang in het programma en een rode draad.
-                            </p>
+            <section className="mx-auto max-w-5xl bg-white px-4 py-16 sm:px-6 lg:px-8">
+                <h2 className="mb-6 text-3xl font-bold text-gold-600">
+                    Unieke Groepsdynamiek
+                </h2>
+                <p className="mb-6 text-lg leading-relaxed text-gray-600">
+                    De leergang staat open voor alle medewerkers van
+                    ondersteuners tot senior-coördinerend medewerkers. De groep
+                    bestaat bij voorkeur uit 16 deelnemers uit hetzelfde
+                    organisatieonderdeel, waarbij zij in tweetallen
+                    verantwoordelijk zijn voor het ontwikkelen en verzorgen van
+                    een van de modules.
+                </p>
+                <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                    Zowel dat men elkaar onderling al enigszins kent, als dat de
+                    leergang open staat voor iedereen wordt zeer positief
+                    gewaardeerd en blijkt een positieve invloed op het
+                    groepsproces te hebben omdat er hierdoor ook onderdeel
+                    coaching plaatsvindt.
+                </p>
+                <div className="rounded-lg bg-gold-500/10 p-6">
+                    <h3 className="mb-3 text-lg font-semibold text-gold-600">
+                        Langetermijn Impact
+                    </h3>
+                    <p className="text-gray-700">
+                        Wanneer dit meerdere jaren achtereen herhaald wordt
+                        binnen hetzelfde organisatieonderdeel met steeds een
+                        nieuwe groep deelnemers zorgt dit voor enorme
+                        versterking van het onderlinge teamgevoel.
+                    </p>
+                </div>
 
-                            <div className="space-y-4">
-                                {programmaDetails.map((detail, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start"
-                                    >
-                                        <div className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
-                                        <p className="text-gray-700">
-                                            {detail}
-                                        </p>
-                                    </div>
-                                ))}
+                <div className="relative mt-24">
+                    <div className="mb-6 inline-flex items-center rounded-full bg-gold-500/10 px-4 py-2 text-gold-700">
+                        <Calendar className="mr-2 h-4 w-4" />
+                        Programma Opzet
+                    </div>
+                    <h2 className="mb-6 text-3xl font-bold text-gold-600">
+                        Flexibel en Maatwerk
+                    </h2>
+                    <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                        De leergang bestaat standaard uit 8 modules van een
+                        dagdeel die worden verdeeld over een periode van 8
+                        maanden. De groep kiest in een startbijeenkomst zelf
+                        welke 8 thema's centraal zullen staan. Daarbij zorgt de
+                        moderator voor samenhang in het programma en een rode
+                        draad.
+                    </p>
+
+                    <div className="space-y-4">
+                        {programmaDetails.map((detail, index) => (
+                            <div key={index} className="flex items-start">
+                                <div className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
+                                <p className="text-gray-700">{detail}</p>
                             </div>
-                        </div>
-                        <div className="relative">
-                            <div className="overflow-hidden rounded-2xl shadow-2xl">
-                                <img
-                                    src="images/Interactief-leren.jpeg"
-                                    alt="Workshop met handen omhoog - Interactieve leergang"
-                                    className="h-96 w-full object-cover"
-                                />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* Voordelen Section */}
-            <section className="bg-white py-16">
+            <section className="-mb-24 mt-12 bg-slate-300/10 py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
                         <h2 className="mb-4 text-3xl font-bold text-gold-600">
@@ -238,9 +250,12 @@ const MinisterieBZK = () => {
                         </p>
                     </div>
 
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {programmaVoordelen.map((voordeel, index) => (
-                            <div key={index} className="text-center">
+                            <div
+                                key={index}
+                                className="rounded-lg border border-gray-400/20 px-3 pb-4 pt-5 text-center shadow-md"
+                            >
                                 <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/10">
                                     <voordeel.icon className="h-8 w-8 text-gold-600" />
                                 </div>
@@ -252,114 +267,6 @@ const MinisterieBZK = () => {
                                 </p>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Unieke Aanpak Section */}
-            <section className="bg-gradient-to-br from-slate-50 to-gold-50 py-16">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-                        <div className="relative">
-                            <div className="overflow-hidden rounded-2xl shadow-2xl">
-                                <img
-                                    src="images/medewerkers.jpeg"
-                                    alt="Medewerkers van ondersteuners tot senior-coördinerend
-                                medewerkers"
-                                    className="w-full object-cover"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-3xl font-bold text-gold-600">
-                                Unieke Groepsdynamiek
-                            </h2>
-                            <p className="mb-6 text-lg leading-relaxed text-gray-600">
-                                De leergang staat open voor alle medewerkers van
-                                ondersteuners tot senior-coördinerend
-                                medewerkers. De groep bestaat bij voorkeur uit
-                                16 deelnemers uit hetzelfde
-                                organisatieonderdeel, waarbij zij in tweetallen
-                                verantwoordelijk zijn voor het ontwikkelen en
-                                verzorgen van een van de modules.
-                            </p>
-                            <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                                Zowel dat men elkaar onderling al enigszins
-                                kent, als dat de leergang open staat voor
-                                iedereen wordt zeer positief gewaardeerd en
-                                blijkt een positieve invloed op het groepsproces
-                                te hebben omdat er hierdoor ook onderdeel
-                                coaching plaatsvindt.
-                            </p>
-                            <div className="rounded-lg bg-gold-500/10 p-6">
-                                <h3 className="mb-3 text-lg font-semibold text-gold-600">
-                                    Langetermijn Impact
-                                </h3>
-                                <p className="text-gray-700">
-                                    Wanneer dit meerdere jaren achtereen
-                                    herhaald wordt binnen hetzelfde
-                                    organisatieonderdeel met steeds een nieuwe
-                                    groep deelnemers zorgt dit voor enorme
-                                    versterking van het onderlinge teamgevoel.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Visual Gallery Section */}
-            <section className="-mb-24 bg-slate-50 py-20">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Groei en Ontwikkeling
-                        </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-gray-700">
-                            Persoonlijk leiderschap ontwikkelt zich door
-                            gezamenlijke reflectie en praktische toepassing
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/PersoonlijkeReis.jpeg"
-                                alt="De woestijn - Persoonlijke reis"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Persoonlijke reis
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/workshop-hands-up_BKZ.jpeg"
-                                alt="Workshop interactie - Samen leren"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Samen leren
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="images/group-church.jpeg"
-                                alt="Groep mensen - Gemeenschapsgevoel"
-                                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Gemeenschapsgevoel
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

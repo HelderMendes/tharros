@@ -68,9 +68,9 @@ const Tharros = () => {
                         </div>
                         <div className="relative inset-0 rounded-lg bg-gradient-to-t from-gold-900/50 to-transparent">
                             <img
-                                src="images/TheFourCardinalVirtues-appearing-to-SaintJerome.jpg"
+                                src="images/Tharros_hero.jpeg"
                                 alt="De vier hoofddeugden die aan Sint-Hiëronymus verschijnen (Pietro Testa)"
-                                className="rounded-sm shadow-2xl"
+                                className="w-full rounded-sm object-fill shadow-2xl"
                             />
                         </div>
                     </div>
@@ -179,59 +179,29 @@ const Tharros = () => {
 
             {/* Leadership Section */}
             <section className="mt-12 bg-slate-100/30 py-20">
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 items-center gap-12 text-gray-700 lg:grid-cols-2">
-                        <div>
-                            <h3 className="mb-8 text-3xl font-semibold text-gold-800">
-                                Leiderschap in de publieke sector
-                            </h3>
-                            <div className="space-y-6 leading-relaxed">
-                                <p>
-                                    Leiderschap in de publieke sector vraagt
-                                    wijsheid, kunnen luisteren en doorvragen,
-                                    maar ook dat je richting durft te geven en
-                                    de koers weet uit te zetten.
-                                </p>
-                                <p>
-                                    In de training en coaching gaat het om
-                                    kunnen en durven vertrouwen op jezelf, echt
-                                    weten waar je het over hebt, verbinding
-                                    kunnen maken juist ook als het ingewikkeld
-                                    wordt, richting durven geven en het in
-                                    openheid durven spreken over wat er op dat
-                                    moment toe doet.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
-                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
-                                    Wijsheid & Luisteren
-                                </h4>
-                                <p className="text-gray-600">
-                                    Kunnen luisteren en doorvragen met wijsheid
-                                </p>
-                            </div>
-                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
-                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
-                                    Richting Durven Geven
-                                </h4>
-                                <p className="text-gray-600">
-                                    Koers bepalen en leiding nemen wanneer nodig
-                                </p>
-                            </div>
-                            <div className="rounded-lg border border-gray-200 bg-white/75 p-5 shadow-sm">
-                                <h4 className="mb-2 text-xl font-semibold text-slate-800">
-                                    Authentieke Verbinding
-                                </h4>
-                                <p className="text-gray-600">
-                                    Echte verbinding maken, ook in complexe
-                                    situaties
-                                </p>
-                            </div>
+                <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+                    <div>
+                        <h3 className="mb-8 text-3xl font-semibold text-gold-800">
+                            Leiderschap in de publieke sector
+                        </h3>
+                        <div className="space-y-6 leading-relaxed">
+                            <p>
+                                Leiderschap in de publieke sector vraagt
+                                wijsheid, kunnen luisteren en doorvragen, maar
+                                ook dat je richting durft te geven en de koers
+                                weet uit te zetten.
+                            </p>
+                            <p>
+                                In de training en coaching gaat het om kunnen en
+                                durven vertrouwen op jezelf, echt weten waar je
+                                het over hebt, verbinding kunnen maken juist ook
+                                als het ingewikkeld wordt, richting durven geven
+                                en het in openheid durven spreken over wat er op
+                                dat moment toe doet.
+                            </p>
                         </div>
                     </div>
+                    <div className="grid grid-cols-1 items-center gap-12 text-gray-700 lg:grid-cols-2"></div>
                 </div>
             </section>
         </>

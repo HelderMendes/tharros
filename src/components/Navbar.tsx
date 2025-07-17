@@ -28,7 +28,7 @@ const Navbar = () => {
             href: '/comenius',
         },
         {
-            name: 'ABR – Algemene Bestuursdienst Rijk\nOefenen met de rol van politiek-ambtelijk adviseur',
+            name: 'Algemene Bestuursdienst Rijk\nOefenen met de rol van politiek-ambtelijk adviseur',
             href: '/ABR',
         },
         {

@@ -1,6 +1,5 @@
 // workshops.jsx
-import React from 'react';
-import { Users, Award, CheckCircle, ArrowRight, Briefcase } from 'lucide-react';
+import { Users, Award, CheckCircle, Briefcase } from 'lucide-react';
 
 const kernAspecten = [
     {
@@ -21,13 +20,6 @@ const kernAspecten = [
         description:
             "Ervaring met Comenius, College Tour-style, morele dilemma's, publiek actief betrokken.",
     },
-];
-
-const kompasRichtingen = [
-    'Vertrekpositie voor leiderschap',
-    '5 kerndimensies van publiek leiderschap',
-    '10 hoofdrichtingen voor ontwikkeling',
-    'Praktische toepassing in dagelijkse werkzaamheden',
 ];
 
 const Workshops = () => {
@@ -67,7 +59,7 @@ const Workshops = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/ArtOfThePeople_ThomasGriesel.jpg"
+                                    src="images/workshops_intro.jpeg"
                                     alt="Ferdi Licher - Senior Leadership Coach & Trainer"
                                     className="h-96 w-full object-cover"
                                 />
@@ -114,66 +106,6 @@ const Workshops = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Visual Gallery Section */}
-            <section className="-mb-24 bg-slate-50 py-20">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Indrukken uit eerdere workshops
-                        </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-gray-700">
-                            Place holder fo text lLorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Quo aut qui sapiente
-                            reprehenderit ducimus architecto iusto.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="/images/Lecture_bkg.jpeg"
-                                alt="Foto met Diederik Samsom"
-                                className="h-52 w-full rounded-lg object-cover shadow-md"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Speciaal adviseur
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="/images/groeps01.jpeg"
-                                alt="Groepje mensen met naast een harp"
-                                className="h-52 w-full rounded-lg object-cover shadow-md"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Voor teams en organisaties
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="group relative overflow-hidden rounded-2xl">
-                            <img
-                                src="/images/workshops.jpeg"
-                                alt="Zaal met geel licht en mensen op de rug gezien"
-                                className="h-52 w-full rounded-lg object-cover shadow-md"
-                            />
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div> */}
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <p className="text-lg font-medium">
-                                    Gastspreker
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

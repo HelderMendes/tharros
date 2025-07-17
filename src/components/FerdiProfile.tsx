@@ -13,7 +13,7 @@ export default function FerdiProfile({
                         Ferdi Licher
                     </h3>
                     <p className="pt-2 text-right text-xl font-medium leading-tight text-slate-900">
-                        Senior Leadership Coach & Trainer
+                        Moderator, Trainer en Coach
                     </p>
                 </div>
                 <div className="h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-y-2 border-primary/20 border-zinc-300">
@@ -25,9 +25,8 @@ export default function FerdiProfile({
                 </div>
             </div>
             <p className="flex-1 pt-3 leading-relaxed text-muted-foreground text-white">
-                Met meer dan 15 jaar ervaring in de publieke sector,
-                specialiseert Ferdi zich in het ontwikkelen van authentiek
-                leiderschap en effectief vakmanschap.
+                Training en Coaching op het gebied van leiderschap en ambtelijk
+                vakmanschap in de publieke sector
             </p>
         </div>
     );
