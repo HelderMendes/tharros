@@ -62,8 +62,8 @@ const ABR = () => {
         <>
             <SEO
                 title="ABR - Algemene Bestuursdienst Rijk | Politiek-Ambtelijk Adviseur Training"
-                description="Oefenen met de rol van politiek-ambtelijk adviseur. Leer ruimte maken voor het goede gesprek en vul je rol krachtiger en effectiever in binnen het Ontwikkelprogramma Leiderschap van de ABR."
-                keywords="algemene bestuursdienst rijk, ABR, politiek ambtelijk adviseur, ontwikkelprogramma leiderschap, rijksoverheid, leiderschapstraining, publiek leiderschap kompas"
+                description="Specialistische training voor ABR'ers: Oefenen met de rol van politiek-ambtelijk adviseur. Leer ruimte maken voor het goede gesprek en vul je rol krachtiger en effectiever in binnen het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst Rijk."
+                keywords="algemene bestuursdienst rijk, ABR training, politiek ambtelijk adviseur, ontwikkelprogramma leiderschap abr, rijksoverheid training, leiderschapstraining abr, publiek leiderschap kompas, abr coaching, ministerie training, topambtenaren training"
                 structuredData={courseSchema}
             />
 

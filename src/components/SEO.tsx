@@ -33,8 +33,12 @@ export const SEO = ({
     const fullTitle = `${title} | Tharros Training & Coaching`;
     const finalOgTitle = ogTitle || title;
     const finalOgDescription = ogDescription || description;
-    const finalCanonical = canonical || window.location.href;
-    const finalOgUrl = ogUrl || window.location.href;
+    const finalCanonical =
+        canonical ||
+        (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
+    const finalOgUrl =
+        ogUrl ||
+        (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
     const finalOgImage = ogImage.startsWith('http')
         ? ogImage
         : `${siteUrl}${ogImage}`;
@@ -52,6 +56,11 @@ export const SEO = ({
             <meta name="robots" content="index, follow" />
             <meta name="language" content="nl" />
             <meta name="revisit-after" content="7 days" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+            />
+            <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
             {/* Canonical URL */}
             <link rel="canonical" href={finalCanonical} />
@@ -80,6 +89,19 @@ export const SEO = ({
             <meta name="coverage" content="Worldwide" />
             <meta name="distribution" content="Global" />
             <meta name="rating" content="General" />
+
+            {/* Business/Organization Meta Tags */}
+            <meta
+                name="business:contact_data:street_address"
+                content="Amsterdam"
+            />
+            <meta name="business:contact_data:locality" content="Amsterdam" />
+            <meta name="business:contact_data:region" content="Noord-Holland" />
+            <meta name="business:contact_data:postal_code" content="1000 AA" />
+            <meta
+                name="business:contact_data:country_name"
+                content="Nederland"
+            />
 
             {/* Structured Data */}
             {structuredData && (

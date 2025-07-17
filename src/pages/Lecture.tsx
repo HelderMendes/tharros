@@ -34,8 +34,8 @@ const Lecture = () => {
         <>
             <SEO
                 title="Lecture - Over Ambtelijk Vakmanschap | Reflectie op Publieke Waarden"
-                description="Een inspirerende lecture over ambtelijk vakmanschap door Ferdi Licher. Ontdek wat er echt toe doet in de publieke sector, reflecteer op waarden en waarheid, en leer hoe je als ambtenaar het verschil kunt maken."
-                keywords="lecture ambtelijk vakmanschap, publieke sector lecture, overheid waarden, ambtelijke integriteit, politiek ongeduld, thorbecke huis, publieke onvrede, processturing, ferdi licher lecture"
+                description="Een inspirerende lecture over ambtelijk vakmanschap door Ferdi Licher. Ontdek wat er echt toe doet in de publieke sector, reflecteer op waarden en waarheid, en leer hoe je als ambtenaar het verschil kunt maken. Download de volledige PDF."
+                keywords="lecture ambtelijk vakmanschap, publieke sector lecture, overheid waarden, ambtelijke integriteit, politiek ongeduld, thorbecke huis, publieke onvrede, processturing, ferdi licher lecture, haagse bluf, leefwereld mensen, weberiaanse bureaucratie, moreel ethische dilemma's"
                 structuredData={lectureSchema}
             />
 

@@ -1,16 +1,65 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import {
     Mail,
     Phone,
+    Briefcase,
     MapPin,
     Send,
     Building2,
-    Clock,
     CheckCircle,
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+    const form = useRef<HTMLFormElement>(null);
+
+    const navigate = useNavigate();
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!form.current) {
+            console.error('Form reference is null');
+            return;
+        }
+
+        console.log('Sending email with form data:', formData);
+
+        emailjs
+            .sendForm(
+                'service_tnwwd7h',
+                // 'template_4x9g9fz',
+                'template_lzuedzh',
+                form.current,
+                {
+                    publicKey: '9-5OzkJ4Bu11JvnC9',
+                }
+            )
+            .then(
+                (result) => {
+                    console.log('Email sent successfully:', result.text);
+                    setIsSubmitted(true);
+                    setTimeout(() => {
+                        setIsSubmitted(true);
+                        setFormData({
+                            name: '',
+                            email: '',
+                            organization: '',
+                            phone: '',
+                            interest: '',
+                            message: '',
+                        });
+                    }, 3000);
+                },
+                (error) => {
+                    console.error('Email send failed:', error);
+                    alert('Er is iets fout gegaan, probeer het later opnieuw.');
+                }
+            );
+    };
+
     const contactSchema = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
@@ -23,7 +72,7 @@ const Contact = () => {
             contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
-                email: 'info@tharros-trainingcoaching.nl',
+                email: 'info@helderdesign.nl',
             },
         },
     };
@@ -49,30 +98,26 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        setIsSubmitted(true);
+    useEffect(() => {
+        let timer: NodeJS.Timeout;
+        if (isSubmitted === true) {
+            timer = setTimeout(() => {
+                navigate('/');
+            }, 3000);
+        }
+        return () => clearTimeout(timer);
+    }, [isSubmitted, navigate]);
 
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({
-                name: '',
-                email: '',
-                organization: '',
-                phone: '',
-                interest: '',
-                message: '',
-            });
-        }, 3000);
-    };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     if (isSubmitted) {
         return (
             <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-50 to-white pt-20">
                 <div className="text-center">
                     <CheckCircle className="mx-auto mb-6 h-16 w-16 text-slate-500" />
-                    <h1 className="mb-4 text-3xl font-semibold text-slate-800">
+                    <h1 className="mb-4 text-3xl font-semibold text-gold-600">
                         Bedankt voor uw bericht!
                     </h1>
                     <p className="mb-6 text-lg font-light text-gray-600">
@@ -87,34 +132,54 @@ const Contact = () => {
     return (
         <>
             <SEO
-                title="Contact - Neem contact op"
-                description="Neem contact op met Tharros Training & Coaching voor meer informatie over onze leiderschapsprogramma's en coaching services voor de publieke sector."
-                keywords="contact, tharros training coaching, leiderschapstraining contact, coaching contact, publieke sector training"
+                title="Contact - Neem Contact Op met Tharros Training & Coaching"
+                description="Neem contact op met Ferdi Licher van Tharros Training & Coaching voor meer informatie over onze leiderschapsprogramma's, coaching services en trainingen voor de publieke sector. Telefoon, email en contactformulier beschikbaar."
+                keywords="contact tharros, ferdi licher contact, leiderschapstraining contact, coaching contact, publieke sector training contact, overheid coaching contact, ambtelijk coaching contact, training aanvragen"
                 structuredData={contactSchema}
             />
-            {/* Hero Section */}
-            <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white">
-                <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-                    <div className="text-center">
-                        <h1 className="mb-8 text-5xl font-bold tracking-tight lg:text-6xl">
-                            Contact
-                        </h1>
-                        <p className="mx-auto mb-10 max-w-4xl text-xl font-light text-slate-100">
-                            Klaar om de volgende stap te zetten in uw
-                            leiderschapsontwikkeling? Neem contact op voor een
-                            vrijblijvend gesprek over de mogelijkheden.
-                        </p>
+            {/* Featured Image Section */}
+            <section className="bg-gradient-to-t from-black/85 to-gold-900 text-white">
+                <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+                        <div>
+                            <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
+                                Contact
+                            </h1>
+                            <p className="mb-6 text-2xl text-slate-600">
+                                Ferdi Licher
+                            </p>
+                            <p className="mb-8 text-xl font-light leading-loose">
+                                Klaar om de volgende stap te zetten in uw
+                                leiderschapsontwikkeling? Neem contact op voor
+                                een vrijblijvend gesprek over de mogelijkheden.
+                            </p>
+                            <div className="flex items-center space-x-10 text-slate-600">
+                                <div className="flex items-center">
+                                    <Briefcase className="mr-3 size-4" />
+                                    <span>Moderator, trainer en coach</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative">
+                            <div className="overflow-hidden rounded-xl shadow-2xl">
+                                <img
+                                    src="images/contact.jpeg"
+                                    alt="Ferdi Licher - Senior Leadership Coach & Trainer"
+                                    className="h-96 w-full object-cover grayscale"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="bg-gray-50 py-20">
+            <section className="-mb-24 bg-gray-50 py-32">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
                         {/* Contact Information */}
                         <div className="space-y-10">
                             <div>
-                                <h2 className="mb-8 text-4xl font-semibold text-slate-800">
+                                <h2 className="mb-8 text-4xl font-semibold text-gold-600">
                                     Neem Contact Op
                                 </h2>
                                 <p className="mb-10 text-lg font-light leading-relaxed text-gray-600">
@@ -131,7 +196,7 @@ const Contact = () => {
                                         <Building2 className="h-6 w-6 text-slate-600" />
                                     </div>
                                     <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-800">
+                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
                                             Ferdi Licher
                                         </h3>
                                         <p className="font-light text-gray-600">
@@ -148,7 +213,7 @@ const Contact = () => {
                                         <Phone className="h-6 w-6 text-slate-600" />
                                     </div>
                                     <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-800">
+                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
                                             Telefoon
                                         </h3>
                                         <p className="font-light text-gray-600">
@@ -165,7 +230,7 @@ const Contact = () => {
                                         <Mail className="h-6 w-6 text-slate-600" />
                                     </div>
                                     <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-800">
+                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
                                             E-mail
                                         </h3>
                                         <p className="font-light text-gray-600">
@@ -182,7 +247,7 @@ const Contact = () => {
                                         <MapPin className="h-6 w-6 text-slate-600" />
                                     </div>
                                     <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-800">
+                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
                                             Locatie
                                         </h3>
                                         <p className="font-light text-gray-600">
@@ -194,30 +259,20 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Response Time */}
-                            <div className="rounded-none border border-slate-200 bg-slate-50 p-8">
-                                <div className="mb-4 flex items-center space-x-4">
-                                    <Clock className="h-6 w-6 text-slate-600" />
-                                    <h3 className="text-lg font-semibold text-slate-800">
-                                        Snelle Respons
-                                    </h3>
-                                </div>
-                                <p className="font-light text-slate-700">
-                                    We streven ernaar om binnen 24 uur te
-                                    reageren op uw aanvraag. Voor spoedeisende
-                                    zaken kunt u direct bellen.
-                                </p>
-                            </div>
                         </div>
 
                         {/* Contact Form */}
-                        <div className="rounded-none border border-gray-200 bg-white p-10 shadow-sm">
-                            <h3 className="mb-8 text-3xl font-semibold text-slate-800">
+                        <div className="rounded-none bg-white p-10 shadow-sm">
+                            <h3 className="mb-8 text-3xl font-semibold text-slate-600">
                                 Verstuur een Bericht
                             </h3>
 
-                            <form onSubmit={handleSubmit} className="space-y-8">
+                            {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
+                            <form
+                                ref={form}
+                                onSubmit={sendEmail}
+                                className="space-y-6"
+                            >
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                     <div>
                                         <label
@@ -233,7 +288,7 @@ const Contact = () => {
                                             required
                                             value={formData.name}
                                             onChange={handleChange}
-                                            className="w-full rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                            className="w-full rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                             placeholder="Uw volledige naam"
                                         />
                                     </div>
@@ -252,7 +307,7 @@ const Contact = () => {
                                             required
                                             value={formData.email}
                                             onChange={handleChange}
-                                            className="w-full rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                            className="w-full rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                             placeholder="uw.email@organisatie.nl"
                                         />
                                     </div>
@@ -272,7 +327,7 @@ const Contact = () => {
                                             name="organization"
                                             value={formData.organization}
                                             onChange={handleChange}
-                                            className="w-full rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                            className="w-full rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                             placeholder="Uw organisatie"
                                         />
                                     </div>
@@ -290,7 +345,7 @@ const Contact = () => {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            className="w-full rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                            className="w-full rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                             placeholder="06-12345678"
                                         />
                                     </div>
@@ -308,30 +363,34 @@ const Contact = () => {
                                         name="interest"
                                         value={formData.interest}
                                         onChange={handleChange}
-                                        className="w-full rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                        className="w-full rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                     >
                                         <option value="">
                                             Selecteer een programma
                                         </option>
                                         <option value="lecture">
-                                            Lecture - Programma Doorgroeien in
-                                            Leiderschap
+                                            Lecture, Over ambtelijke vakmanschap
                                         </option>
                                         <option value="comenius">
-                                            Comenius - Emerging Leaders Leergang
+                                            Comenius, Leergang Emerging leaders
+                                            in de publieke sector
                                         </option>
                                         <option value="ABR">
-                                            ABR - Ontwikkelprogramma Leiderschap
+                                            Algemene Bestuursdienst Rijk,
+                                            Oefenen met de rol van
+                                            politiek-ambtelijk adviseur
                                         </option>
                                         <option value="BZK">
-                                            BZK - Programma Doorgroeien in
-                                            Leiderschap
+                                            Ministerie BZK, Leergang Groeien in
+                                            persoonlijk leiderschap
                                         </option>
                                         <option value="workshops">
-                                            Workshops
+                                            Workshops, Maatwerk en moderatie
+                                            voor teams en organisaties
                                         </option>
                                         <option value="coaching">
-                                            Individuele Coaching & Mentorschap
+                                            Individuele Trajecten, Persoonlijke
+                                            coaching en mentorschap
                                         </option>
                                         <option value="other">
                                             Anders / Algemene vraag
@@ -353,18 +412,27 @@ const Contact = () => {
                                         required
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="w-full resize-none rounded-none border border-gray-300 px-4 py-4 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
+                                        className="w-full resize-none rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
                                         placeholder="Vertel ons over uw situatie, doelen of vragen..."
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="flex w-full transform items-center justify-center rounded-none bg-slate-600 px-8 py-5 font-semibold text-white shadow-sm transition-colors duration-200 hover:-translate-y-1 hover:bg-slate-700 hover:shadow-md"
+                                    className="flex w-full transform items-center justify-center rounded-xl bg-gradient-to-t from-black/85 to-gold-900 py-3 font-semibold text-white shadow-sm transition-colors duration-200 hover:-translate-y-1 hover:bg-gradient-to-t hover:from-slate-500/85 hover:to-slate-900 hover:shadow-md"
                                 >
                                     <Send className="mr-3 h-5 w-5" />
                                     Verstuur Bericht
                                 </button>
+                                <button type="submit">Send</button>
+                                {status === 'SUCCESS' && (
+                                    <div>
+                                        Thank you! We will talk to you soon!
+                                    </div>
+                                )}
+                                {status === 'ERROR' && (
+                                    <div>Oops! There was an error.</div>
+                                )}
                             </form>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 // workshops.jsx
 import { Users, Award, CheckCircle, Briefcase } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const kernAspecten = [
     {
@@ -23,8 +24,33 @@ const kernAspecten = [
 ];
 
 const Workshops = () => {
+    const serviceSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Workshops - Maatwerk en moderatie voor teams en organisaties',
+        description:
+            'Professionele workshops en moderatie voor teams en organisaties. Oplossingsgerichte begeleiding, podiumgesprekken en maatwerk voor uiteenlopende sectoren.',
+        provider: {
+            '@type': 'Organization',
+            name: 'Tharros Training & Coaching',
+            url: 'https://tharros.nl',
+        },
+        serviceType: 'Workshop Facilitation',
+        areaServed: 'Nederland',
+        audience: {
+            '@type': 'Audience',
+            audienceType: 'Teams en organisaties publieke en private sector',
+        },
+    };
+
     return (
         <>
+            <SEO
+                title="Workshops - Maatwerk en Moderatie voor Teams en Organisaties"
+                description="Professionele workshops en moderatie voor teams en organisaties. Oplossingsgerichte begeleiding, podiumgesprekken en maatwerk voor overheidsinstellingen, NGOs en private sector."
+                keywords="workshops, moderatie, teamworkshops, organisatie workshops, podiumgesprekken, workshop facilitatie, team training, groepsdynamiek, overheid workshops, NGO workshops, bedrijfsworkshops"
+                structuredData={serviceSchema}
+            />
             {/* Hero Section */}
             <section className="mb-12 bg-gradient-to-br from-black/95 to-gold-900 text-white">
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

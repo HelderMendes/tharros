@@ -39,8 +39,8 @@ const Home = () => {
         <>
             <SEO
                 title="Tharros – Leiderschapstraining & Coaching voor de Publieke Sector"
-                description="Tharros Training & Coaching biedt gespecialiseerde leiderschapstraining en coaching voor professionals in de publieke sector. Ontdek onze programma's voor persoonlijke ontwikkeling en ambtelijk vakmanschap."
-                keywords="leiderschapstraining, coaching publieke sector, ambtelijk vakmanschap, overheid training, persoonlijke ontwikkeling, management training, leiderschap nederland"
+                description="Tharros Training & Coaching biedt gespecialiseerde leiderschapstraining, coaching en mentorschap voor professionals in de publieke sector. Ontwikkel ambtelijk vakmanschap, persoonlijke ontwikkeling en effectief leiderschap met Ferdi Licher."
+                keywords="leiderschapstraining publieke sector, coaching publieke sector, ambtelijk vakmanschap, overheid training, persoonlijke ontwikkeling, management training publieke sector, leiderschap nederland, ferdi licher, tharros training coaching, rijksoverheid coaching"
                 structuredData={organizationSchema}
             />
 

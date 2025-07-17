@@ -92,9 +92,9 @@ const MinisterieBZK = () => {
     return (
         <>
             <SEO
-                title="Ministerie BZK - Leergang Groeien in persoonlijk leiderschap"
-                description="In-company leergang voor en door medewerkers zelf gemaakt. Persoonlijke leerdoelen, communicatie en effectief handelen in beleid en uitvoering."
-                keywords="ministerie bzk, persoonlijk leiderschap, in-company leergang, beleid uitvoering, communicatie, teamontwikkeling"
+                title="Ministerie BZK - Leergang Groeien in Persoonlijk Leiderschap | Tharros"
+                description="Specialistische in-company leergang voor Ministerie van Binnenlandse Zaken en Koninkrijksrelaties. Ontwikkel persoonlijk leiderschap voor effectief handelen in beleid en uitvoering. Voor en door medewerkers zelf ontwikkeld."
+                keywords="ministerie bzk leergang, persoonlijk leiderschap bzk, binnenlandse zaken training, in-company leergang overheid, beleid uitvoering training, leiderschapsontwikkeling ministerie, overheid communicatie training, teamontwikkeling bzk"
                 structuredData={courseSchema}
             />
 
