@@ -84,16 +84,16 @@ const Footer = () => {
                         <h3 className="mb-8 text-2xl font-semibold">Menu</h3>
                         <ul className="space-y-3">
                             <li>
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/tharros"
+                                <Link
+                                    to="/tharros"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -101,11 +101,11 @@ const Footer = () => {
                                     </span>
                                     <br />
                                     Moed en zelfvertrouwen Leergang Emerging
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/ferdi-licher"
+                                <Link
+                                    to="/ferdi-licher"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -113,11 +113,11 @@ const Footer = () => {
                                     </span>
                                     <br />
                                     Moderator, trainer en coach
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/lecture"
+                                <Link
+                                    to="/lecture"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -125,11 +125,11 @@ const Footer = () => {
                                     </span>
                                     <br />
                                     Over ambtelijke vakmanschap
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/comenius"
+                                <Link
+                                    to="/comenius"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -138,11 +138,11 @@ const Footer = () => {
                                     <br />
                                     Leergang Emerging leaders in de publieke
                                     sector
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/abr"
+                                <Link
+                                    to="/abr"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -151,11 +151,11 @@ const Footer = () => {
                                     <br />
                                     Oefenen met de rol van politiek-ambtelijk
                                     adviseur
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/ministerie-BZK"
+                                <Link
+                                    to="/ministerie-BZK"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -163,11 +163,11 @@ const Footer = () => {
                                     </span>
                                     <br />
                                     Leergang Groeien in persoonlijk leiderschap
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/workshops"
+                                <Link
+                                    to="/workshops"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -176,11 +176,11 @@ const Footer = () => {
                                     <br />
                                     Maatwerk en moderatie voor teams en
                                     organisaties
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/coaching"
+                                <Link
+                                    to="/coaching"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -188,15 +188,15 @@ const Footer = () => {
                                     </span>
                                     <br />
                                     Persoonlijke coaching en mentorschap
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/contact"
+                                <Link
+                                    to="/contact"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -214,7 +214,6 @@ const Footer = () => {
                             <p>KvK: 97556947 | BTW: NL005277464B14</p>
                             <p>IBAN: NL24INGB0114748454</p>
                             <p>
-                                {' '}
                                 <Link
                                     to="/"
                                     className="flex items-center space-x-3"
