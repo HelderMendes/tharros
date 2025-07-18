@@ -24,7 +24,7 @@ const Footer = () => {
                                 Contact
                             </h3>
                             <div className="space-y-6">
-                                <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-4">
                                     <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <div>
                                         <p className="font-medium text-gray-300">
@@ -34,7 +34,7 @@ const Footer = () => {
                                             href="https://www.google.com/maps/search/?api=1&query=Vossiusstraat+30-2,+1071AG+Amsterdam"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-sm text-gray-400 transition-colors hover:text-slate-400"
+                                            className="text-gray-400 transition-colors hover:text-slate-400"
                                         >
                                             Vossiusstraat 30-2
                                             <br />
@@ -43,20 +43,20 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <Phone className="h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <a
                                         href="tel:+31615017524"
                                         className="text-gray-300 transition-colors hover:text-slate-600"
                                     >
+                                        <Phone className="mr-4 inline h-5 w-5" />
                                         +31 (6) 150 175 24
                                     </a>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <Mail className="h-5 w-5 flex-shrink-0 text-slate-400" />
                                     <a
                                         href="mailto:f.licher1@chello.nl?subject=Contact%20via%20Tharros%20Website"
                                         className="text-gray-300 transition-colors hover:text-slate-600"
                                     >
+                                        <Mail className="mr-4 inline h-5 w-5 flex-shrink-0" />
                                         f.licher1@chello.nl
                                     </a>
                                 </div>
@@ -67,8 +67,8 @@ const Footer = () => {
                                         aria-label="LinkedIn"
                                         target="new"
                                     >
-                                        <Linkedin className="siz3-8 mt-3 inline text-gray-300" />{' '}
-                                        <span className="ml-3 text-white">
+                                        <Linkedin className="mt-3 inline size-5" />
+                                        <span className="-mb-1 ml-3">
                                             LinkedIn Profile
                                         </span>
                                     </a>

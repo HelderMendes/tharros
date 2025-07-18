@@ -100,7 +100,7 @@ const Navbar = () => {
                                         <Link
                                             to={item.href}
                                             onClick={() => setIsOpen(false)}
-                                            className={`text-md block pb-2 text-center font-semibold leading-tight transition-all duration-300 hover:text-[#b67716] md:text-2xl ${
+                                            className={`text-md block pb-2 text-center font-semibold leading-tight transition-all duration-300 hover:text-slate-600 md:text-2xl ${
                                                 isActive(item.href)
                                                     ? 'font-light text-slate-800'
                                                     : 'text-gold-50'
@@ -145,7 +145,7 @@ const Navbar = () => {
                                     />
                                 </Link>
                             </div>
-                            <p className="mx-auto max-w-[90%] max-w-md px-4 text-lg font-light text-[#b67716]">
+                            <p className="mx-auto max-w-[90%] max-w-md px-4 text-lg font-light text-slate-600">
                                 Leiderschap en ambtelijk vakmanschap in de
                                 publieke sector
                             </p>
