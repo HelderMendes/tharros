@@ -74,7 +74,7 @@ const ABR = () => {
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
                             <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
-                                Algemene Bestuursdienst Rijk
+                                Algemene Bestuursdienst
                             </h1>
                             <p className="mb-6 text-2xl text-gold-300">
                                 Oefenen met de rol van politiek-ambtelijk

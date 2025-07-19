@@ -149,14 +149,14 @@ const Contact = () => {
                                 Ferdi Licher
                             </p>
                             <p className="mb-8 text-xl font-light leading-loose">
-                                Klaar om de volgende stap te zetten in uw
-                                leiderschapsontwikkeling? Neem contact op voor
-                                een vrijblijvend gesprek over de mogelijkheden.
+                                Voor deelname aan activiteiten of verkennen van
+                                samenwerkingsmogelijkheden kunt u contact
+                                opnemen.
                             </p>
                             <div className="flex items-center space-x-10 text-slate-600">
                                 <div className="flex items-center">
                                     <Briefcase className="mr-3 size-4" />
-                                    <span>Moderator, trainer en coach</span>
+                                    <span>Tharros training en coaching</span>
                                 </div>
                             </div>
                         </div>
@@ -180,13 +180,10 @@ const Contact = () => {
                         <div className="space-y-10">
                             <div>
                                 <h2 className="mb-8 text-4xl font-semibold text-gold-600">
-                                    Neem Contact Op
+                                    Contactgegevens
                                 </h2>
                                 <p className="mb-10 text-lg font-light leading-relaxed text-gray-600">
-                                    We staan klaar om uw vragen te beantwoorden
-                                    en u te helpen bij het vinden van het juiste
-                                    programma voor uw ontwikkeling of
-                                    organisatie.
+                                    U kunt contact opnemen.
                                 </p>
                             </div>
 
@@ -219,9 +216,6 @@ const Contact = () => {
                                         <p className="font-light text-gray-600">
                                             +31 (0)6 12345678
                                         </p>
-                                        <p className="text-sm font-light text-gray-500">
-                                            Ma-Vr: 09:00 - 17:00
-                                        </p>
                                     </div>
                                 </div>
 
@@ -236,9 +230,6 @@ const Contact = () => {
                                         <p className="font-light text-gray-600">
                                             info@tharros-training.nl
                                         </p>
-                                        <p className="text-sm font-light text-gray-500">
-                                            We reageren binnen 24 uur
-                                        </p>
                                     </div>
                                 </div>
 
@@ -252,9 +243,6 @@ const Contact = () => {
                                         </h3>
                                         <p className="font-light text-gray-600">
                                             Nederland
-                                        </p>
-                                        <p className="text-sm font-light text-gray-500">
-                                            Landelijk actief
                                         </p>
                                     </div>
                                 </div>
@@ -413,7 +401,7 @@ const Contact = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         className="w-full resize-none rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
-                                        placeholder="Vertel ons over uw situatie, doelen of vragen..."
+                                        placeholder="'Schrijf hier uw vraag of opmerking..."
                                     />
                                 </div>
 

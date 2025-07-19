@@ -54,7 +54,7 @@ const Home = () => {
                 <div className="block min-w-full bg-[#04293A] xl:hidden">
                     <div className="mx-auto flex w-[80%] gap-3 pb-12">
                         <div className="-mt-4 flex flex-1 flex-col items-center justify-center gap-3">
-                            <div className="z-50 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-slate-700">
+                            <div className="z-20 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-slate-700">
                                 <img
                                     src="images/Profil_FerdiLicher.jpeg"
                                     alt="Ferdi Licher"
@@ -86,7 +86,7 @@ const Home = () => {
 
                         <ServiceBlock
                             title="Ferdi Licher"
-                            subtitle="Moderator, trainer en coach"
+                            subtitle="Tharros training en coaching"
                             intro="Na mijn jarenlange ervaring als leidinggevende bij verschillende ministeries wil ik met jonge medewerkers en beginnend leidinggevenden delen hoe je als ambtenaar het verschil kunt maken."
                             href="ferdi-licher"
                             image="images/FerdiLicher-profil.jpeg"

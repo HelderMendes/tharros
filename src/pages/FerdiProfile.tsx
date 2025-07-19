@@ -121,7 +121,7 @@ const FerdiProfile = () => {
                         <div className="relative">
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
-                                    src="images/profil02.jpg"
+                                    src="images/profil.jpg"
                                     alt="Ferdi Licher - Senior Leadership Coach & Trainer"
                                     className="h-96 w-full object-cover"
                                 />
@@ -169,19 +169,6 @@ const FerdiProfile = () => {
                                         Groningen.
                                     </p>
                                 </div>
-                                <div className="mt-3">
-                                    <a
-                                        href="https://www.linkedin.com/in/ferdi-licher-20456313/#"
-                                        className="flex items-center justify-end text-gold-700 transition-colors hover:text-slate-600"
-                                        aria-label="LinkedIn"
-                                        target="new"
-                                    >
-                                        <Linkedin className="inline" />
-                                        <span className="ml-3 pt-2 font-semibold">
-                                            LinkedIn Profile
-                                        </span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
@@ -189,7 +176,7 @@ const FerdiProfile = () => {
                             <div className="mb-6 rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
                                 <h3 className="mb-4 flex items-center text-xl font-semibold text-slate-800">
                                     <GraduationCap className="mr-4 h-6 w-6 text-slate-700" />
-                                    Opleiding
+                                    LinkedIn
                                 </h3>
                                 <ul className="space-y-3">
                                     <li className="items-start">
@@ -207,16 +194,29 @@ const FerdiProfile = () => {
                                     <li className="flex items-start">
                                         <span className="text-gray-700">
                                             <Check className="mr-2 inline-flex text-slate-700" />
-                                            Universiteit van Amsterdam
+                                            Topambtenaar Rijksoverheid
                                         </span>
                                     </li>
                                     <li className="flex items-start">
                                         <span className="text-gray-700">
                                             <Check className="mr-2 inline-flex text-slate-700" />
-                                            Universiteit Padova (Italië)
+                                            Tango, schaken, sport
                                         </span>
                                     </li>
                                 </ul>
+                                <div className="mt-3">
+                                    <a
+                                        href="https://www.linkedin.com/in/ferdi-licher-20456313/#"
+                                        className="flex items-center text-gold-700 transition-colors hover:text-slate-600"
+                                        aria-label="LinkedIn"
+                                        target="new"
+                                    >
+                                        <Linkedin className="inline" />
+                                        <span className="ml-[9.5px] pt-2 font-semibold">
+                                            LinkedIn Profile
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -224,13 +224,13 @@ const FerdiProfile = () => {
             </section>
 
             {/* Leadership and vision Section */}
-            <section className="mt-12 bg-slate-100/30 py-20 pt-20">
-                <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-                    <div>
-                        <h3 className="mb-8 text-3xl font-semibold text-gold-800">
-                            Mijn leiderschapsvisie
+            <section className="bg-white py-16">
+                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                    <div className="rounded-lg bg-gradient-to-b from-black/85 to-gold-900 p-8 text-white md:p-12">
+                        <h3 className="mb-6 text-2xl font-semibold text-slate-600">
+                            Mijn leiderschapsvisie{' '}
                         </h3>
-                        <div className="space-y-6 text-lg leading-relaxed">
+                        <div className="space-y-6 leading-loose">
                             <p>
                                 Als rode draad door mijn loopbaan loopt het
                                 aspect van het ontwerpen, het effectief leren
@@ -239,70 +239,20 @@ const FerdiProfile = () => {
                             </p>
                             <p>
                                 In mijn visie op leiderschap staan het
-                                ontwikkelen van{' '}
-                                <strong>moed en zelfvertrouwen</strong>{' '}
-                                centraal, en het durven vertrouwen op intuïtie
-                                en improvisatie.
+                                ontwikkelen van moed en zelfvertrouwen centraal,
+                                en het durven vertrouwen op intuïtie en
+                                improvisatie.
+                            </p>
+                            <p>
+                                Deze elementen van intuïtie en improvisatie vind
+                                ik ook terug in mijn passies zoals tangodansen,
+                                schaken en sport.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Current Work Section */}
-            <section className="bg-white py-20">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 className="mb-12 text-center text-3xl font-semibold text-slate-700">
-                        Lust for life...
-                    </h2>
-
-                    {/* Leadership Philosophy Section */}
-                    <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                            <div className="text-center">
-                                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gold-100">
-                                    <Heart className="h-10 w-10 text-gold-600" />
-                                </div>
-                                <h3 className="mb-2 text-2xl font-semibold text-slate-800">
-                                    Tango
-                                </h3>
-                                <p className="text-lg text-gray-600">
-                                    Passie voor verbinding en improvisatie
-                                </p>
-                            </div>
-
-                            <div className="text-center">
-                                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gold-100">
-                                    <Sun className="h-10 w-10 text-gold-600" />
-                                </div>
-                                <h3 className="mb-2 text-2xl font-semibold text-slate-800">
-                                    Sport
-                                </h3>
-                                <p className="text-lg text-gray-600">
-                                    Doorzettingsvermogen en teamwork
-                                </p>
-                            </div>
-
-                            <div className="text-center">
-                                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gold-100">
-                                    <FontAwesomeIcon
-                                        icon={faChess}
-                                        size="2x"
-                                        className="text-gold-600"
-                                    />
-                                </div>
-
-                                <h3 className="mb-2 text-2xl font-semibold text-slate-800">
-                                    Schaken
-                                </h3>
-                                <p className="text-lg text-gray-600">
-                                    Strategisch denken en geduld
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             {/* Testimonials Section */}
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

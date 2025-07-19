@@ -115,20 +115,26 @@ const Coaching = () => {
             {/* Introduction Section */}
             <section className="bg-white py-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-8 text-3xl font-bold text-slate-600 sm:text-5xl">
-                            Persoonlijke begeleiding op maat
+                    <div className="mx-auto mb-16 max-w-5xl text-center">
+                        <h2 className="mb-8 text-3xl font-bold leading-snug text-slate-600 lg:text-4xl lg:leading-snug">
+                            Persoonlijke begeleiding op maat voor medewerkers en
+                            leidinggevenden
                         </h2>
+                        <p className="mx-auto max-w-4xl pb-3 text-xl leading-relaxed text-gray-700">
+                            In mijn individuele coaching en mentorschap zoeken
+                            we samen hoe je de kern van het werk centraal kunt
+                            stellen en daar positieve energie en plezier in kunt
+                        </p>
                         <p className="mx-auto max-w-4xl text-xl leading-relaxed text-gray-700">
-                            Daarbij kan ik mijn eigen jarenlange kennis en
-                            ervaring uit de praktijk inzetten om te verhelderen
-                            hoe dingen wellicht ook anders kunnen een hoe een
-                            meer effectief handelingsrepertoire ontwikkeld kan
-                            worden.
+                            organiseren. Daarbij kan ik mijn eigen jarenlange
+                            kennis en ervaring uit de praktijk inzetten om te
+                            verhelderen hoe dingen wellicht ook anders kunnen
+                            een hoe een meer effectief handelingsrepertoire
+                            ontwikkeld kan worden.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-8 pt-4 lg:grid-cols-3">
                         {focusAreas.map((area, index) => (
                             <div
                                 key={index}
@@ -147,36 +153,6 @@ const Coaching = () => {
                                 </p>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Detailed Content Section */}
-            <section className="mb-6 mt-16 bg-white">
-                <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-                    <h2 className="mb-8 text-4xl font-bold text-slate-600">
-                        Voor beginnend leidinggevenden
-                    </h2>
-                    <div className="space-y-3 text-lg leading-relaxed text-gray-700">
-                        <p className="leading-relaxed">
-                            Als beginnend leidinggevende is het vaak zoeken naar
-                            de juiste balans in toon en stijl, in dirigeren en
-                            delegeren, in waar je je tijd aan besteedt en hoe je
-                            omgaat met weerstand en moeilijke situaties.
-                        </p>
-                        <p className="leading-relaxed">
-                            Hoeveel steun en draagvlak heb je voor veranderingen
-                            en de koers die je wilt inslaan. Wat is nodig en
-                            haalbaar. En hoe zorg je dat er positieve energie
-                            gaat stromen in het team en dat medewerkers niet
-                            uitgeput raken van tegenslagen of kritiek.
-                        </p>
-                        <p className="leading-relaxed">
-                            In mijn individuele coaching en mentorschap zoeken
-                            we samen hoe je de kern van het werk centraal kunt
-                            stellen en daar positieve energie en plezier in kunt
-                            organiseren.
-                        </p>
                     </div>
                 </div>
             </section>

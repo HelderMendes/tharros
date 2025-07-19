@@ -196,17 +196,6 @@ const MinisterieBZK = () => {
                     groepsproces te hebben omdat er hierdoor ook onderdeel
                     coaching plaatsvindt.
                 </p>
-                <div className="rounded-lg bg-gold-500/10 p-6">
-                    <h3 className="mb-3 text-lg font-semibold text-gold-600">
-                        Langetermijn Impact
-                    </h3>
-                    <p className="text-gray-700">
-                        Wanneer dit meerdere jaren achtereen herhaald wordt
-                        binnen hetzelfde organisatieonderdeel met steeds een
-                        nieuwe groep deelnemers zorgt dit voor enorme
-                        versterking van het onderlinge teamgevoel.
-                    </p>
-                </div>
 
                 <div className="relative mt-24">
                     <div className="mb-6 inline-flex items-center rounded-full bg-gold-500/10 px-4 py-2 text-gold-700">

@@ -5,21 +5,21 @@ import { SEO } from '@/components/SEO';
 const kernAspecten = [
     {
         icon: Briefcase,
-        title: 'Workshop Moderatie',
+        title: 'Moderatie van workshops',
         description:
-            'Oplossingsgerichte begeleiding voor teams. Elke stem telt, scherpe vraagstelling, sfeer van vertrouwen.',
+            'Elke stem telt, scherpe vraagstelling, sfeer van vertrouwen.',
     },
     {
         icon: CheckCircle,
-        title: 'Podiumgesprekken',
+        title: 'Moderatie podiumgesprekken',
         description:
-            "Workshops en moderatie op maat voor uiteenlopende sectoren, van overheidsinstellingen tot NGO's.",
+            'Interview in College Tour stijl waarbij de achterkant van persoon en verhaal scherp naar voren komt',
     },
     {
         icon: Users,
-        title: 'Maatwerk voor Organisaties',
+        title: 'Maatwerk voor organisaties',
         description:
-            "Ervaring met Comenius, College Tour-style, morele dilemma's, publiek actief betrokken.",
+            "Begeleiding van gesprekken over het maken van impact, dilemma's en organisatieverandering",
     },
 ];
 
@@ -98,21 +98,19 @@ const Workshops = () => {
             {/* Aanpak Section */}
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-12 text-center">
+                    <div className="mb-20 text-center">
                         <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Waar kan ik mee helpen?
+                            Voorbeelden
                         </h2>
-                        <p className="text-gary-600 mx-auto max-w-3xl text-lg">
-                            Naast het modereren van workshops voor teams heb ik
-                            ook ervaring met de moderatie van podiumgesprekken.
-                            Met Comenius heb ik bijvoorbeeld een vrijplaats
-                            georganiseerd voor Comenius alumni over het thema{' '}
-                            <i>Rijk in roerige tijden</i>. Gastspreker was
-                            oud-directeur generaal en speciaal adviseur van de
-                            rijksoverheid Mark Frequin. Dit hebben we gedaan in
-                            de formule van College Tour waarbij de gastspreker
-                            stevig wordt doorgevraagd over morele dilemma’s en
-                            het publiek daarbij actief wordt betrokken.
+                        <p className="text-gary-600 mx-auto max-w-3xl text-lg leading-relaxed">
+                            oorbeelden zijn een podiumgesprek met Diederik
+                            Samsom over zijn persoonlijke ervaringen, drijfveren
+                            en ambities in het klimaatbeleid. Een gesprek over
+                            meer impact maken bij afdeling Corporate
+                            Communicatie bij de Belastingdienst en een
+                            vrijplaats met Comenius alumni en
+                            ex-directeur-generaal Mark Frequin over over het
+                            thema het Rijk in roerige tijden.
                         </p>
                     </div>
 

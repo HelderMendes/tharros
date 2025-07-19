@@ -173,14 +173,14 @@ const Comenius = () => {
                         <div>
                             <div className="mb-6 flex flex-col gap-4 text-xl leading-relaxed text-gray-700">
                                 <p>
-                                    De basis hiervoor leggen we in het
-                                    persoonlijk leiderschap en het ontwikkelen
-                                    van een persoonlijk leiderschapsverhaal. Dat
-                                    werken aan persoonlijk leiderschap vergt
-                                    veel. In de eerste plaats de bereidheid tot
-                                    diepgaande zelfkennis en zelfreflectie, maar
-                                    ook de bereidheid te luisteren en bevragen
-                                    en de moed ruimte te geven aan anderen en
+                                    De basis hiervoor leggen we in de
+                                    ontwikkeling van het persoonlijk
+                                    leiderschapsverhaal. Dat werken aan
+                                    persoonlijk leiderschap vergt veel. In de
+                                    eerste plaats de bereidheid tot diepgaande
+                                    zelfkennis en zelfreflectie, maar ook de
+                                    bereidheid te luisteren en bevragen en de
+                                    moed ruimte te geven aan anderen en
                                     andersdenkenden en nieuwe inzichten te
                                     omarmen.
                                 </p>
@@ -282,25 +282,16 @@ const Comenius = () => {
                                 respectvol leren van elkaar. Onder leiding van
                                 een moderator voer jij met hen het goede gesprek
                                 over wie jij bent, over wie je wil worden en
-                                over de route erheen.{' '}
-                                <strong>
-                                    Daarbij vormen de 7 pijlers van wijs
-                                    leiderschap
-                                </strong>{' '}
-                                een belangrijk ankerpunt. Maar is er
-                                nadrukkelijk ook aandacht voor inhoudelijke
-                                verdieping, het internationale perspectief, de
-                                grote lijnen in de politiek-filosofische
-                                stromingen en wat we kunnen leren van de
-                                geschiedenis.
+                                over de route erheen. Daarbij vormen de 7
+                                pijlers van wijs leiderschap een belangrijk
+                                ankerpunt. Maar is er nadrukkelijk ook aandacht
+                                voor inhoudelijke verdieping, het internationale
+                                perspectief, de grote lijnen in de
+                                politiek-filosofische stromingen en wat we
+                                kunnen leren van de geschiedenis.
                             </p>
                         </div>
                     </div>
-                    <p className="mx-auto mt-6 max-w-4xl text-center font-medium leading-relaxed text-slate-600">
-                        De basis hiervoor leggen we in het persoonlijk
-                        leiderschap en het ontwikkelen van een persoonlijk
-                        leiderschapsverhaal.
-                    </p>
                 </div>
             </section>
 
@@ -325,7 +316,7 @@ const Comenius = () => {
                             constateert Comenius dat een aantal kwaliteiten in
                             al die jaren door vele leiders telkens worden
                             genoemd als belangrijk. Comenius noemt ze de 7
-                            pijlers van wijs leiderschap.{' '}
+                            pijlers van wijs leiderschap.
                         </p>
                     </div>
 
