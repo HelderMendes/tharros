@@ -197,40 +197,61 @@ const Contact = () => {
                                             Ferdi Licher
                                         </h3>
                                         <p className="font-light text-gray-600">
-                                            Oprichter & Senior Coach
+                                            Oprichter Tharros training en
+                                            coaching
                                         </p>
                                         <p className="font-light text-gray-600">
-                                            Tharros Training & Coaching
+                                            Moderator, trainer en coach
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start space-x-6">
-                                    <div className="rounded-full bg-slate-100 p-4">
-                                        <Phone className="h-6 w-6 text-slate-600" />
-                                    </div>
-                                    <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
-                                            Telefoon
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            +31 (0)6 12345678
-                                        </p>
-                                    </div>
+                                <div className="flex items-start space-x-6 hover:rounded-lg hover:bg-black/5 hover:p-1">
+                                    <a
+                                        href="tel:+31615017524"
+                                        className="flex w-full justify-start gap-6 text-start text-gray-600 transition-colors hover:text-slate-600"
+                                    >
+                                        <div className="rounded-full bg-slate-100 p-4">
+                                            <Phone className="h-6 w-6 text-slate-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="mb-2 text-lg font-semibold text-slate-600">
+                                                Telefoon
+                                            </h3>
+                                            <p className="font-light text-gray-600">
+                                                <a
+                                                    href="tel:+31615017524"
+                                                    className="text-gray-600 transition-colors hover:text-slate-600"
+                                                >
+                                                    +31 (0)6 12345678
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
 
-                                <div className="flex items-start space-x-6">
-                                    <div className="rounded-full bg-slate-100 p-4">
-                                        <Mail className="h-6 w-6 text-slate-600" />
-                                    </div>
-                                    <div>
-                                        <h3 className="mb-2 text-lg font-semibold text-slate-600">
-                                            E-mail
-                                        </h3>
-                                        <p className="font-light text-gray-600">
-                                            info@tharros-training.nl
-                                        </p>
-                                    </div>
+                                <div className="flex items-start space-x-6 hover:rounded-lg hover:bg-black/5 hover:p-1">
+                                    <a
+                                        href="mailto:f.licher1@chello.nl?subject=Contact%20via%20Tharros%20Website"
+                                        className="flex w-full justify-start gap-6 text-start text-gray-600 transition-colors hover:font-medium hover:text-slate-600"
+                                    >
+                                        <div className="rounded-full bg-slate-100 p-4">
+                                            <Mail className="h-6 w-6 text-slate-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="mb-2 text-lg font-semibold text-slate-600">
+                                                E-mail
+                                            </h3>
+                                            <p className="font-light text-gray-600">
+                                                <a
+                                                    href="mailto:f.licher1@chello.nl?subject=Contact%20via%20Tharros%20Website"
+                                                    className="text-gray-600 transition-colors hover:font-medium hover:text-slate-600"
+                                                >
+                                                    f.licher1@chello.nl
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div className="flex items-start space-x-6">

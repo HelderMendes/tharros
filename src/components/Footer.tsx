@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Link2Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -60,6 +60,15 @@ const Footer = () => {
                                         f.licher1@chello.nl
                                     </a>
                                 </div>
+                                <div className="flex items-center space-x-3">
+                                    <Link
+                                        to="/"
+                                        className="text-gray-300 transition-colors hover:text-slate-600"
+                                    >
+                                        <Link2Icon className="mr-4 inline h-5 w-5 flex-shrink-0" />
+                                        tharros-trainingcoaching.nl
+                                    </Link>
+                                </div>
                                 <div className="flex space-x-4">
                                     <a
                                         href="https://www.linkedin.com/in/ferdi-licher-20456313/#"
@@ -77,9 +86,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Contact Information */}
-
-                    {/* Quick Links */}
+                    {/* Contact / Quick Links */}
                     <div>
                         <h3 className="mb-8 text-2xl font-semibold">Menu</h3>
                         <ul className="space-y-3">
@@ -100,7 +107,7 @@ const Footer = () => {
                                         Tharros
                                     </span>
                                     <br />
-                                    Moed en zelfvertrouwen Leergang Emerging
+                                    Moed en zelfvertrouwen
                                 </Link>
                             </li>
                             <li>
@@ -180,7 +187,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/coaching"
+                                    to="/individuele-trajecten"
                                     className="font-light text-gray-400 transition-colors hover:text-slate-400"
                                 >
                                     <span className="font-semibold">
@@ -190,6 +197,7 @@ const Footer = () => {
                                     Persoonlijke coaching en mentorschap
                                 </Link>
                             </li>
+
                             <li>
                                 <Link
                                     to="/contact"
@@ -213,14 +221,6 @@ const Footer = () => {
                         <div className="text-md flex flex-col gap-2 font-light text-gray-400">
                             <p>KvK: 97556947 | BTW: NL005277464B14</p>
                             <p>IBAN: NL24INGB0114748454</p>
-                            <p>
-                                <Link
-                                    to="/"
-                                    className="flex items-center space-x-3"
-                                >
-                                    tharros-trainingcoaching.nl
-                                </Link>
-                            </p>
                         </div>
                     </div>
                 </div>

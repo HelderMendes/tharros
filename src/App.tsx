@@ -8,7 +8,7 @@ import Lecture from './pages/Lecture';
 import Comenius from './pages/Comenius';
 import ABR from './pages/ABR';
 import Workshops from './pages/Workshops';
-import Coaching from './pages/Coaching';
+import IndividueleTrajecten from './pages/IndividueleTrajecten';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import MinisterieBZK from './pages/MinisterieBZK';
@@ -37,7 +37,10 @@ function App() {
                                 element={<MinisterieBZK />}
                             />
                             <Route path="/workshops" element={<Workshops />} />
-                            <Route path="/coaching" element={<Coaching />} />
+                            <Route
+                                path="/individuele-trajecten"
+                                element={<IndividueleTrajecten />}
+                            />
                             <Route path="/contact" element={<Contact />} />
                         </Routes>
                     </main>

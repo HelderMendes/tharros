@@ -41,7 +41,7 @@ const Navbar = () => {
         },
         {
             name: 'Individuele trajecten\nPersoonlijke coaching en mentorschap',
-            href: '/coaching',
+            href: '/individuele-trajecten',
         },
         { name: 'Contact', href: '/contact' },
     ];

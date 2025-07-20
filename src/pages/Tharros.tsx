@@ -84,17 +84,9 @@ const Tharros = () => {
                         <div className="space-y-8">
                             <div>
                                 <h3 className="mb-6 text-2xl font-semibold leading-tight text-gold-800">
-                                    Moed in het Nederlands betekent dapperheid
+                                    Moed in het Nederlands
                                 </h3>
                                 <div className="space-y-6 leading-relaxed text-gray-700">
-                                    <p>
-                                        Tharros verwijst ook naar innerlijke
-                                        kracht, zelfvertrouwen en naar een
-                                        onbevreesde houding in moeilijke
-                                        situaties, de bereidheid risico's te
-                                        nemen, angst en onzekerheid te
-                                        trotseren.
-                                    </p>
                                     <p>
                                         Moed in het Nederlands betekent
                                         dapperheid, de eigenschap om door te
@@ -105,6 +97,14 @@ const Tharros = () => {
                                         persoonlijke ontwikkeling. Het vergt
                                         moed om tegen te spreken of een nieuwe
                                         koers in te slaan.
+                                    </p>
+                                    <p>
+                                        Tharros verwijst ook naar innerlijke
+                                        kracht, zelfvertrouwen en naar een
+                                        onbevreesde houding in moeilijke
+                                        situaties, de bereidheid risico's te
+                                        nemen, angst en onzekerheid te
+                                        trotseren.
                                     </p>
                                 </div>
                             </div>

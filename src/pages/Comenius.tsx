@@ -103,18 +103,15 @@ const Comenius = () => {
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div className="">
-                            <div className="mb-6 flex items-center text-slate-400">
+                            <div className="mb-1 flex items-center text-slate-400">
                                 <GraduationCap className="mr-3 h-8 w-8" />
                                 <span className="text-lg font-medium">
                                     Comenius Leergang
                                 </span>
                             </div>
-                            <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
-                                Emerging Leaders
+                            <h1 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl lg:leading-tight">
+                                Emerging Leaders in de publieke sector
                             </h1>
-                            <p className="mb-6 text-xl uppercase text-slate-400">
-                                in de publieke sector
-                            </p>
                             <p className="mb-4 text-xl leading-relaxed">
                                 Dit leiderschapsprogramma van Comenius wil jonge
                                 veelbelovende mensen in de publieke sector

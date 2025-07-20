@@ -11,7 +11,7 @@ const kernAspecten = [
     },
     {
         icon: CheckCircle,
-        title: 'Moderatie podiumgesprekken',
+        title: 'Podiumgesprekken',
         description:
             'Interview in College Tour stijl waarbij de achterkant van persoon en verhaal scherp naar voren komt',
     },
@@ -96,14 +96,14 @@ const Workshops = () => {
             </section>
 
             {/* Aanpak Section */}
-            <section className="bg-white py-16">
+            <section className="bg-white py-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-20 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
+                    <div className="mx-auto mb-16 max-w-4xl text-center">
+                        <h2 className="mb-6 text-3xl font-bold leading-snug text-gold-600 lg:text-4xl lg:leading-snug">
                             Voorbeelden
                         </h2>
-                        <p className="text-gary-600 mx-auto max-w-3xl text-lg leading-relaxed">
-                            oorbeelden zijn een podiumgesprek met Diederik
+                        <p className="mx-auto pb-3 text-xl leading-relaxed text-gray-700">
+                            Voorbeelden zijn een podiumgesprek met Diederik
                             Samsom over zijn persoonlijke ervaringen, drijfveren
                             en ambities in het klimaatbeleid. Een gesprek over
                             meer impact maken bij afdeling Corporate

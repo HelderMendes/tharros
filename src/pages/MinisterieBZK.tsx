@@ -190,7 +190,7 @@ const MinisterieBZK = () => {
                     een van de modules.
                 </p>
                 <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                    Zowel dat men elkaar onderling al enigszins kent, als dat de
+                    Dat men elkaar onderling al enigszins kent, als dat de
                     leergang open staat voor iedereen wordt zeer positief
                     gewaardeerd en blijkt een positieve invloed op het
                     groepsproces te hebben omdat er hierdoor ook onderdeel
@@ -217,8 +217,8 @@ const MinisterieBZK = () => {
                     <div className="space-y-4">
                         {programmaDetails.map((detail, index) => (
                             <div key={index} className="flex items-start">
-                                <div className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
-                                <p className="text-gray-700">{detail}</p>
+                                <div className="mx-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
+                                <p className="pl-2 text-gray-700">{detail}</p>
                             </div>
                         ))}
                     </div>

@@ -109,7 +109,7 @@ const Home = () => {
                         />
 
                         <ServiceBlock
-                            title="Algemene Bestuursdienst Rijk"
+                            title="Algemene Bestuursdienst"
                             subtitle="Oefenen met de rol van politiek-ambtelijk adviseur"
                             intro="In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen."
                             href="abr"

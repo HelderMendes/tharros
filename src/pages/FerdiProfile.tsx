@@ -114,7 +114,7 @@ const FerdiProfile = () => {
                                 </div>
                                 <div className="flex items-center">
                                     <Briefcase className="mr-2 h-5 w-5" />
-                                    <span>35+ jaar rijksoverheid</span>
+                                    <span>35 jaar rijksoverheid</span>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +164,7 @@ const FerdiProfile = () => {
                                         leidinggevende. Eerst bij het ministerie
                                         van SZW, later bij OCW en de laatste 15
                                         jaar bij het ministerie van BZK onder
-                                        meer al, directeur Bouwen en Energie en
+                                        meer als, directeur Bouwen en Energie en
                                         programmadirecteur Verduurzaming
                                         Groningen.
                                     </p>
