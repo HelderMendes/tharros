@@ -221,7 +221,7 @@ const Contact = () => {
                                             <p className="font-light text-gray-600">
                                                 <a
                                                     href="tel:+31615017524"
-                                                    className="text-gray-600 transition-colors hover:text-slate-600"
+                                                    className="text-gray-600 transition-colors hover:font-medium hover:text-slate-600"
                                                 >
                                                     +31 (0)6 12345678
                                                 </a>
