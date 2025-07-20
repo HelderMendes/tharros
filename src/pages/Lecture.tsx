@@ -95,6 +95,54 @@ const Lecture = () => {
                 </div>
             </section>
 
+            {/* Context Section */}
+            {/* <section className="bg-slate-50 py-20">
+                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+                    <h2 className="text-4xl font-bold text-slate-600">
+                        De huidige context
+                    </h2>
+                    <div className="space-y-6 pt-8 text-lg leading-loose text-gray-700">
+                        <p>
+                            We draven en dolen steeds meer. Het huis van
+                            Thorbecke kraakt en piept. Er is toenemend politiek
+                            ongeduld, de druk op de overheid en individuele
+                            ambtenaren neemt voelbaar toe.
+                        </p>
+                        <p>
+                            Ambtenaren voelen zich onmachtig het tij van
+                            publieke onvrede te keren. Die onmacht heeft te
+                            maken met moeilijk te herstellen fouten uit het
+                            verleden, vastgelopen en doorgeschoten wetgeving,
+                            het ontbreken van stabiele politieke meerderheden en
+                            een consistente koers.
+                        </p>
+                        <p className="font-medium text-slate-600">
+                            Maar ook met hoe we ons werk doen. Processturing
+                            domineert te vaak de samenwerking.
+                        </p>
+                    </div>
+                </div>
+            </section> */}
+            <section className="bg-slate-50 py-20">
+                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+                    <h2 className="text-4xl font-bold text-slate-600">
+                        De huidige context
+                    </h2>
+                    <div className="space-y-6 pt-8 text-lg leading-loose text-gray-700">
+                        <p>
+                            <span className="text-sm opacity-85">✔️</span>
+                            &ensp;Het huis piept...
+                            <br />
+                            <span className="text-sm opacity-85">✔️</span>
+                            &ensp;De waan van de dag...
+                            <br />
+                            <span className="text-sm opacity-85">✔️</span>
+                            &ensp;Ambtenaren voelen zich onmachtig...
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* Key Themes Section */}
             <section className="bg-white py-20">
                 <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
@@ -108,7 +156,7 @@ const Lecture = () => {
                                 <Target className="h-6 w-6 text-gold-600" />
                             </div>
                             <h4 className="mb-3 text-xl font-semibold text-slate-600">
-                                Het huis piept...
+                                Waarden & Waarheid
                             </h4>
                             <p className="text-gray-600">
                                 Wat doet er echt toe in de publieke sector? Hoe
@@ -122,7 +170,7 @@ const Lecture = () => {
                                 <Users className="h-6 w-6 text-gold-600" />
                             </div>
                             <h4 className="mb-3 text-xl font-semibold text-slate-600">
-                                De waan van de dag...
+                                Leefwereld van Mensen
                             </h4>
                             <p className="text-gray-600">
                                 Hoe blijven we verbonden met wat er echt speelt
@@ -135,7 +183,7 @@ const Lecture = () => {
                                 <BookOpen className="h-6 w-6 text-gold-600" />
                             </div>
                             <h4 className="mb-3 text-xl font-semibold text-slate-600">
-                                Ambtenaren voelen zich onmachtig...
+                                Ambtelijk Vakmanschap
                             </h4>
                             <p className="text-gray-600">
                                 Hoe ontwikkelen we ons vakmanschap verder? Wat

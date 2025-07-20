@@ -190,7 +190,7 @@ const MinisterieBZK = () => {
                     een van de modules.
                 </p>
                 <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                    Dat men elkaar onderling al enigszins kent, als dat de
+                    Dat men elkaar onderling al enigszins kent en dat de
                     leergang open staat voor iedereen wordt zeer positief
                     gewaardeerd en blijkt een positieve invloed op het
                     groepsproces te hebben omdat er hierdoor ook onderdeel

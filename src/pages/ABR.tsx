@@ -13,7 +13,7 @@ const ABR = () => {
         '@type': 'Course',
         name: 'Algemene Bestuursdienst Rijk - Oefenen met de rol van politiek-ambtelijk adviseur',
         description:
-            'In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen.',
+            'In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst Rijk oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen.',
         provider: {
             '@type': 'Organization',
             name: 'Tharros Training & Coaching',
@@ -82,10 +82,10 @@ const ABR = () => {
                             </p>
                             <p className="mb-8 text-xl font-light leading-loose">
                                 In het kader van het Ontwikkelprogramma
-                                Leiderschap van de Algemene Bestuursdienst oefen
-                                ik samen met de deelnemers hoe zij ruimte kunnen
-                                maken voor het goede gesprek en hun rol als
-                                politiek-ambtelijk adviseur krachtiger en
+                                Leiderschap van de Algemene Bestuursdienst Rijk
+                                oefen ik samen met de deelnemers hoe zij ruimte
+                                kunnen maken voor het goede gesprek en hun rol
+                                als politiek-ambtelijk adviseur krachtiger en
                                 effectiever kunnen invullen.
                             </p>
                             <div className="flex items-center space-x-10 text-gold-300">
@@ -184,7 +184,7 @@ const ABR = () => {
                             <div className="overflow-hidden rounded-full border-4 border-gold-700/30 shadow-2xl">
                                 <img
                                     src="images/politiek-ambtelijk-samenspel.jpg"
-                                    alt="Leiderschapskompas Algemene bestuursdienst, Politiek ambtelijk samenspel"
+                                    alt="Leiderschapskompas Algemene bestuursdienst Rijk, Politiek ambtelijk samenspel"
                                     className="w-full object-cover"
                                 />
                             </div>
