@@ -223,7 +223,7 @@ const Contact = () => {
                                                     href="tel:+31615017524"
                                                     className="text-gray-600 transition-colors hover:font-medium hover:text-slate-600"
                                                 >
-                                                    +31 (0)6 12345678
+                                                    +31 (6) 150 175 24
                                                 </a>
                                             </p>
                                         </div>

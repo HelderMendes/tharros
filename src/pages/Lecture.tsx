@@ -74,71 +74,35 @@ const Lecture = () => {
 
             {/* Introduction Section */}
             <section className="bg-white py-24">
-                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h2 className="text-4xl font-bold text-slate-600">
                             Waarom deze lecture?
                         </h2>
-                        <div className="mx-auto max-w-3xl">
-                            <div className="rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 pt-8 text-xl leading-loose text-gray-700">
-                                <p className="">
-                                    De waan van de dag bepaalt te vaak de
-                                    agenda. Goede bedoelingen lopen te vaak vast
-                                    in de uitvoering. Het gesprek over waarden
-                                    en waarheid, over wat er echt toe doet en
-                                    wat er echt aan de hand is in de leefwereld
-                                    van mensen krijgt te weinig ruimte.
-                                </p>
-                            </div>
+                        <div className="space-y-3 rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 pt-8 text-xl leading-loose text-gray-700">
+                            <p>
+                                We draven en dolen steeds meer. Het huis van
+                                Thorbecke kraakt en piept. Er is toenemend
+                                politiek ongeduld, de druk op de overheid en
+                                individuele ambtenaren neemt voelbaar toe.
+                            </p>
+                            <p>
+                                De waan van de dag bepaalt te vaak de agenda.
+                                Goede bedoelingen lopen te vaak vast in de
+                                uitvoering. Het gesprek over waarden en
+                                waarheid, over wat er echt toe doet en wat er
+                                echt aan de hand is in de leefwereld van mensen
+                                krijgt te weinig ruimte.
+                            </p>
+                            <p>
+                                Ambtenaren voelen zich onmachtig het tij van
+                                publieke onvrede te keren. Die onmacht heeft te
+                                maken met moeilijk te herstellen fouten uit het
+                                verleden, vastgelopen en doorgeschoten
+                                wetgeving, het ontbreken van stabiele politieke
+                                meerderheden en een consistente koers.
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Context Section */}
-            {/* <section className="bg-slate-50 py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-slate-600">
-                        De huidige context
-                    </h2>
-                    <div className="space-y-6 pt-8 text-lg leading-loose text-gray-700">
-                        <p>
-                            We draven en dolen steeds meer. Het huis van
-                            Thorbecke kraakt en piept. Er is toenemend politiek
-                            ongeduld, de druk op de overheid en individuele
-                            ambtenaren neemt voelbaar toe.
-                        </p>
-                        <p>
-                            Ambtenaren voelen zich onmachtig het tij van
-                            publieke onvrede te keren. Die onmacht heeft te
-                            maken met moeilijk te herstellen fouten uit het
-                            verleden, vastgelopen en doorgeschoten wetgeving,
-                            het ontbreken van stabiele politieke meerderheden en
-                            een consistente koers.
-                        </p>
-                        <p className="font-medium text-slate-600">
-                            Maar ook met hoe we ons werk doen. Processturing
-                            domineert te vaak de samenwerking.
-                        </p>
-                    </div>
-                </div>
-            </section> */}
-            <section className="bg-slate-50 py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-slate-600">
-                        De huidige context
-                    </h2>
-                    <div className="space-y-6 pt-8 text-lg leading-loose text-gray-700">
-                        <p>
-                            <span className="text-sm opacity-85">✔️</span>
-                            &ensp;Het huis piept...
-                            <br />
-                            <span className="text-sm opacity-85">✔️</span>
-                            &ensp;De waan van de dag...
-                            <br />
-                            <span className="text-sm opacity-85">✔️</span>
-                            &ensp;Ambtenaren voelen zich onmachtig...
-                        </p>
                     </div>
                 </div>
             </section>

@@ -92,7 +92,7 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <div className="-mt-8 flex h-full flex-col items-center justify-start md:-mt-20 md:justify-center">
+                    <div className="-mt-12 flex h-full flex-col items-center overflow-y-auto px-4 py-8">
                         <nav className="text-center">
                             <ul className="space-y-2 text-gold-200 md:space-y-8">
                                 {navigation.map((item) => (
