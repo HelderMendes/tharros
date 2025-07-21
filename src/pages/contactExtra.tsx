@@ -13,83 +13,99 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const RECAPTCHA_SITE_KEY =
+    import.meta.env.VITE_RECAPTCHA_SITE_KEY || 'fallback-site-key';
+const EMAILJS_SERVICE_ID =
+    import.meta.env.VITE_EMAILJS_SERVICE_ID || 'fallback-service-id';
+const EMAILJS_TEMPLATE_ID =
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'fallback-template-id';
+const EMAILJS_PUBLIC_KEY =
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'fallback-public-key';
+
 const Contact = () => {
-    const form = useRef<HTMLFormElement>(null);
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+    const form = useRef<HTMLFormElement>(null);
 
     const navigate = useNavigate();
 
-    const handleRecaptchaChange = (token: string | null) => {
-        setRecaptchaVerified(!!token);
-    };
+    // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
 
-    const handleRecaptchaExpired = () => {
-        setRecaptchaVerified(false);
-    };
+    //     if (!form.current) {
+    //         console.error('Form reference is null');
+    //         return;
+    //     } else if (!captchaToken) {
+    //         alert(
+    //             'Bevestig a.u.b. dat u geen robot bent door de reCAPTCHA aan te vinken.'
+    //         );
+    //         return;
+    //     }
+
+    //     console.log('Sending email with form state:', formData);
+    //     console.log('Captcha token:', captchaToken);
+
+    //     // Add the captcha token to the form data for EmailJS
+    //     const emailFormData = new FormData(form.current);
+    //     emailFormData.append('g-recaptcha-response', captchaToken);
+
+    //     // const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+    //     emailjs
+    //         .sendForm(
+    //             import.meta.env.VITE_EMAILJS_SERVICE_ID ||
+    //                 'fallback-service-id',
+    //             import.meta.env.VITE_EMAILJS_TEMPLATE_ID ||
+    //                 'fallback-template-id',
+    //             form.current!,
+    //             {
+    //                 publicKey:
+    //                     import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
+    //                     'fallback-public-key',
+    //             }
+    //         )
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        if (!form.current) {
-            console.error('Form reference is null');
-            return;
-        }
-
-        // Get reCAPTCHA token
-        const recaptchaToken = recaptchaRef.current?.getValue();
-
-        if (!recaptchaToken) {
-            alert(
-                'Gelieve de reCAPTCHA te voltooien voordat u het formulier verzendt.'
-            );
-            return;
-        }
-
-        setIsLoading(true);
-        console.log('Sending email with form data:', formData);
-
-        // Add the reCAPTCHA token to the form data
-        const formDataWithCaptcha = new FormData(form.current);
-        formDataWithCaptcha.append('g-recaptcha-response', recaptchaToken);
+        if (!form.current) return;
 
         emailjs
-            .sendForm(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_vdnjsup',
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_lzuedzh',
-                form.current,
-                {
-                    publicKey:
-                        import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
-                        '9-5OzkJ4Bu11JvnC9',
-                }
-            )
+            .sendForm('service_vdnjsup', 'template_lzuedzh', form.current, {
+                publicKey: '9-5OzkJ4Bu11JvnC9',
+            })
             .then(
                 (result) => {
                     console.log('Email sent successfully:', result.text);
                     setIsSubmitted(true);
-                    setIsLoading(false);
-                    // Reset reCAPTCHA
-                    recaptchaRef.current?.reset();
-                    setRecaptchaVerified(false);
+
+                    // Reset form and captcha
+                    setFormData({
+                        name: '',
+                        email: '',
+                        organization: '',
+                        phone: '',
+                        interest: '',
+                        message: '',
+                    });
+                    setCaptchaToken(null);
+                    if (recaptchaRef.current) {
+                        recaptchaRef.current.reset();
+                    }
+
                     setTimeout(() => {
-                        setIsSubmitted(true);
-                        setFormData({
-                            name: '',
-                            email: '',
-                            organization: '',
-                            phone: '',
-                            interest: '',
-                            message: '',
-                        });
+                        navigate('/');
                     }, 3000);
                 },
                 (error) => {
                     console.error('Email send failed:', error);
                     alert('Er is iets fout gegaan, probeer het later opnieuw.');
-                    setIsLoading(false);
-                    // Reset reCAPTCHA on error
-                    recaptchaRef.current?.reset();
-                    setRecaptchaVerified(false);
+
+                    // Reset captcha on error
+                    setCaptchaToken(null);
+                    if (recaptchaRef.current) {
+                        recaptchaRef.current.reset();
+                    }
                 }
             );
     };
@@ -106,7 +122,7 @@ const Contact = () => {
             contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
-                email: 'info@helderdesign.nl',
+                email: 'f.licher@chello.nl',
             },
         },
     };
@@ -120,8 +136,6 @@ const Contact = () => {
         message: '',
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [recaptchaVerified, setRecaptchaVerified] = useState(false);
 
     const handleChange = (
         e: React.ChangeEvent<
@@ -302,7 +316,6 @@ const Contact = () => {
                                 Verstuur een Bericht
                             </h3>
 
-                            {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
                             <form
                                 ref={form}
                                 onSubmit={sendEmail}
@@ -448,45 +461,37 @@ const Contact = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         className="w-full resize-none rounded-none border border-slate-900/20 p-3 font-light transition-colors focus:border-transparent focus:ring-2 focus:ring-slate-500"
-                                        placeholder="'Schrijf hier uw vraag of opmerking..."
+                                        placeholder="Schrijf hier uw vraag of opmerking..."
                                     />
                                 </div>
+                                <input
+                                    type="hidden"
+                                    name="g-recaptcha-response"
+                                    value={captchaToken || ''}
+                                />
 
-                                {/* reCAPTCHA */}
-                                <div className="flex justify-center">
-                                    <ReCAPTCHA
-                                        ref={recaptchaRef}
-                                        sitekey={
-                                            import.meta.env
-                                                .VITE_RECAPTCHA_SITE_KEY ||
-                                            '6LcwhYorAAAAAP9DjKoHEq_W7Rzy4ozGoIREY2kd'
-                                        }
-                                        onChange={handleRecaptchaChange}
-                                        onExpired={handleRecaptchaExpired}
-                                        theme="light"
-                                    />
-                                </div>
+                                <ReCAPTCHA
+                                    sitekey={
+                                        '6LcwhYorAAAAAP9DjKoHEq_W7Rzy4ozGoIREY2kd'
+                                    }
+                                    onChange={setCaptchaToken}
+                                    ref={recaptchaRef}
+                                    onExpired={() => setCaptchaToken(null)}
+                                />
 
                                 <button
                                     type="submit"
-                                    disabled={!recaptchaVerified || isLoading}
-                                    className={`flex w-full transform items-center justify-center rounded-xl py-3 font-semibold text-white shadow-sm transition-colors duration-200 ${
-                                        !recaptchaVerified || isLoading
-                                            ? 'cursor-not-allowed bg-gray-400'
-                                            : 'bg-gradient-to-t from-black/85 to-gold-900 hover:-translate-y-1 hover:bg-gradient-to-t hover:from-slate-500/85 hover:to-slate-900 hover:shadow-md'
+                                    disabled={!captchaToken}
+                                    className={`flex w-full transform items-center justify-center rounded-xl py-3 font-semibold shadow-sm transition-all duration-200 ${
+                                        captchaToken
+                                            ? 'bg-gradient-to-t from-black/85 to-gold-900 text-white hover:-translate-y-1 hover:bg-gradient-to-t hover:from-slate-500/85 hover:to-slate-900 hover:shadow-md'
+                                            : 'cursor-not-allowed bg-gray-300 text-gray-500'
                                     }`}
                                 >
-                                    {isLoading ? (
-                                        <>
-                                            <div className="mr-3 h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
-                                            Verzenden...
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Send className="mr-3 h-5 w-5" />
-                                            Verstuur Bericht
-                                        </>
-                                    )}
+                                    <Send className="mr-3 h-5 w-5" />
+                                    {captchaToken
+                                        ? 'Verstuur Bericht'
+                                        : 'Vink eerst de reCAPTCHA aan'}
                                 </button>
                             </form>
                         </div>
