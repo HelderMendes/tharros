@@ -54,13 +54,11 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_vdnjsup',
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_lzuedzh',
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 form.current,
                 {
-                    publicKey:
-                        import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
-                        '9-5OzkJ4Bu11JvnC9',
+                    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
                 }
             )
             .then(
@@ -458,8 +456,7 @@ const Contact = () => {
                                         ref={recaptchaRef}
                                         sitekey={
                                             import.meta.env
-                                                .VITE_RECAPTCHA_SITE_KEY ||
-                                            '6LcwhYorAAAAAP9DjKoHEq_W7Rzy4ozGoIREY2kd'
+                                                .VITE_RECAPTCHA_SITE_KEY
                                         }
                                         onChange={handleRecaptchaChange}
                                         onExpired={handleRecaptchaExpired}
