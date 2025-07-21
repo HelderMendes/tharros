@@ -139,7 +139,7 @@ const Home = () => {
                             title="Individuele Trajecten"
                             subtitle="Persoonlijke coaching en mentorschap"
                             intro="Als u behoefte heeft aan persoonlijke coaching of mentorschap als medewerker of leidinggevende in de publieke sector dan ik u daarbij helpen door samen te zoeken naar wat er goed gaat en nog beter kan. Daarbij kan ik mijn eigen jarenlange kennis en ervaring uit de praktijk inzetten om te verhelderen hoe dingen wellicht ook anders kunnen een hoe een meer effectief handelingsrepertoire ontwikkeld kan worden."
-                            href="coaching"
+                            href="individuele-trajecten"
                             image="images/Cubism.jpg"
                         />
 

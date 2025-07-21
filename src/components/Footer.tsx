@@ -31,14 +31,12 @@ const Footer = () => {
                                             Ferdi Licher
                                         </p>
                                         <a
-                                            href="https://www.google.com/maps/search/?api=1&query=Vossiusstraat+30-2,+1071AG+Amsterdam"
+                                            href="#"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-gray-400 transition-colors hover:text-slate-400"
                                         >
-                                            Vossiusstraat 30-2
-                                            <br />
-                                            1071AG Amsterdam
+                                            Amsterdam
                                         </a>
                                     </div>
                                 </div>
