@@ -17,7 +17,7 @@ const heroImages: HeroImage[] = [
 
 const ImageSlider = () => {
     return (
-        <section className="relative aspect-[1700/900] h-full max-h-[870px] w-full overflow-hidden">
+        <section className="relative aspect-[600/400] h-full max-h-[870px] min-h-[320px] w-full overflow-hidden sm:aspect-[600/200] md:aspect-[1700/900]">
             {/* Slider */}
             {heroImages.map((img, idx) => (
                 <div
