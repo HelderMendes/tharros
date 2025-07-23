@@ -1,13 +1,5 @@
 import { SEO } from '@/components/SEO';
-import {
-    MapPin,
-    Briefcase,
-    GraduationCap,
-    Heart,
-    Linkedin,
-    Check,
-    Sun,
-} from 'lucide-react';
+import { MapPin, Briefcase, GraduationCap, Heart, Linkedin, Check, Sun } from 'lucide-react';
 import { faChess } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TestimonialsSlider from '@/components/TestimonialsSlider';
@@ -95,17 +87,11 @@ const FerdiProfile = () => {
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
-                                Ferdi Licher
-                            </h1>
-                            <p className="mb-6 text-2xl text-slate-600">
-                                Moderator, trainer en coach
-                            </p>
+                            <h1 className="mb-2 text-4xl font-bold lg:text-5xl">Ferdi Licher</h1>
+                            <p className="mb-6 text-2xl text-slate-600">Moderator, trainer en coach</p>
                             <p className="mb-8 text-xl font-light leading-loose">
-                                Na mijn jarenlange ervaring als leidinggevende
-                                bij verschillende ministeries wil ik met jonge
-                                medewerkers en beginnend leidinggevenden delen
-                                hoe je als ambtenaar het verschil kunt maken.
+                                Na mijn jarenlange ervaring als leidinggevende bij verschillende ministeries wil ik met jonge medewerkers en beginnend
+                                leidinggevenden delen hoe je als ambtenaar het verschil kunt maken.
                             </p>
                             <div className="flex items-center space-x-10 text-slate-600">
                                 <div className="flex items-center">
@@ -137,36 +123,21 @@ const FerdiProfile = () => {
                     <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
                         <div className="space-y-8">
                             <div>
-                                <h2 className="mb-6 text-3xl font-semibold text-gold-800">
-                                    Mijn achtergrond
-                                </h2>
+                                <h2 className="mb-6 text-3xl font-semibold text-gold-800">Mijn achtergrond</h2>
                                 <div className="space-y-4 text-lg leading-relaxed text-gray-700">
                                     <p>
-                                        Ik ben geboren in Ermelo en opgegroeid
-                                        in de Veluwse bossen. Daarna heb ik
-                                        gewoond in Arnhem, Modena (Italië) en
-                                        inmiddels alweer 35 jaar in Amsterdam.
-                                        Sinds begin dit jaar ook voor een deel
-                                        van het jaar in Siracusa, een Oudgriekse
-                                        stad op Sicilië.
+                                        Ik ben geboren in Ermelo en opgegroeid in de Veluwse bossen. Daarna heb ik gewoond in Arnhem, Modena (Italië)
+                                        en inmiddels alweer 35 jaar in Amsterdam. Sinds begin dit jaar ook voor een deel van het jaar in Siracusa, een
+                                        Oudgriekse stad op Sicilië.
                                     </p>
                                     <p>
-                                        Ik ben opgeleid als
-                                        bewegingsonderwijzer, heb enkele jaren
-                                        als leraar voor de klas gestaan en ben
-                                        vervolgens arbeid- en
-                                        organisatiepsycholoog gaan studeren in
-                                        Padova (Italië) en Amsterdam.
+                                        Ik ben opgeleid als bewegingsonderwijzer, heb enkele jaren als leraar voor de klas gestaan en ben vervolgens
+                                        arbeid- en organisatiepsychologie gaan studeren in Padova (Italië) en Amsterdam.
                                     </p>
                                     <p>
-                                        Ik heb bijna 35 jaar ervaring bij de
-                                        rijksoverheid waarvan ruim 25 jaar als
-                                        leidinggevende. Eerst bij het ministerie
-                                        van SZW, later bij OCW en de laatste 15
-                                        jaar bij het ministerie van BZK onder
-                                        meer als, directeur Bouwen en Energie en
-                                        programmadirecteur Verduurzaming
-                                        Groningen.
+                                        Ik heb bijna 35 jaar ervaring bij de rijksoverheid waarvan ruim 25 jaar als leidinggevende. Eerst bij het
+                                        ministerie van SZW, later bij OCW en de laatste 15 jaar bij het ministerie van BZK onder meer als, directeur
+                                        Bouwen en Energie en programmadirecteur Verduurzaming Groningen.
                                     </p>
                                 </div>
                             </div>
@@ -212,9 +183,7 @@ const FerdiProfile = () => {
                                         target="new"
                                     >
                                         <Linkedin className="inline" />
-                                        <span className="ml-[9.5px] pt-2 font-semibold">
-                                            LinkedIn Profile
-                                        </span>
+                                        <span className="ml-[9.5px] pt-2 font-semibold">LinkedIn Profile</span>
                                     </a>
                                 </div>
                             </div>
@@ -227,27 +196,17 @@ const FerdiProfile = () => {
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                     <div className="rounded-lg bg-gradient-to-b from-black/85 to-gold-900 p-8 text-white md:p-12">
-                        <h3 className="mb-6 text-2xl font-semibold text-slate-600">
-                            Mijn leiderschapsvisie{' '}
-                        </h3>
+                        <h3 className="mb-6 text-2xl font-semibold text-slate-600">Mijn leiderschapsvisie </h3>
                         <div className="space-y-6 leading-loose">
                             <p>
-                                Als rode draad door mijn loopbaan loopt het
-                                aspect van het ontwerpen, het effectief leren
-                                samenspelen en het enthousiasmeren van jonge
-                                mensen.
+                                Als rode draad door mijn loopbaan loopt het aspect van het ontwerpen, het effectief leren samenspelen en het
+                                enthousiasmeren van jonge mensen.
                             </p>
                             <p>
-                                In mijn visie op leiderschap staan het
-                                ontwikkelen van moed en zelfvertrouwen centraal,
-                                en het durven vertrouwen op intuïtie en
-                                improvisatie.
+                                In mijn visie op leiderschap staan het ontwikkelen van moed en zelfvertrouwen centraal, en het durven vertrouwen op
+                                intuïtie en improvisatie.
                             </p>
-                            <p>
-                                Deze elementen van intuïtie en improvisatie vind
-                                ik ook terug in mijn passies zoals tangodansen,
-                                schaken en sport.
-                            </p>
+                            <p>Deze elementen van intuïtie en improvisatie vind ik ook terug in mijn passies zoals tangodansen, schaken en sport.</p>
                         </div>
                     </div>
                 </div>
@@ -256,9 +215,7 @@ const FerdiProfile = () => {
             {/* Testimonials Section */}
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 className="mb-12 text-center text-3xl font-semibold text-gold-800">
-                        Wat anderen zeggen...
-                    </h2>
+                    <h2 className="mb-12 text-center text-3xl font-semibold text-gold-800">Wat anderen zeggen...</h2>
                     <TestimonialsSlider />
                 </div>
             </section>

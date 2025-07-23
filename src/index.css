@@ -55,5 +55,39 @@
     }
     body {
         @apply bg-background text-foreground;
+        /* iOS Safari fixes */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* iOS Safari specific fixes for better compatibility */
+    @supports (-webkit-touch-callout: none) {
+        body {
+            /* Fix for iOS Safari blank page issues */
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Ensure canvas elements work properly on iOS */
+        canvas {
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+
+        /* Fix for PDF rendering issues on iOS */
+        .react-pdf__Document {
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .react-pdf__Page {
+            display: block !important;
+            margin: 0 auto !important;
+        }
+
+        .react-pdf__Page__canvas {
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+        }
     }
 }

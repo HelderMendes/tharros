@@ -61,7 +61,7 @@ const Comenius = () => {
             icon: Lightbulb,
             title: 'Verbeeldingskracht',
             description:
-                'Verbeeldingskracht verdient een prominente plaats in het repertoire van de leider. Zonder verbeeldingskrachtverbleken persoonlijke en maatschappelijke drive en inspiratie. Hoe geef je metaforen, verhalen, gedichten, muziek, een plek in jouw werk?',
+                'Verbeeldingskracht verdient een prominente plaats in het repertoire van de leider. Zonder verbeeldingskracht verbleken persoonlijke en maatschappelijke drive en inspiratie. Hoe geef je metaforen, verhalen, gedichten, muziek, een plek in jouw werk?',
         },
         {
             icon: Star,
