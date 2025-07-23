@@ -3,40 +3,69 @@ import { Document, Page, pdfjs } from 'react-pdf';
 
 // Configure the PDF.js worker with proper version matching
 // This prevents console errors about worker version mismatch
-pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
-
-// Configure PDF.js to reduce console warnings
-if (import.meta.env.DEV) {
-    // Suppress common PDF.js warnings in development
-    const originalConsoleWarn = console.warn;
-    console.warn = function (message, ...args) {
-        if (
-            typeof message === 'string' &&
-            (message.includes('Setting up fake worker') || message.includes('pdf.worker.js') || message.includes('WorkerTransport'))
-        ) {
-            return;
-        }
-        originalConsoleWarn.apply(console, [message, ...args]);
-    };
+try {
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
+} catch (error) {
+    // Fallback for environments where URL construction fails
+    pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+    console.warn('PDF worker fallback loaded:', error);
 }
+
+// Note: Console warning suppression removed for better error visibility in development
 
 function PDFViewer() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(600); // Default width
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
+    const [componentError, setComponentError] = useState<string | null>(null);
 
-    // Detect iOS devices
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isIOSChrome = isIOS && /CriOS/.test(navigator.userAgent);
+    // Detect iOS devices with comprehensive detection for all browsers
+    const userAgent = navigator.userAgent;
+    const isIOS =
+        /iPad|iPhone|iPod/.test(userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ||
+        /iPhone|iPad|iPod|iOS/i.test(userAgent);
+
+    // More comprehensive iOS Chrome detection
+    const isIOSChrome = isIOS && (/CriOS/.test(userAgent) || /Chrome/.test(userAgent) || /Google/.test(userAgent));
+
     const isIOSSafari = isIOS && !isIOSChrome;
 
-    // Debug logging
+    // Use fallback for ALL iOS devices since react-pdf has issues on iOS
+    const isIOSMobile = isIOS;
+
+    // Error boundary effect
     useEffect(() => {
-        console.log('PDFViewer mounted');
-        console.log('iOS:', isIOS, 'Safari:', isIOSSafari);
+        const handleError = (error: ErrorEvent) => {
+            if (error.message.includes('pdf') || error.message.includes('worker')) {
+                console.error('PDF-related error caught:', error);
+                setComponentError(error.message);
+                setHasError(true);
+            }
+        };
+
+        window.addEventListener('error', handleError);
+        return () => window.removeEventListener('error', handleError);
+    }, []);
+
+    // Debug logging with more detailed information
+    useEffect(() => {
+        console.log('=== PDFViewer Debug Info ===');
+        console.log('User Agent:', navigator.userAgent);
+        console.log('Platform:', navigator.platform);
+        console.log('Max Touch Points:', navigator.maxTouchPoints);
+        console.log('iOS Detection Results:');
+        console.log('  - isIOS:', isIOS);
+        console.log('  - isIOSSafari:', isIOSSafari);
+        console.log('  - isIOSChrome:', isIOSChrome);
+        console.log('  - isIOSMobile (will show fallback):', isIOSMobile);
         console.log('Worker src:', pdfjs.GlobalWorkerOptions.workerSrc);
-    }, [isIOS, isIOSSafari]);
+        if (componentError) {
+            console.error('Component Error:', componentError);
+        }
+        console.log('=== End Debug Info ===');
+    }, [isIOS, isIOSSafari, isIOSChrome, isIOSMobile, componentError]);
 
     // Update width responsively with simplified logic
     useEffect(() => {
@@ -91,19 +120,21 @@ function PDFViewer() {
     }, []);
     return (
         <div ref={containerRef} className="mx-auto flex w-full max-w-5xl justify-center">
-            {/* Special handling for iOS Safari - show iframe fallback */}
-            {isIOSSafari ? (
-                <div className="w-full">
-                    <div className="mb-4 rounded-md bg-blue-50 p-4 text-center">
+            {/* Special handling for ALL iOS devices - show fallback for better compatibility */}
+            {isIOSMobile ? (
+                <div className="bg-pdf-bkg w-full bg-contain bg-no-repeat">
+                    {/* <div className="mb-4 rounded-md bg-blue-50 p-4 text-center">
                         <p className="text-sm text-blue-700">Voor de beste ervaring op iOS, open de PDF in een nieuwe tab.</p>
-                    </div>
-                    <div className="flex h-96 w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300">
-                        <div className="text-gray-600">PDF Preview niet beschikbaar op dit apparaat</div>
+                    </div> */}
+                    <div className="flex aspect-[170/270] w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300">
+                        <div className="bg-white/50 px-8 py-3 text-center font-semibold text-gray-600">
+                            PDF Preview niet beschikbaar op dit apparaat
+                        </div>
                         <a
                             href="/files/ambtelijk-leiderschap_lecture.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded bg-slate-600 px-6 py-3 font-semibold text-white shadow-lg hover:bg-gold-600"
+                            className="rounded-2xl border bg-slate-600 px-6 py-2 text-white hover:bg-gold-600"
                         >
                             Open PDF in nieuwe tab
                         </a>
@@ -130,80 +161,105 @@ function PDFViewer() {
                             </a>
                         </div>
                     ) : (
-                        <Document
-                            file="/files/ambtelijk-leiderschap_lecture.pdf"
-                            onLoadSuccess={(pdf) => {
-                                console.log('PDF loaded successfully:', pdf.numPages, 'pages');
-                                setIsLoading(false);
-                            }}
-                            onLoadError={(error) => {
-                                console.error('Error loading PDF:', error);
-                                setHasError(true);
-                                setIsLoading(false);
-                            }}
-                            onSourceError={(error) => {
-                                console.error('Error with PDF source:', error);
-                                setHasError(true);
-                                setIsLoading(false);
-                            }}
-                            className={'text-center'}
-                            loading={
-                                <div className="flex h-96 w-full items-center justify-center">
-                                    <div className="text-gray-500">PDF laden...</div>
-                                </div>
-                            }
-                            error={
-                                <div className="flex h-96 w-full flex-col items-center justify-center space-y-4">
-                                    <div className="text-red-500">PDF kan niet worden geladen op dit apparaat.</div>
-                                    <a
-                                        href="/files/ambtelijk-leiderschap_lecture.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="rounded bg-slate-600 px-4 py-2 text-white hover:bg-gold-600"
-                                    >
-                                        Open PDF in nieuwe tab
-                                    </a>
-                                </div>
-                            }
-                            options={{
-                                cMapUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
-                                cMapPacked: true,
-                                standardFontDataUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
-                                verbosity: 0,
-                            }}
-                        >
-                            <Page
-                                pageNumber={1}
-                                width={width}
-                                renderTextLayer={false}
-                                renderAnnotationLayer={false}
-                                className="mx-auto"
-                                onRenderSuccess={() => {
-                                    console.log('Page rendered successfully with width:', width);
-                                }}
-                                onRenderError={(error) => {
-                                    console.error('Page render error:', error);
-                                }}
-                                loading={
-                                    <div className="flex h-96 w-full items-center justify-center">
-                                        <div className="text-gray-500">Pagina laden...</div>
-                                    </div>
-                                }
-                                error={
-                                    <div className="flex h-96 w-full flex-col items-center justify-center space-y-4">
-                                        <div className="text-red-500">Pagina kan niet worden weergegeven.</div>
-                                        <a
-                                            href="/files/ambtelijk-leiderschap_lecture.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="rounded bg-slate-600 px-4 py-2 text-white hover:bg-gold-600"
+                        <div>
+                            {(() => {
+                                try {
+                                    return (
+                                        <Document
+                                            file="/files/ambtelijk-leiderschap_lecture.pdf"
+                                            onLoadSuccess={(pdf) => {
+                                                console.log('PDF loaded successfully:', pdf.numPages, 'pages');
+                                                setIsLoading(false);
+                                            }}
+                                            onLoadError={(error) => {
+                                                console.error('Error loading PDF:', error);
+                                                setHasError(true);
+                                                setIsLoading(false);
+                                            }}
+                                            onSourceError={(error) => {
+                                                console.error('Error with PDF source:', error);
+                                                setHasError(true);
+                                                setIsLoading(false);
+                                            }}
+                                            className={'text-center'}
+                                            loading={
+                                                <div className="flex h-96 w-full items-center justify-center">
+                                                    <div className="text-gray-500">PDF laden...</div>
+                                                </div>
+                                            }
+                                            error={
+                                                <div className="flex h-96 w-full flex-col items-center justify-center space-y-4">
+                                                    <div className="text-red-500">PDF kan niet worden geladen op dit apparaat.</div>
+                                                    <a
+                                                        href="/files/ambtelijk-leiderschap_lecture.pdf"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="rounded bg-slate-600 px-4 py-2 text-white hover:bg-gold-600"
+                                                    >
+                                                        Open PDF in nieuwe tab
+                                                    </a>
+                                                </div>
+                                            }
+                                            options={{
+                                                cMapUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+                                                cMapPacked: true,
+                                                standardFontDataUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+                                                verbosity: 0,
+                                            }}
                                         >
-                                            Open PDF in nieuwe tab
-                                        </a>
-                                    </div>
+                                            <Page
+                                                pageNumber={1}
+                                                width={width}
+                                                renderTextLayer={false}
+                                                renderAnnotationLayer={false}
+                                                className="mx-auto"
+                                                onRenderSuccess={() => {
+                                                    console.log('Page rendered successfully with width:', width);
+                                                }}
+                                                onRenderError={(error) => {
+                                                    console.error('Page render error:', error);
+                                                }}
+                                                loading={
+                                                    <div className="flex h-96 w-full items-center justify-center">
+                                                        <div className="text-gray-500">Pagina laden...</div>
+                                                    </div>
+                                                }
+                                                error={
+                                                    <div className="flex h-96 w-full flex-col items-center justify-center space-y-4">
+                                                        <div className="text-red-500">Pagina kan niet worden weergegeven.</div>
+                                                        <a
+                                                            href="/files/ambtelijk-leiderschap_lecture.pdf"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="rounded bg-slate-600 px-4 py-2 text-white hover:bg-gold-600"
+                                                        >
+                                                            Open PDF in nieuwe tab
+                                                        </a>
+                                                    </div>
+                                                }
+                                            />
+                                        </Document>
+                                    );
+                                } catch (error) {
+                                    console.error('PDF Component Error:', error);
+                                    setComponentError(error instanceof Error ? error.message : 'Unknown error');
+                                    setHasError(true);
+                                    return (
+                                        <div className="flex h-96 w-full flex-col items-center justify-center space-y-4">
+                                            <div className="text-red-500">Er is een probleem opgetreden met de PDF component.</div>
+                                            <a
+                                                href="/files/ambtelijk-leiderschap_lecture.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="rounded bg-slate-600 px-4 py-2 text-white hover:bg-gold-600"
+                                            >
+                                                Open PDF in nieuwe tab
+                                            </a>
+                                        </div>
+                                    );
                                 }
-                            />
-                        </Document>
+                            })()}
+                        </div>
                     )}
                 </>
             )}
