@@ -1,11 +1,5 @@
 import { SEO } from '@/components/SEO';
-import {
-    Target,
-    CheckCircle,
-    MessageSquare,
-    Shield,
-    Compass,
-} from 'lucide-react';
+import { Target, CheckCircle, MessageSquare, Shield, Compass } from 'lucide-react';
 
 const ABR = () => {
     const courseSchema = {
@@ -46,8 +40,7 @@ const ABR = () => {
         {
             icon: CheckCircle,
             title: 'Effectieve oplossingen',
-            description:
-                'Hoe kom je tot de kern van wat er aan de hand is en tot meer effectieve, rechtvaardige en duurzame oplossingen.',
+            description: 'Hoe kom je tot de kern van wat er aan de hand is en tot meer effectieve, rechtvaardige en duurzame oplossingen.',
         },
     ];
 
@@ -73,23 +66,15 @@ const ABR = () => {
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
-                                Algemene Bestuursdienst
-                            </h1>
-                            <p className="mb-6 text-2xl text-gold-300">
-                                Oefenen met de rol van politiek-ambtelijk
-                                adviseur
-                            </p>
+                            <h1 className="mb-2 text-3xl font-bold lg:text-4xl">Algemene Bestuursdienst</h1>
+                            <p className="mb-6 text-2xl text-gold-300">Oefenen met de rol van politiek-ambtelijk adviseur</p>
                             <p className="mb-8 text-xl font-light leading-loose">
-                                In het kader van het Ontwikkelprogramma
-                                Leiderschap van de Algemene Bestuursdienst Rijk
-                                oefen ik samen met de deelnemers hoe zij ruimte
-                                kunnen maken voor het goede gesprek en hun rol
-                                als politiek-ambtelijk adviseur krachtiger en
+                                In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst Rijk oefen ik samen met de
+                                deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en
                                 effectiever kunnen invullen.
                             </p>
-                            <div className="flex items-center space-x-10 text-gold-300">
-                                <div className="flex items-center">
+                            <div className="flex flex-col items-start space-x-0 space-y-3 text-gold-300 sm:flex-row sm:items-start sm:space-x-10 sm:space-y-0">
+                                <div className="flex items-start">
                                     <MessageSquare className="mr-2 inline h-5 w-5" />
                                     Ontwikkelprogramma Leiderschap
                                 </div>
@@ -116,12 +101,9 @@ const ABR = () => {
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Praktijkgerichte Aanpak
-                        </h2>
+                        <h2 className="mb-4 text-3xl font-bold text-gold-600">Praktijkgerichte Aanpak</h2>
                         <p className="text-gary-600 mx-auto max-w-3xl text-lg">
-                            Het oefenen vindt plaats aan de hand van casussen
-                            uit de praktijk. Deze aspecten komen aan de orde:
+                            Het oefenen vindt plaats aan de hand van casussen uit de praktijk. Deze aspecten komen aan de orde:
                         </p>
                     </div>
 
@@ -132,12 +114,8 @@ const ABR = () => {
                                     <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold-500/10">
                                         <aspect.icon className="h-6 w-6 text-gold-600" />
                                     </div>
-                                    <h3 className="mb-4 text-xl font-semibold text-gold-600">
-                                        {aspect.title}
-                                    </h3>
-                                    <p className="leading-relaxed text-black">
-                                        {aspect.description}
-                                    </p>
+                                    <h3 className="mb-4 text-xl font-semibold text-gold-600">{aspect.title}</h3>
+                                    <p className="leading-relaxed text-black">{aspect.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -154,28 +132,18 @@ const ABR = () => {
                                 <Compass className="mr-2 h-4 w-4" />
                                 Leiderschapsinstrument
                             </div>
-                            <h2 className="mb-6 text-3xl font-bold text-gold-600">
-                                Het Kompas voor Publiek Leiderschap
-                            </h2>
+                            <h2 className="mb-6 text-3xl font-bold text-gold-600">Het Kompas voor Publiek Leiderschap</h2>
                             <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                                Het kompas voor publiek leiderschap is opgesteld
-                                aan de hand van groot aantal interviews met
-                                leidinggevenden en bestaat uit een
-                                vertrekpositie, 5 kerndimensies en 10
-                                hoofdrichtingen die de zoektocht naar meer en
-                                beter leiderschap kunnen helpen vormgeven.
+                                Het kompas voor publiek leiderschap is opgesteld aan de hand van groot aantal interviews met leidinggevenden en
+                                bestaat uit een vertrekpositie, 5 kerndimensies en 10 hoofdrichtingen die de zoektocht naar meer en beter leiderschap
+                                kunnen helpen vormgeven.
                             </p>
 
                             <div className="space-y-4">
                                 {kompasRichtingen.map((richting, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start"
-                                    >
+                                    <div key={index} className="flex items-start">
                                         <div className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gold-500"></div>
-                                        <p className="text-gray-700">
-                                            {richting}
-                                        </p>
+                                        <p className="text-gray-700">{richting}</p>
                                     </div>
                                 ))}
                             </div>

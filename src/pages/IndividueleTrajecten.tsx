@@ -49,14 +49,12 @@ const IndividueleTrajecten = () => {
         {
             icon: Users,
             title: 'Steun en draagvlak',
-            description:
-                'Hoe krijg je steun en draagvlak voor veranderingen en de koers die je wilt inslaan. Wat is nodig en haalbaar.',
+            description: 'Hoe krijg je steun en draagvlak voor veranderingen en de koers die je wilt inslaan. Wat is nodig en haalbaar.',
         },
         {
             icon: Heart,
             title: 'Positieve energie',
-            description:
-                'Hoe zorg je dat er positieve energie gaat stromen in het team en dat medewerkers niet uitgeput raken van tegenslagen.',
+            description: 'Hoe zorg je dat er positieve energie gaat stromen in het team en dat medewerkers niet uitgeput raken van tegenslagen.',
         },
     ];
 
@@ -74,21 +72,14 @@ const IndividueleTrajecten = () => {
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 className="mb-3 text-3xl font-bold lg:text-4xl">
-                                Individuele Trajecten
-                            </h1>
-                            <p className="mb-6 text-2xl text-gold-300">
-                                Persoonlijke coaching en mentorschap
-                            </p>
+                            <h1 className="mb-3 text-3xl font-bold lg:text-4xl">Individuele Trajecten</h1>
+                            <p className="mb-6 text-2xl text-gold-300">Persoonlijke coaching en mentorschap</p>
                             <p className="mb-8 text-xl font-light leading-loose">
-                                Als u behoefte heeft aan persoonlijke coaching
-                                of mentorschap als medewerker of leidinggevende
-                                in de publieke sector dan kan ik u daarbij
-                                helpen door samen te zoeken naar wat er goed
-                                gaat en wat nog beter kan.
+                                Als u behoefte heeft aan persoonlijke coaching of mentorschap als medewerker of leidinggevende in de publieke sector
+                                dan kan ik u daarbij helpen door samen te zoeken naar wat er goed gaat en wat nog beter kan.
                             </p>
-                            <div className="flex space-x-10 text-gold-300">
-                                <div className="flex items-center">
+                            <div className="flex flex-col items-start space-x-0 space-y-3 text-gold-300 sm:flex-row sm:items-start sm:space-x-10 sm:space-y-0">
+                                <div className="flex items-start">
                                     <UserCircle className="mr-2 inline h-5 w-5" />
                                     Coaching & Mentorschap
                                 </div>
@@ -101,11 +92,7 @@ const IndividueleTrajecten = () => {
                         <div className="relative">
                             {/* Abstract faces image */}
                             <div className="overflow-hidden rounded-lg shadow-2xl">
-                                <img
-                                    src={coachingImages[0].src}
-                                    alt={coachingImages[0].alt}
-                                    className="h-96 w-full object-cover"
-                                />
+                                <img src={coachingImages[0].src} alt={coachingImages[0].alt} className="h-96 w-full object-cover" />
                             </div>
                         </div>
                     </div>
@@ -117,41 +104,28 @@ const IndividueleTrajecten = () => {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto mb-16 max-w-4xl text-center">
                         <h2 className="mb-8 text-3xl font-bold leading-snug text-slate-600 lg:text-4xl lg:leading-snug">
-                            Persoonlijke begeleiding op maat voor medewerkers en
-                            leidinggevenden
+                            Persoonlijke begeleiding op maat voor medewerkers en leidinggevenden
                         </h2>
                         <p className="mx-auto pb-3 text-xl leading-relaxed text-gray-700">
-                            In mijn individuele coaching en mentorschap zoeken
-                            we samen hoe je de kern van het werk centraal kunt
-                            stellen en daar positieve energie en plezier in kunt
-                            organiseren.
+                            In mijn individuele coaching en mentorschap zoeken we samen hoe je de kern van het werk centraal kunt stellen en daar
+                            positieve energie en plezier in kunt organiseren.
                         </p>
                         <p className="mx-auto text-xl leading-relaxed text-gray-700">
-                            Daarbij kan ik mijn eigen jarenlange kennis en
-                            ervaring uit de praktijk inzetten om te verhelderen
-                            hoe dingen wellicht ook anders kunnen een hoe een
-                            meer effectief handelingsrepertoire ontwikkeld kan
-                            worden.
+                            Daarbij kan ik mijn eigen jarenlange kennis en ervaring uit de praktijk inzetten om te verhelderen hoe dingen wellicht ook
+                            anders kunnen een hoe een meer effectief handelingsrepertoire ontwikkeld kan worden.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 pt-4 lg:grid-cols-3">
                         {focusAreas.map((area, index) => (
-                            <div
-                                key={index}
-                                className="rounded-2xl bg-slate-200/10 p-8 shadow-lg"
-                            >
+                            <div key={index} className="rounded-2xl bg-slate-200/10 p-8 shadow-lg">
                                 <div className="mb-6 flex justify-center">
                                     <div className="rounded-2xl bg-slate-100 p-4">
                                         <area.icon className="h-8 w-8 text-slate-600" />
                                     </div>
                                 </div>
-                                <h3 className="mb-4 text-center text-xl font-semibold text-slate-600">
-                                    {area.title}
-                                </h3>
-                                <p className="text-center leading-relaxed text-gray-700">
-                                    {area.description}
-                                </p>
+                                <h3 className="mb-4 text-center text-xl font-semibold text-slate-600">{area.title}</h3>
+                                <p className="text-center leading-relaxed text-gray-700">{area.description}</p>
                             </div>
                         ))}
                     </div>

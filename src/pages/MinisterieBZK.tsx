@@ -1,14 +1,5 @@
 import { SEO } from '@/components/SEO';
-import {
-    Users,
-    Calendar,
-    Star,
-    Target,
-    MessageSquare,
-    Heart,
-    Award,
-    TrendingUp,
-} from 'lucide-react';
+import { Users, Calendar, Star, Target, MessageSquare, Heart, Award, TrendingUp } from 'lucide-react';
 
 const MinisterieBZK = () => {
     const courseSchema = {
@@ -37,20 +28,17 @@ const MinisterieBZK = () => {
         {
             icon: Target,
             title: 'Persoonlijke leerdoelen',
-            description:
-                'Ontdek en ontwikkel je persoonlijke leerdoelen binnen de context van jouw werk en organisatie.',
+            description: 'Ontdek en ontwikkel je persoonlijke leerdoelen binnen de context van jouw werk en organisatie.',
         },
         {
             icon: MessageSquare,
             title: 'Communicatie en interactie',
-            description:
-                "Verbeter je vaardigheden in communicatie en interactie met collega's en stakeholders.",
+            description: "Verbeter je vaardigheden in communicatie en interactie met collega's en stakeholders.",
         },
         {
             icon: TrendingUp,
             title: 'Effectief handelen',
-            description:
-                'Leer effectief te handelen in de complexe omgeving van beleid en uitvoering.',
+            description: 'Leer effectief te handelen in de complexe omgeving van beleid en uitvoering.',
         },
     ];
 
@@ -58,14 +46,12 @@ const MinisterieBZK = () => {
         {
             icon: Users,
             title: 'Meer deelnemers',
-            description:
-                'Veel meer medewerkers kunnen meedoen aan het programma',
+            description: 'Veel meer medewerkers kunnen meedoen aan het programma',
         },
         {
             icon: Star,
             title: 'Behoeftegericht',
-            description:
-                'Het programma sluit goed aan bij de werkelijke behoeften',
+            description: 'Het programma sluit goed aan bij de werkelijke behoeften',
         },
         {
             icon: Award,
@@ -103,30 +89,20 @@ const MinisterieBZK = () => {
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
-                                Ministerie BZK
-                            </h1>
-                            <p className="mb-6 text-2xl text-gold-300">
-                                Leergang Groeien in persoonlijk leiderschap
-                            </p>
+                            <h1 className="mb-2 text-3xl font-bold lg:text-4xl">Ministerie BZK</h1>
+                            <p className="mb-6 text-2xl text-gold-300">Leergang Groeien in persoonlijk leiderschap</p>
                             <p className="mb-8 text-xl font-light leading-loose">
-                                De leergang groeien in persoonlijk leiderschap
-                                is een in-company leergang die voor en door
-                                medewerkers zelf wordt gemaakt onder begeleiding
-                                van een moderator. Aan de orde komen onder meer
-                                persoonlijke leerdoelen, uitdagingen in
-                                communicatie en interactie en het effectief
-                                handelen in de complexe omgeving van beleid en
-                                uitvoering.
+                                De leergang groeien in persoonlijk leiderschap is een in-company leergang die voor en door medewerkers zelf wordt
+                                gemaakt onder begeleiding van een moderator. Aan de orde komen onder meer persoonlijke leerdoelen, uitdagingen in
+                                communicatie en interactie en het effectief handelen in de complexe omgeving van beleid en uitvoering.
                             </p>
-                            <div className="flex items-center space-x-10 text-gold-300">
-                                <div className="flex items-center">
+                            <div className="flex flex-col items-start space-x-0 space-y-3 text-gold-300 sm:flex-row sm:items-start sm:space-x-10 sm:space-y-0">
+                                <div className="flex items-start">
                                     <Users className="mr-2 inline h-5 w-5" />
                                     In-company leergang
                                 </div>
                                 <div className="flex items-center">
-                                    <Calendar className="mr-2 h-5 w-5" />8
-                                    maanden programma
+                                    <Calendar className="mr-2 h-5 w-5" />8 maanden programma
                                 </div>
                             </div>
                         </div>
@@ -147,12 +123,9 @@ const MinisterieBZK = () => {
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Kernthema's van de Leergang
-                        </h2>
+                        <h2 className="mb-4 text-3xl font-bold text-gold-600">Kernthema's van de Leergang</h2>
                         <p className="text-gary-600 mx-auto max-w-3xl text-lg">
-                            De leergang richt zich op drie hoofdthema's die
-                            essentieel zijn voor persoonlijk leiderschap
+                            De leergang richt zich op drie hoofdthema's die essentieel zijn voor persoonlijk leiderschap
                         </p>
                     </div>
 
@@ -163,12 +136,8 @@ const MinisterieBZK = () => {
                                     <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold-500/10">
                                         <aspect.icon className="h-6 w-6 text-gold-600" />
                                     </div>
-                                    <h3 className="mb-4 text-xl font-semibold text-gold-600">
-                                        {aspect.title}
-                                    </h3>
-                                    <p className="leading-relaxed text-black">
-                                        {aspect.description}
-                                    </p>
+                                    <h3 className="mb-4 text-xl font-semibold text-gold-600">{aspect.title}</h3>
+                                    <p className="leading-relaxed text-black">{aspect.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -178,23 +147,15 @@ const MinisterieBZK = () => {
 
             {/* Programma Opzet Section */}
             <section className="mx-auto max-w-5xl bg-white px-4 py-16 sm:px-6 lg:px-8">
-                <h2 className="mb-6 text-3xl font-bold text-gold-600">
-                    Unieke Groepsdynamiek
-                </h2>
+                <h2 className="mb-6 text-3xl font-bold text-gold-600">Unieke Groepsdynamiek</h2>
                 <p className="mb-6 text-lg leading-relaxed text-gray-600">
-                    De leergang staat open voor alle medewerkers van
-                    ondersteuners tot senior-coördinerend medewerkers. De groep
-                    bestaat bij voorkeur uit 16 deelnemers uit hetzelfde
-                    organisatieonderdeel, waarbij zij in tweetallen
-                    verantwoordelijk zijn voor het ontwikkelen en verzorgen van
-                    een van de modules.
+                    De leergang staat open voor alle medewerkers van ondersteuners tot senior-coördinerend medewerkers. De groep bestaat bij voorkeur
+                    uit 16 deelnemers uit hetzelfde organisatieonderdeel, waarbij zij in tweetallen verantwoordelijk zijn voor het ontwikkelen en
+                    verzorgen van een van de modules.
                 </p>
                 <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                    Dat men elkaar onderling al enigszins kent en dat de
-                    leergang open staat voor iedereen wordt zeer positief
-                    gewaardeerd en blijkt een positieve invloed op het
-                    groepsproces te hebben omdat er hierdoor ook onderdeel
-                    coaching plaatsvindt.
+                    Dat men elkaar onderling al enigszins kent en dat de leergang open staat voor iedereen wordt zeer positief gewaardeerd en blijkt
+                    een positieve invloed op het groepsproces te hebben omdat er hierdoor ook onderdeel coaching plaatsvindt.
                 </p>
 
                 <div className="relative mt-24">
@@ -202,16 +163,11 @@ const MinisterieBZK = () => {
                         <Calendar className="mr-2 h-4 w-4" />
                         Programma Opzet
                     </div>
-                    <h2 className="mb-6 text-3xl font-bold text-gold-600">
-                        Flexibel en Maatwerk
-                    </h2>
+                    <h2 className="mb-6 text-3xl font-bold text-gold-600">Flexibel en Maatwerk</h2>
                     <p className="mb-8 text-lg leading-relaxed text-gray-600">
-                        De leergang bestaat standaard uit 8 modules van een
-                        dagdeel die worden verdeeld over een periode van 8
-                        maanden. De groep kiest in een startbijeenkomst zelf
-                        welke 8 thema's centraal zullen staan. Daarbij zorgt de
-                        moderator voor samenhang in het programma en een rode
-                        draad.
+                        De leergang bestaat standaard uit 8 modules van een dagdeel die worden verdeeld over een periode van 8 maanden. De groep kiest
+                        in een startbijeenkomst zelf welke 8 thema's centraal zullen staan. Daarbij zorgt de moderator voor samenhang in het programma
+                        en een rode draad.
                     </p>
 
                     <div className="space-y-4">
@@ -229,31 +185,20 @@ const MinisterieBZK = () => {
             <section className="-mb-24 mt-12 bg-slate-300/10 py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
-                        <h2 className="mb-4 text-3xl font-bold text-gold-600">
-                            Voordelen van In-Company Leergang
-                        </h2>
+                        <h2 className="mb-4 text-3xl font-bold text-gold-600">Voordelen van In-Company Leergang</h2>
                         <p className="text-gary-600 mx-auto max-w-3xl text-lg">
-                            Het voordeel van een in-company door en voor
-                            medewerkers zelf te ontwikkelen
-                            leiderschapsprogramma
+                            Het voordeel van een in-company door en voor medewerkers zelf te ontwikkelen leiderschapsprogramma
                         </p>
                     </div>
 
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {programmaVoordelen.map((voordeel, index) => (
-                            <div
-                                key={index}
-                                className="rounded-lg border border-gray-400/20 px-3 pb-4 pt-5 text-center shadow-md"
-                            >
+                            <div key={index} className="rounded-lg border border-gray-400/20 px-3 pb-4 pt-5 text-center shadow-md">
                                 <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/10">
                                     <voordeel.icon className="h-8 w-8 text-gold-600" />
                                 </div>
-                                <h3 className="mb-2 text-lg font-semibold text-gold-600">
-                                    {voordeel.title}
-                                </h3>
-                                <p className="text-gray-700">
-                                    {voordeel.description}
-                                </p>
+                                <h3 className="mb-2 text-lg font-semibold text-gold-600">{voordeel.title}</h3>
+                                <p className="text-gray-700">{voordeel.description}</p>
                             </div>
                         ))}
                     </div>

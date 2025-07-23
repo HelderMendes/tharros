@@ -93,7 +93,7 @@ const FerdiProfile = () => {
                                 Na mijn jarenlange ervaring als leidinggevende bij verschillende ministeries wil ik met jonge medewerkers en beginnend
                                 leidinggevenden delen hoe je als ambtenaar het verschil kunt maken.
                             </p>
-                            <div className="flex items-center space-x-10 text-slate-600">
+                            <div className="flex flex-col space-y-3 text-slate-600 sm:flex-row sm:items-start sm:space-x-10 sm:space-y-0">
                                 <div className="flex items-center">
                                     <MapPin className="mr-2 h-5 w-5" />
                                     <span>Amsterdam / Siracusa</span>
