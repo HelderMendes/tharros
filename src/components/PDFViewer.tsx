@@ -143,7 +143,7 @@ function PDFViewer() {
             ) : (
                 <>
                     {isLoading && (
-                        <div className="flex h-96 w-full items-center justify-center">
+                        <div className="bg-pdf-bkg flex h-96 w-full items-center justify-center bg-contain bg-no-repeat">
                             <div className="text-gray-500">PDF laden...</div>
                         </div>
                     )}

@@ -66,7 +66,7 @@ const Lecture = () => {
                 <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h2 className="text-4xl font-bold text-slate-600">Waarom deze lecture?</h2>
-                        <div className="space-y-3 rounded-lg bg-gradient-to-r from-gold-50 to-slate-50 pt-8 text-xl leading-loose text-gray-700">
+                        <div className="space-y-3 pt-8 text-lg leading-relaxed text-gray-700">
                             <p>
                                 We draven en dolen steeds meer. Het huis van Thorbecke kraakt en piept. Er is toenemend politiek ongeduld, de druk op
                                 de overheid en individuele ambtenaren neemt voelbaar toe.
