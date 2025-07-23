@@ -122,11 +122,11 @@ function PDFViewer() {
         <div ref={containerRef} className="mx-auto flex w-full max-w-5xl justify-center">
             {/* Special handling for ALL iOS devices - show fallback for better compatibility */}
             {isIOSMobile ? (
-                <div className="bg-pdf-bkg w-full bg-contain bg-no-repeat">
+                <div className="w-full">
                     {/* <div className="mb-4 rounded-md bg-blue-50 p-4 text-center">
                         <p className="text-sm text-blue-700">Voor de beste ervaring op iOS, open de PDF in een nieuwe tab.</p>
                     </div> */}
-                    <div className="flex aspect-[170/270] w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300">
+                    <div className="bg-pdf-bkg flex aspect-[170/270] w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300 bg-contain bg-no-repeat">
                         <div className="bg-white/50 px-8 py-3 text-center font-semibold text-gray-600">
                             PDF Preview niet beschikbaar op dit apparaat
                         </div>
