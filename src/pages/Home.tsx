@@ -7,7 +7,7 @@ const Home = () => {
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'Tharros Training & Coaching',
+        name: 'Tharros, Training en Coaching',
         url: 'https://www.tharros-trainingcoaching.nl',
         logo: 'https://www.tharros-trainingcoaching.nl/LogoTharros.png',
         description:
@@ -19,27 +19,21 @@ const Home = () => {
         contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer service',
-            email: 'info@tharros-trainingcoaching.nl',
+            email: 'f.licher1@chello.nl',
         },
         founder: {
             '@type': 'Person',
             name: 'Ferdi Licher',
             jobTitle: 'Senior Leadership Coach & Trainer',
         },
-        services: [
-            'Leiderschapstraining',
-            'Coaching',
-            'Workshops',
-            'Mentorschap',
-            'Persoonlijke ontwikkeling',
-        ],
+        services: ['Leiderschapstraining', 'Coaching', 'Workshops', 'Mentorschap', 'Persoonlijke ontwikkeling'],
     };
 
     return (
         <>
             <SEO
                 title="Tharros – Leiderschapstraining & Coaching voor de Publieke Sector"
-                description="Tharros Training & Coaching biedt gespecialiseerde leiderschapstraining, coaching en mentorschap voor professionals in de publieke sector. Ontwikkel ambtelijk vakmanschap, persoonlijke ontwikkeling en effectief leiderschap met Ferdi Licher."
+                description="Tharros, Training en Coaching biedt gespecialiseerde leiderschapstraining, coaching en mentorschap voor professionals in de publieke sector. Ontwikkel ambtelijk vakmanschap, persoonlijke ontwikkeling en effectief leiderschap met Ferdi Licher."
                 keywords="leiderschapstraining publieke sector, coaching publieke sector, ambtelijk vakmanschap, overheid training, persoonlijke ontwikkeling, management training publieke sector, leiderschap nederland, ferdi licher, tharros training coaching, rijksoverheid coaching"
                 structuredData={organizationSchema}
             />
@@ -55,18 +49,10 @@ const Home = () => {
                     <div className="mx-auto flex w-[80%] gap-3 pb-12">
                         <div className="-mt-4 flex flex-1 flex-col items-center justify-center gap-3">
                             <div className="z-20 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-slate-700">
-                                <img
-                                    src="images/Profil_FerdiLicher.jpeg"
-                                    alt="Ferdi Licher"
-                                    className="h-full w-full object-cover"
-                                />
+                                <img src="images/Profil_FerdiLicher.jpeg" alt="Ferdi Licher" className="h-full w-full object-cover" />
                             </div>
-                            <h3 className="-mb-2 text-4xl font-bold text-slate-400">
-                                Ferdi Licher
-                            </h3>
-                            <p className="text-center text-2xl font-medium leading-tight text-gold-100">
-                                Moderator, Trainer en Coach
-                            </p>
+                            <h3 className="-mb-2 text-4xl font-bold text-slate-400">Ferdi Licher</h3>
+                            <p className="text-center text-2xl font-medium leading-tight text-gold-100">Moderator, Trainer en Coach</p>
                             <ReferencesSlider />
                         </div>
                     </div>

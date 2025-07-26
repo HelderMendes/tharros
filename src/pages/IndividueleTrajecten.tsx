@@ -28,7 +28,7 @@ const IndividueleTrajecten = () => {
             'Persoonlijke coaching en mentorschap voor medewerkers en leidinggevenden in de publieke sector. Samen zoeken naar wat er goed gaat en nog beter kan door jarenlange praktijkervaring in te zetten.',
         provider: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
             url: 'https://tharros.nl',
         },
         serviceType: 'Individual Traject Coaching',

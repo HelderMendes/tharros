@@ -10,7 +10,7 @@ const MinisterieBZK = () => {
             'De leergang groeien in persoonlijk leiderschap is een in-company leergang die voor en door medewerkers zelf wordt gemaakt onder begeleiding van een moderator. Aan de orde komen onder meer persoonlijke leerdoelen, uitdagingen in communicatie en interactie en het effectief handelen in de complexe omgeving van beleid en uitvoering.',
         provider: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
         },
         instructor: {
             '@type': 'Person',

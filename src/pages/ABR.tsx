@@ -10,7 +10,7 @@ const ABR = () => {
             'In het kader van het Ontwikkelprogramma Leiderschap van de Algemene Bestuursdienst Rijk oefen ik samen met de deelnemers hoe zij ruimte kunnen maken voor het goede gesprek en hun rol als politiek-ambtelijk adviseur krachtiger en effectiever kunnen invullen.',
         provider: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
         },
         instructor: {
             '@type': 'Person',

@@ -29,7 +29,7 @@ const Workshops = () => {
             'Professionele workshops en moderatie voor teams en organisaties. Oplossingsgerichte begeleiding, podiumgesprekken en maatwerk voor uiteenlopende sectoren.',
         provider: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
             url: 'https://tharros.nl',
         },
         serviceType: 'Workshop Facilitation',

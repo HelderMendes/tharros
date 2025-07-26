@@ -11,7 +11,7 @@ const Lecture = () => {
             'Een inspirerende lecture over ambtelijk vakmanschap, waarin we stilstaan bij wat er echt toe doet in de publieke sector en hoe we als ambtenaren het verschil kunnen maken.',
         organizer: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
         },
         performer: {
             '@type': 'Person',

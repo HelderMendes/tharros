@@ -12,7 +12,7 @@ const FerdiProfile = () => {
         jobTitle: 'Senior Leadership Coach, Trainer & Moderator',
         worksFor: {
             '@type': 'Organization',
-            name: 'Tharros Training & Coaching',
+            name: 'Tharros, Training en Coaching',
         },
         description:
             'Ervaren trainer, coach en moderator met 35 jaar ervaring in de rijksoverheid, waarvan 25 jaar als leidinggevende. Gespecialiseerd in leiderschapsontwikkeling voor de publieke sector, met rollen als directeur Bouwen en Energie en programmadirecteur Verduurzaming Groningen bij BZK.',

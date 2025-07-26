@@ -30,18 +30,12 @@ export const SEO = ({
     structuredData,
 }: SEOProps) => {
     const siteUrl = 'https://www.tharros-trainingcoaching.nl';
-    const fullTitle = `${title} | Tharros Training & Coaching`;
+    const fullTitle = `${title} | Tharros, Training en Coaching`;
     const finalOgTitle = ogTitle || title;
     const finalOgDescription = ogDescription || description;
-    const finalCanonical =
-        canonical ||
-        (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
-    const finalOgUrl =
-        ogUrl ||
-        (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
-    const finalOgImage = ogImage.startsWith('http')
-        ? ogImage
-        : `${siteUrl}${ogImage}`;
+    const finalCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
+    const finalOgUrl = ogUrl || (typeof window !== 'undefined' ? window.location.href : `${siteUrl}`);
+    const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
     return (
         <Helmet>
@@ -49,17 +43,11 @@ export const SEO = ({
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
-            <meta
-                name="author"
-                content="Ferdi Licher, Tharros Training & Coaching"
-            />
+            <meta name="author" content="Ferdi Licher, Tharros, Training en Coaching" />
             <meta name="robots" content="index, follow" />
             <meta name="language" content="nl" />
             <meta name="revisit-after" content="7 days" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-            />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
             {/* Canonical URL */}
@@ -71,10 +59,7 @@ export const SEO = ({
             <meta property="og:image" content={finalOgImage} />
             <meta property="og:url" content={finalOgUrl} />
             <meta property="og:type" content="website" />
-            <meta
-                property="og:site_name"
-                content="Tharros Training & Coaching"
-            />
+            <meta property="og:site_name" content="Tharros, Training en Coaching" />
             <meta property="og:locale" content="nl_NL" />
 
             {/* Twitter Card Meta Tags */}
@@ -91,24 +76,14 @@ export const SEO = ({
             <meta name="rating" content="General" />
 
             {/* Business/Organization Meta Tags */}
-            <meta
-                name="business:contact_data:street_address"
-                content="Amsterdam"
-            />
+            <meta name="business:contact_data:street_address" content="Amsterdam" />
             <meta name="business:contact_data:locality" content="Amsterdam" />
             <meta name="business:contact_data:region" content="Noord-Holland" />
             <meta name="business:contact_data:postal_code" content="1000 AA" />
-            <meta
-                name="business:contact_data:country_name"
-                content="Nederland"
-            />
+            <meta name="business:contact_data:country_name" content="Nederland" />
 
             {/* Structured Data */}
-            {structuredData && (
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
-            )}
+            {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
         </Helmet>
     );
 };
