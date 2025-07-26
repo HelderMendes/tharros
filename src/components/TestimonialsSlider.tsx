@@ -22,8 +22,7 @@ const testimonials: Testimonial[] = [
     },
     {
         id: 4,
-        testimonial:
-            'Het was fijn om hem zo in zijn element te zien en hoe open hij was over zijn ervaringen. Veel van geleerd.',
+        testimonial: 'Het was fijn om hem zo in zijn element te zien en hoe open hij was over zijn ervaringen. Veel van geleerd.',
     },
     {
         id: 5,
@@ -55,18 +54,13 @@ const TestimonialsSlider = () => {
             {/* Testimonials Display */}
             <div className="grid grid-cols-1 gap-6 transition-all duration-700 ease-in-out md:grid-cols-2 lg:grid-cols-3">
                 {visibleTestimonials.map((testimonial, index) => (
-                    <div key={index} className="rounded-lg bg-slate-50 p-6">
+                    <div key={index} className="rounded-lg bg-slate-50 p-6 leading-relaxed text-gray-700">
                         <div className="mb-4 flex items-center">
                             {[...Array(5)].map((_, i) => (
-                                <Star
-                                    key={i}
-                                    className="mr-2 h-5 w-5 fill-current text-slate-500"
-                                />
+                                <Star key={i} className="mr-2 h-5 w-5 fill-current text-slate-500" />
                             ))}
                         </div>
-                        <p className="mb-4 italic text-gray-700">
-                            "{testimonial.testimonial}"
-                        </p>
+                        <p className="mb-4">"{testimonial.testimonial}"</p>
                     </div>
                 ))}
             </div>
