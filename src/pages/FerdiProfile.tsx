@@ -187,6 +187,9 @@ const FerdiProfile = () => {
                                     </a>
                                 </div>
                             </div>
+                            <div className="rounded-fuul overflow-hidden">
+                                <img src="images/CRKBO_Docent.jpg" alt="Ferdi Licher - CRKBO Docent" className="h-auto w-[50%] object-cover" />
+                            </div>
                         </div>
                     </div>
                 </div>
