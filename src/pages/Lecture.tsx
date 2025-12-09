@@ -27,13 +27,44 @@ const Lecture = () => {
         keywords: 'ambtelijk vakmanschap, publieke sector, overheid, waarden, waarheid, leefwereld',
     };
 
-    const [pdfError, setPdfError] = useState(false);
+    // State for mobile detection, errors, and loading
     const [isMobile, setIsMobile] = useState(false);
+    const [pdfError, setPdfError] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Mobile detection: Runs on mount and resize
+    useEffect(() => {
+        const checkMobile = () => {
+            const mobile = window.innerWidth < 768; // Matches Tailwind 'md:' breakpoint
+            setIsMobile(mobile);
+            console.log('Mobile detected:', mobile); // Debug: Remove in production
+        };
+        checkMobile(); // Initial check on client mount
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // PDF error detection: Timeout if still loading after 3s (desktop only)
+    useEffect(() => {
+        if (!isMobile && !pdfError && isLoading) {
+            const timer = setTimeout(() => {
+                setPdfError(true);
+                setIsLoading(false);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [isMobile, pdfError, isLoading]);
+
+    // Optional: Success handler (call from PDFViewer props if supported)
+    const handlePdfLoadSuccess = () => {
+        setIsLoading(false);
+        setPdfError(false);
+    };
 
     return (
         <>
             <SEO
-                title="Lecture - Over Ambtelijk Vakmanschap | Reflectie op Publieke Waarden, "
+                title="Lecture - Over Ambtelijk Vakmanschap | Reflectie op Publieke Waarden"
                 description="Een inspirerende lecture over ambtelijk vakmanschap door Ferdi Licher. Ontdek wat er echt toe doet in de publieke sector, reflecteer op waarden en waarheid, en leer hoe je als ambtenaar het verschil kunt maken. Download de volledige PDF."
                 keywords="lecture ambtelijk vakmanschap, publieke sector lecture, overheid waarden, ambtelijke integriteit, politiek ongeduld, thorbecke huis, publieke onvrede, processturing, ferdi licher lecture, haagse bluf, leefwereld mensen, weberiaanse bureaucratie, moreel ethische dilemma's"
                 structuredData={lectureSchema}
@@ -56,7 +87,7 @@ const Lecture = () => {
                             <div className="overflow-hidden rounded-lg shadow-2xl">
                                 <img
                                     src="images/lecture_beeld.jpeg"
-                                    alt="Siracusa –metafoor voor groei en stabiliteit"
+                                    alt="Siracusa – metafoor voor groei en stabiliteit"
                                     className="h-96 w-full object-cover"
                                 />
                             </div>
@@ -134,50 +165,59 @@ const Lecture = () => {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center">
                         <h2 className="mb-4 text-4xl font-bold text-slate-600">Volledige Lecture</h2>
-                        <p className="text-xl text-gray-600">Lees de complete tekst van de lecture over ambtelijk vakmanschap</p>{' '}
+                        <p className="text-xl text-gray-600">Lees de complete tekst van de lecture over ambtelijk vakmanschap</p>
                     </div>
                     <p className="mb-3 text-right text-sm font-semibold uppercase text-gray-600/80">Publicatie maart 2025</p>
 
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg">
-                        {/* Desktop/Large Screen: PDFViewer */}
+                        {/* Desktop: PDFViewer with loading/error handling */}
                         {!isMobile && !pdfError && (
                             <div className="mb-8 hidden md:block">
-                                <PDFViewer />
+                                {isLoading && (
+                                    <div className="flex h-64 items-center justify-center p-4">
+                                        <div className="mr-2 h-8 w-8 animate-spin rounded-full border-b-2 border-slate-600"></div>
+                                        <span className="text-gray-600">PDF laden...</span>
+                                    </div>
+                                )}
+                                <PDFViewer
+                                // Tie to your PDFViewer props (e.g., if react-pdf):
+                                // onLoadSuccess={handlePdfLoadSuccess}
+                                // onDocumentLoadError={() => { setPdfError(true); setIsLoading(false); }}
+                                />
                             </div>
                         )}
 
-                        {/* Fallback for Mobile/Small Screen or Errors: Message + Iframe + Download */}
-                        {(isMobile || pdfError) && (
+                        {/* Desktop Error Overlay */}
+                        {!isMobile && pdfError && (
+                            <div className="mb-8 rounded-lg border border-red-200 bg-red-50 p-8 text-center">
+                                <p className="mb-2 text-lg font-medium text-red-600">PDF kon niet laden.</p>
+                                <p className="text-sm text-red-500">Download voor offline lezen of refresh de pagina.</p>
+                            </div>
+                        )}
+
+                        {/* Mobile Fallback: Always show on small screens */}
+                        {isMobile && (
                             <div className="space-y-6 md:hidden">
-                                {' '}
-                                {/* Show only on small screens; hide on md+ */}
-                                <div className="text-center">
+                                <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 text-center">
                                     <p className="mb-4 text-lg font-medium text-gray-700">
-                                        Voor de beste ervaring op mobiel: download de PDF of bekijk in een aparte viewer.
+                                        Voor de beste mobiele ervaring: download de PDF of bekijk inline.
                                     </p>
-                                    {/* Optional Iframe: Attempts inline view; iOS may prompt download instead */}
                                     <iframe
-                                        src="/files/ambtelijk-leiderschap_lecture.pdf"
-                                        className="mx-auto h-96 w-full rounded-lg border"
-                                        title="Lecture PDF"
+                                        src="/files/ambtelijk-leiderschap_lecture.pdf#toolbar=0&view=fitH" // Cleaner view: hide toolbar, fit height
+                                        className="mx-auto h-96 w-full rounded-lg border shadow-inner"
+                                        title="Lecture PDF inline viewer"
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>
                         )}
 
-                        {/* Error Overlay on Desktop (if PDF fails) */}
-                        {!isMobile && pdfError && (
-                            <div className="text-center">
-                                <p className="mb-4 text-lg text-red-600">PDF kon niet laden. Download voor offline lezen.</p>
-                            </div>
-                        )}
-
-                        {/* Always-visible Download Button (Responsive Styling) */}
+                        {/* Always-Visible Download Button */}
                         <div className="mx-4 my-12 text-center">
                             <a
                                 href="/files/ambtelijk-leiderschap_lecture.pdf"
                                 download
-                                className="inline-flex items-center rounded-xl bg-slate-600 px-12 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:bg-gold-600 hover:shadow-xl md:px-16 md:py-3 md:text-lg" // Made larger on desktop
+                                className="inline-flex items-center rounded-xl bg-slate-600 px-12 py-2 font-semibold text-white shadow-lg transition-all duration-200 hover:bg-gold-600 hover:shadow-xl md:px-16 md:py-3 md:text-lg"
                             >
                                 <BookOpen className="mr-3 h-5 w-5" />
                                 Download PDF
