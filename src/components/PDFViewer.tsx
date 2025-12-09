@@ -13,7 +13,12 @@ try {
 
 // Note: Console warning suppression removed for better error visibility in development
 
-function PDFViewer() {
+interface PDFViewerProps {
+    onLoadSuccess?: () => void;
+    onLoadError?: (error: Error) => void;
+}
+
+function PDFViewer({ onLoadSuccess, onLoadError }: PDFViewerProps = {}) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(600); // Default width
     const [isLoading, setIsLoading] = useState(true);
@@ -126,7 +131,7 @@ function PDFViewer() {
                     {/* <div className="mb-4 rounded-md bg-blue-50 p-4 text-center">
                         <p className="text-sm text-blue-700">Voor de beste ervaring op iOS, open de PDF in een nieuwe tab.</p>
                     </div> */}
-                    <div className="bg-pdf-bkg flex aspect-[170/270] w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300 bg-contain bg-no-repeat">
+                    <div className="flex aspect-[170/270] w-full flex-col items-center justify-center space-y-4 rounded-lg border-2 border-dashed border-gray-300 bg-pdf-bkg bg-contain bg-no-repeat">
                         <div className="bg-white/50 px-8 py-3 text-center font-semibold text-gray-600">
                             PDF Preview niet beschikbaar op dit apparaat
                         </div>
@@ -143,7 +148,7 @@ function PDFViewer() {
             ) : (
                 <>
                     {isLoading && (
-                        <div className="bg-pdf-bkg flex h-96 w-full items-center justify-center bg-contain bg-no-repeat">
+                        <div className="flex h-96 w-full items-center justify-center bg-pdf-bkg bg-contain bg-no-repeat">
                             <div className="text-gray-500">PDF laden...</div>
                         </div>
                     )}
@@ -170,16 +175,22 @@ function PDFViewer() {
                                             onLoadSuccess={(pdf) => {
                                                 console.log('PDF loaded successfully:', pdf.numPages, 'pages');
                                                 setIsLoading(false);
+                                                // Call parent callback if provided
+                                                onLoadSuccess?.();
                                             }}
                                             onLoadError={(error) => {
                                                 console.error('Error loading PDF:', error);
                                                 setHasError(true);
                                                 setIsLoading(false);
+                                                // Call parent callback if provided
+                                                onLoadError?.(error);
                                             }}
                                             onSourceError={(error) => {
                                                 console.error('Error with PDF source:', error);
                                                 setHasError(true);
                                                 setIsLoading(false);
+                                                // Call parent callback if provided
+                                                onLoadError?.(error);
                                             }}
                                             className={'text-center'}
                                             loading={

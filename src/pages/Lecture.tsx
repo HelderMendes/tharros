@@ -1,7 +1,7 @@
 import PDFViewer from '@/components/PDFViewer';
 import { SEO } from '@/components/SEO';
 import { BookOpen, Users, Target } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Lecture = () => {
     const lectureSchema = {
@@ -27,38 +27,21 @@ const Lecture = () => {
         keywords: 'ambtelijk vakmanschap, publieke sector, overheid, waarden, waarheid, leefwereld',
     };
 
-    // State for mobile detection, errors, and loading
-    const [isMobile, setIsMobile] = useState(false);
+    // State for PDF loading and errors (mobile detection handled by CSS media queries)
     const [pdfError, setPdfError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Mobile detection: Runs on mount and resize
-    useEffect(() => {
-        const checkMobile = () => {
-            const mobile = window.innerWidth < 768; // Matches Tailwind 'md:' breakpoint
-            setIsMobile(mobile);
-            console.log('Mobile detected:', mobile); // Debug: Remove in production
-        };
-        checkMobile(); // Initial check on client mount
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    // PDF error detection: Timeout if still loading after 3s (desktop only)
-    useEffect(() => {
-        if (!isMobile && !pdfError && isLoading) {
-            const timer = setTimeout(() => {
-                setPdfError(true);
-                setIsLoading(false);
-            }, 3000);
-            return () => clearTimeout(timer);
-        }
-    }, [isMobile, pdfError, isLoading]);
-
-    // Optional: Success handler (call from PDFViewer props if supported)
+    // PDF success handler - called when PDF loads successfully
     const handlePdfLoadSuccess = () => {
         setIsLoading(false);
         setPdfError(false);
+    };
+
+    // PDF error handler - called when PDF fails to load
+    const handlePdfLoadError = (error: Error) => {
+        console.error('PDF load error:', error);
+        setPdfError(true);
+        setIsLoading(false);
     };
 
     return (
@@ -170,47 +153,38 @@ const Lecture = () => {
                     <p className="mb-3 text-right text-sm font-semibold uppercase text-gray-600/80">Publicatie maart 2025</p>
 
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg">
-                        {/* Desktop: PDFViewer with loading/error handling */}
-                        {!isMobile && !pdfError && (
-                            <div className="mb-8 hidden md:block">
-                                {isLoading && (
-                                    <div className="flex h-64 items-center justify-center p-4">
-                                        <div className="mr-2 h-8 w-8 animate-spin rounded-full border-b-2 border-slate-600"></div>
-                                        <span className="text-gray-600">PDF laden...</span>
-                                    </div>
-                                )}
-                                <PDFViewer
-                                // Tie to your PDFViewer props (e.g., if react-pdf):
-                                // onLoadSuccess={handlePdfLoadSuccess}
-                                // onDocumentLoadError={() => { setPdfError(true); setIsLoading(false); }}
+                        {/* Desktop: PDFViewer with loading/error handling - visibility controlled by CSS */}
+                        <div className="mb-8 hidden md:block">
+                            {!pdfError && isLoading && (
+                                <div className="flex h-64 items-center justify-center p-4">
+                                    <div className="mr-2 h-8 w-8 animate-spin rounded-full border-b-2 border-slate-600"></div>
+                                    <span className="text-gray-600">PDF laden...</span>
+                                </div>
+                            )}
+                            {!pdfError && <PDFViewer onLoadSuccess={handlePdfLoadSuccess} onLoadError={handlePdfLoadError} />}
+                            {/* Desktop Error Overlay */}
+                            {pdfError && (
+                                <div className="mb-8 rounded-lg border border-red-200 bg-red-50 p-8 text-center">
+                                    <p className="mb-2 text-lg font-medium text-red-600">PDF kon niet laden.</p>
+                                    <p className="text-sm text-red-500">Download voor offline lezen of refresh de pagina.</p>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Mobile Fallback: Always show on small screens - visibility controlled by CSS */}
+                        <div className="space-y-6 md:hidden">
+                            <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 text-center">
+                                <p className="mb-4 text-lg font-medium text-gray-700">
+                                    Voor de beste mobiele ervaring: download de PDF of bekijk inline.
+                                </p>
+                                <iframe
+                                    src="/files/ambtelijk-leiderschap_lecture.pdf#toolbar=0&view=fitH"
+                                    className="mx-auto h-96 w-full rounded-lg border shadow-inner"
+                                    title="Lecture PDF inline viewer"
+                                    loading="lazy"
                                 />
                             </div>
-                        )}
-
-                        {/* Desktop Error Overlay */}
-                        {!isMobile && pdfError && (
-                            <div className="mb-8 rounded-lg border border-red-200 bg-red-50 p-8 text-center">
-                                <p className="mb-2 text-lg font-medium text-red-600">PDF kon niet laden.</p>
-                                <p className="text-sm text-red-500">Download voor offline lezen of refresh de pagina.</p>
-                            </div>
-                        )}
-
-                        {/* Mobile Fallback: Always show on small screens */}
-                        {isMobile && (
-                            <div className="space-y-6 md:hidden">
-                                <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 text-center">
-                                    <p className="mb-4 text-lg font-medium text-gray-700">
-                                        Voor de beste mobiele ervaring: download de PDF of bekijk inline.
-                                    </p>
-                                    <iframe
-                                        src="/files/ambtelijk-leiderschap_lecture.pdf#toolbar=0&view=fitH" // Cleaner view: hide toolbar, fit height
-                                        className="mx-auto h-96 w-full rounded-lg border shadow-inner"
-                                        title="Lecture PDF inline viewer"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            </div>
-                        )}
+                        </div>
 
                         {/* Always-Visible Download Button */}
                         <div className="mx-4 my-12 text-center">
