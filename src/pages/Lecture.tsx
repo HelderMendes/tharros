@@ -1,7 +1,9 @@
-import PDFViewer from '@/components/PDFViewer';
+import PDFErrorBoundary from '@/components/PDFErrorBoundary';
 import { SEO } from '@/components/SEO';
 import { BookOpen, Users, Target } from 'lucide-react';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
+
+const PDFViewer = lazy(() => import('@/components/PDFViewer'));
 
 const Lecture = () => {
     const lectureSchema = {
@@ -161,7 +163,13 @@ const Lecture = () => {
                                     <span className="text-gray-600">PDF laden...</span>
                                 </div>
                             )}
-                            {!pdfError && <PDFViewer onLoadSuccess={handlePdfLoadSuccess} onLoadError={handlePdfLoadError} />}
+                            {!pdfError && (
+                                <PDFErrorBoundary>
+                                    <Suspense fallback={<div className="p-4 text-center">Component laden...</div>}>
+                                        <PDFViewer onLoadSuccess={handlePdfLoadSuccess} onLoadError={handlePdfLoadError} />
+                                    </Suspense>
+                                </PDFErrorBoundary>
+                            )}
                             {/* Desktop Error Overlay */}
                             {pdfError && (
                                 <div className="mb-8 rounded-lg border border-red-200 bg-red-50 p-8 text-center">

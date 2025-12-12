@@ -25,22 +25,13 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/tharros" element={<Tharros />} />
-                            <Route
-                                path="/ferdi-licher"
-                                element={<FerdiProfile />}
-                            />
+                            <Route path="/ferdi-licher" element={<FerdiProfile />} />
                             <Route path="/lecture" element={<Lecture />} />
                             <Route path="/comenius" element={<Comenius />} />
                             <Route path="/abr" element={<ABR />} />
-                            <Route
-                                path="/ministerie-BZK"
-                                element={<MinisterieBZK />}
-                            />
+                            <Route path="/ministerie-BZK" element={<MinisterieBZK />} />
                             <Route path="/workshops" element={<Workshops />} />
-                            <Route
-                                path="/individuele-trajecten"
-                                element={<IndividueleTrajecten />}
-                            />
+                            <Route path="/individuele-trajecten" element={<IndividueleTrajecten />} />
                             <Route path="/contact" element={<Contact />} />
                         </Routes>
                     </main>
