@@ -251,6 +251,8 @@ const Contact = () => {
 
                             {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
                             <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                                {/* Traceability only: recipient is actually resolved by the EmailJS template config */}
+                                <input type="hidden" name="to_email" value={import.meta.env.VITE_CONTACT_RECIPIENT_EMAIL} />
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                     <div>
                                         <label htmlFor="name" className="mb-3 block text-sm font-medium text-gray-700">
