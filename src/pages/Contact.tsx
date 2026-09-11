@@ -42,6 +42,12 @@ const Contact = () => {
         const formDataWithCaptcha = new FormData(form.current);
         formDataWithCaptcha.append('g-recaptcha-response', recaptchaToken);
 
+        // Strip bare CR characters that trip strict SMTP relays (552 5.2.0 violation)
+        const messageField = form.current.elements.namedItem('message');
+        if (messageField instanceof HTMLTextAreaElement) {
+            messageField.value = messageField.value.replace(/\r\n?/g, '\n');
+        }
+
         emailjs
             .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
                 publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
