@@ -42,10 +42,11 @@ const Contact = () => {
         const formDataWithCaptcha = new FormData(form.current);
         formDataWithCaptcha.append('g-recaptcha-response', recaptchaToken);
 
-        // Strip bare CR characters that trip strict SMTP relays (552 5.2.0 violation)
+        // Collapse line breaks in free-text fields: raw \r/\n in merge tag values
+        // trips the SMTP relay's strict line-ending parser (552 5.2.0 bare CR violation)
         const messageField = form.current.elements.namedItem('message');
         if (messageField instanceof HTMLTextAreaElement) {
-            messageField.value = messageField.value.replace(/\r\n?/g, '\n');
+            messageField.value = messageField.value.replace(/\s*[\r\n]+\s*/g, ' ').trim();
         }
 
         emailjs
